@@ -7,7 +7,7 @@ public class DataManager : MonoBehaviour
 {
     public static DataManager Instance;
     public Dictionary<int, RawData> dicTestData;
-    // Start is called before the first frame update
+    
     void Awake()
     {
         DataManager.Instance=this;
