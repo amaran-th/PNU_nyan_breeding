@@ -11,7 +11,7 @@ public class TestGUI : MonoBehaviour
 
     void Start(){
         
-        DataManager.Instance.LoadData("Data/test_data");
+        DataManager.Instance.LoadData("Json/test_data");
         var testData=DataManager.Instance.dicTestData;
         for(int i=0;i<testData.Count;i++){
             var data=(TestData)testData[i];
