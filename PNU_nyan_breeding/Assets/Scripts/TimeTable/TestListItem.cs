@@ -7,11 +7,17 @@ using TMPro;
 public class TestListItem : MonoBehaviour
 {
     public TMP_Text text;
-
-    public void Init(int id, string ico_name){
-        text.text=ico_name;
+    private int id;
+    private string name;
+    private string img_path;
+    public void Init(int id, string name, string img_path){
+        this.id=id;
+        this.name=name;
+        this.img_path=img_path;
+        text.text=name;
     }
-     public void SetType(){ //Practice Type에 따른 텍스트 업데이트
-        text.text=TypeButton.GetPracticeType().ToString();
+     public void OnClickItem(){ //Practice Type에 따른 텍스트 업데이트
+        //text.text=TypeButton.GetPracticeType().ToString();
+        Debug.Log(img_path);
     }
 }
