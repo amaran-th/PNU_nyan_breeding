@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
     //열거형
-public enum PracticeType{
+public enum ActivityType{
     Study, Arbite, Leisure, Club, Competition
 }
     

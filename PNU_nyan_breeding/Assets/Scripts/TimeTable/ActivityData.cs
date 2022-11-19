@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PracticeData : RawData
+public class ActivityData : RawData
 {
     public string name;
     public string img_path;

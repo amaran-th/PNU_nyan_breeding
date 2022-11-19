@@ -8,18 +8,19 @@ public class TestGUI : MonoBehaviour
     public GameObject listItemGO;
     public GameObject[] Calender=new GameObject[3];
     private static List<TestListItem> objectList=new List<TestListItem>();
-    private string[] pathList={"Json/practice_study","Json/practice_arbite","Json/practice_leisure","Json/practice_club","Json/practice_competition"};
+    private string[] pathList={"Json/activity_study","Json/activity_arbite","Json/activity_leisure","Json/activity_club","Json/activity_competition"};
     
-    public static PracticeType currentType = PracticeType.Study;
-    PracticeType CURRENT_EVENT = PracticeType.Study;
+    public static ActivityType currentType = ActivityType.Study;
+    ActivityType CURRENT_EVENT = ActivityType.Study;
 
-    public PracticeType detectType{
+    //activity type이 변할 때마다
+    public ActivityType detectType{
         set
         {
             if (CURRENT_EVENT == value) return;
 
             CURRENT_EVENT = value;
-
+            
             UpdateItemList(CURRENT_EVENT);
         }
         get
@@ -30,7 +31,7 @@ public class TestGUI : MonoBehaviour
     void Awake(){
         //TODO 더 좋은 작성 방법이 있을 것 같다.
         DataManager.Instance.LoadData(pathList);
-        currentType=PracticeType.Study;
+        currentType=ActivityType.Study;
     }
     void Start(){
         UpdateItemList(currentType);
@@ -39,11 +40,11 @@ public class TestGUI : MonoBehaviour
         detectType=currentType;
     }
 
-    public void UpdateItemList(PracticeType type){
+    public void UpdateItemList(ActivityType type){
         var testData=DataManager.Instance.dicTestData[(int)type];
         RemoveItemList();
         for(int i=0;i<testData.Count;i++){
-            var data=(PracticeData)testData[i];
+            var data=(ActivityData)testData[i];
             var listItem=Instantiate(listItemGO, contents);
             listItem.transform.SetParent(GameObject.Find("Content").transform);
             var testListItem=listItem.GetComponent<TestListItem>();

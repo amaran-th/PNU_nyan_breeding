@@ -16,8 +16,8 @@ public class TestListItem : MonoBehaviour
         this.img_path=img_path;
         text.text=name;
     }
-     public void OnClickItem(){ //Practice Type에 따른 텍스트 업데이트
-        //text.text=TypeButton.GetPracticeType().ToString();
+     public void OnClickItem(){ //Activity Type에 따른 텍스트 업데이트
+        //text.text=TypeButton.GetActivityType().ToString();
         Debug.Log(img_path);
     }
 }

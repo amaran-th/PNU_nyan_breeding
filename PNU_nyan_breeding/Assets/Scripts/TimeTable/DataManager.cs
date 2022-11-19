@@ -19,7 +19,7 @@ public class DataManager : MonoBehaviour
             var ta=Resources.Load<TextAsset>(path[i]);
             Debug.Log(ta);
             var json=ta.text;
-            var arrData=JsonConvert.DeserializeObject<PracticeData[]>(json);
+            var arrData=JsonConvert.DeserializeObject<ActivityData[]>(json);
             Dictionary<int,RawData> dicData=new Dictionary<int,RawData>();
             foreach(var data in arrData)
             {
