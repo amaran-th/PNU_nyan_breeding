@@ -7,34 +7,31 @@ public class TestGUI : MonoBehaviour
     public RectTransform contents;
     public GameObject listItemGO;
     public GameObject[] Calender=new GameObject[3];
-    private static List<TestListItem> objectList=new List<TestListItem>();
+
+
+    private List<TestListItem> objectList=new List<TestListItem>();
     private string[] pathList={"Json/activity_study","Json/activity_arbite","Json/activity_leisure","Json/activity_club","Json/activity_competition"};
     
     public static ActivityType currentType = ActivityType.Study;
-    ActivityType CURRENT_EVENT = ActivityType.Study;
+    ActivityType newType = ActivityType.Study;
 
     //activity type이 변할 때마다
     public ActivityType detectType{
-        set
-        {
-            if (CURRENT_EVENT == value) return;
-
-            CURRENT_EVENT = value;
-            
-            UpdateItemList(CURRENT_EVENT);
+        set{
+            if (newType == value) return;
+            newType = value;
+            UpdateItemList(newType);
         }
-        get
-        {
-            return CURRENT_EVENT;
+        get{
+            return newType;
         }
     }
     void Awake(){
-        //TODO 더 좋은 작성 방법이 있을 것 같다.
-        DataManager.Instance.LoadData(pathList);
-        currentType=ActivityType.Study;
+        DataManager.Instance.LoadData(pathList);    //Json 파일로부터 데이터 로드
+        currentType=ActivityType.Study; //초기 활동을 수업듣기로 설정
     }
     void Start(){
-        UpdateItemList(currentType);
+        UpdateItemList(currentType);    
     }
     void Update(){
         detectType=currentType;
@@ -45,8 +42,8 @@ public class TestGUI : MonoBehaviour
         RemoveItemList();
         for(int i=0;i<testData.Count;i++){
             var data=(ActivityData)testData[i];
-            var listItem=Instantiate(listItemGO, contents);
-            listItem.transform.SetParent(GameObject.Find("Content").transform);
+            var listItem=Instantiate(listItemGO, contents); //자식 객체 생성
+            listItem.transform.SetParent(GameObject.Find("Content").transform); //위치 설정
             var testListItem=listItem.GetComponent<TestListItem>();
             objectList.Add(testListItem);
             testListItem.Init(data.id, data.name,data.img_path);
