@@ -1,0 +1,80 @@
+[
+  {
+    "id": "0",
+    "name": "보안 동아리",
+    "img_path": "aaa",
+    "coding_stat": "0",
+    "know_stat": "1",
+    "security_stat": "4",
+    "sociality_stat": "0",
+    "interest_stat": "1",
+    "stress_stat": "0",
+    "money_stat": "0",
+    "flag": "0"
+  },
+  {
+    "id": "1",
+    "name": "개발 동아리",
+    "img_path": "bbb",
+    "coding_stat": "4",
+    "know_stat": "1",
+    "security_stat": "0",
+    "sociality_stat": "0",
+    "interest_stat": "1",
+    "stress_stat": "0",
+    "money_stat": "0",
+    "flag": "0"
+  },
+  {
+    "id": "2",
+    "name": "코딩 교육봉사 동아리",
+    "img_path": "ccc",
+    "coding_stat": "0",
+    "know_stat": "2",
+    "security_stat": "0",
+    "sociality_stat": "3",
+    "interest_stat": "0",
+    "stress_stat": "0",
+    "money_stat": "0",
+    "flag": "0"
+  },
+  {
+    "id": "3",
+    "name": "게임 개발 동아리",
+    "img_path": "ddd",
+    "coding_stat": "2",
+    "know_stat": "1",
+    "security_stat": "0",
+    "sociality_stat": "0",
+    "interest_stat": "2",
+    "stress_stat": "0",
+    "money_stat": "0",
+    "flag": "0"
+  },
+  {
+    "id": "4",
+    "name": "그림 동아리",
+    "img_path": "eee",
+    "coding_stat": "0",
+    "know_stat": "0",
+    "security_stat": "0",
+    "sociality_stat": "3",
+    "interest_stat": "-1",
+    "stress_stat": "-2",
+    "money_stat": "0",
+    "flag": "0"
+  },
+  {
+    "id": "5",
+    "name": "운동 동아리",
+    "img_path": "fff",
+    "coding_stat": "0",
+    "know_stat": "0",
+    "security_stat": "0",
+    "sociality_stat": "3",
+    "interest_stat": "-1",
+    "stress_stat": "-2",
+    "money_stat": "0",
+    "flag": "0"
+  }
+]

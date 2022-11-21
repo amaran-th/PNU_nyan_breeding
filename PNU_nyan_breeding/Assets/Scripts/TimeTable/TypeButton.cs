@@ -1,28 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TypeButton : MonoBehaviour
-{
-    //열거형
-    public enum PracticeType{
-        Study, Arbite, Leisure, Club, Competition
+{   
+    public int type;
+    public Button button;
+    public void Update(){
+        button.image.color=((int)TestGUI.currentType==type)?Color.yellow:Color.white;
     }
-
-    private static PracticeType currentType;
-
-    void Start()
-    {
-        currentType=PracticeType.Study;
-    }
-
-    public static int GetPracticeType(){
-        return (int)currentType;
-    }
-
-    public void onClickTypeButton(int type){
-        currentType=(PracticeType)type; //type 업데이트
-        TestGUI.onTypeChange(); //목록 업데이트
+    public void OnClickTypeButton(){
+        TestGUI.currentType=(ActivityType)type; //type 업데이트
+        
+        //testGUI.onTypeChange(); //목록 업데이트
         Debug.Log(type);    
     }
 }

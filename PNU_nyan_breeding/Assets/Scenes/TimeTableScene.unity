@@ -181,10 +181,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: arbite
+  m_text: "\uC544\uB974\uBC14\uC774\uD2B8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -208,8 +208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 234746034}
   - component: {fileID: 234746033}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Early
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,8 +293,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: 65}
-  m_SizeDelta: {x: -75.6343, y: -242.826}
+  m_AnchoredPosition: {x: 0, y: 220}
+  m_SizeDelta: {x: -79.99999, y: -520}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234746033
 MonoBehaviour:
@@ -309,15 +309,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: cf345c61eb0976840854ab2b55a13154, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -369,7 +369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: -0.00012207031}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &265719340
@@ -470,10 +470,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: competition
+  m_text: "\uB300\uD68C "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -497,8 +497,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -559,7 +559,7 @@ GameObject:
   - component: {fileID: 387734775}
   - component: {fileID: 387734774}
   m_Layer: 5
-  m_Name: Panel (1)
+  m_Name: Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -75.6343, y: -242.826}
+  m_SizeDelta: {x: -79.99999, y: -520}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &387734774
 MonoBehaviour:
@@ -598,7 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -681,10 +681,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: leisure
+  m_text: "\uC5EC\uAC00\uD65C\uB3D9"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -708,8 +708,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -796,8 +796,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184, y: -31}
-  m_SizeDelta: {x: 200, y: 200}
+  m_AnchoredPosition: {x: 673, y: -155.34}
+  m_SizeDelta: {x: 525.48, y: 561.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548133357
 MonoBehaviour:
@@ -923,7 +923,7 @@ GameObject:
   - component: {fileID: 619634646}
   - component: {fileID: 619634645}
   m_Layer: 5
-  m_Name: Panel (2)
+  m_Name: Last
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -946,9 +946,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -71}
-  m_SizeDelta: {x: -75.6343, y: -242.826}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 40}
+  m_SizeDelta: {x: -80, y: -520}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &619634645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,15 +962,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 0}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 812970218}
   - component: {fileID: 812970217}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Calender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,8 +1103,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -144.634, y: -9.2885}
-  m_SizeDelta: {x: -342.3448, y: -55.7305}
+  m_AnchoredPosition: {x: -306, y: -83}
+  m_SizeDelta: {x: -712.74, y: -367.433}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &812970217
 MonoBehaviour:
@@ -1258,8 +1258,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.087, y: 12.263}
-  m_SizeDelta: {x: 53.8263, y: 17.0316}
+  m_AnchoredPosition: {x: -185.25, y: 33.972}
+  m_SizeDelta: {x: 154.978, y: 54.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1079858750
 MonoBehaviour:
@@ -1307,8 +1307,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1079858753}
         m_TargetAssemblyTypeName: TypeButton, Assembly-CSharp
-        m_MethodName: onClickTypeButton
-        m_Mode: 3
+        m_MethodName: OnClickTypeButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1367,6 +1367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228baba1dcfed9c4698401fd9b5ba0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 0
+  button: {fileID: 1079858750}
 --- !u!1 &1146255724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,10 +1650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1718,8 +1720,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012398, y: 12.263}
-  m_SizeDelta: {x: 53.8263, y: 17.0316}
+  m_AnchoredPosition: {x: -0.000045776, y: 33.972}
+  m_SizeDelta: {x: 154.978, y: 54.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1362214454
 MonoBehaviour:
@@ -1767,8 +1769,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1362214457}
         m_TargetAssemblyTypeName: TypeButton, Assembly-CSharp
-        m_MethodName: onClickTypeButton
-        m_Mode: 3
+        m_MethodName: OnClickTypeButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1827,6 +1829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228baba1dcfed9c4698401fd9b5ba0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
+  button: {fileID: 1362214454}
 --- !u!1 &1476212139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,10 +2048,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: club
+  m_text: "\uB3D9\uC544\uB9AC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2071,8 +2075,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2159,8 +2163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -12.263}
-  m_SizeDelta: {x: 53.8263, y: 17.0316}
+  m_AnchoredPosition: {x: -0.000045776, y: -33.972}
+  m_SizeDelta: {x: 154.978, y: 54.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1654893131
 MonoBehaviour:
@@ -2208,8 +2212,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1654893134}
         m_TargetAssemblyTypeName: TypeButton, Assembly-CSharp
-        m_MethodName: onClickTypeButton
-        m_Mode: 3
+        m_MethodName: OnClickTypeButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2268,6 +2272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228baba1dcfed9c4698401fd9b5ba0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 3
+  button: {fileID: 1654893131}
 --- !u!1 &1698962164
 GameObject:
   m_ObjectHideFlags: 0
@@ -2343,8 +2349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 184.00005, y: 89.77897}
-  m_SizeDelta: {x: 200, y: 41.5579}
+  m_AnchoredPosition: {x: 673, y: 187}
+  m_SizeDelta: {x: 525.475, y: 122.894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1924570692
 GameObject:
@@ -2384,8 +2390,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 73.087, y: 12.263}
-  m_SizeDelta: {x: 53.8263, y: 17.0316}
+  m_AnchoredPosition: {x: 185.25, y: 33.972}
+  m_SizeDelta: {x: 154.978, y: 54.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924570694
 MonoBehaviour:
@@ -2433,8 +2439,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1924570697}
         m_TargetAssemblyTypeName: TypeButton, Assembly-CSharp
-        m_MethodName: onClickTypeButton
-        m_Mode: 3
+        m_MethodName: OnClickTypeButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2493,6 +2499,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228baba1dcfed9c4698401fd9b5ba0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 4
+  button: {fileID: 1924570694}
 --- !u!1 &2062725691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2551,10 +2559,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: study
+  m_text: "\uC218\uC5C5\uB4E3\uAE30"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2578,8 +2586,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2666,8 +2674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73.087, y: -12.263}
-  m_SizeDelta: {x: 53.8263, y: 17.0316}
+  m_AnchoredPosition: {x: -185.25, y: -33.972}
+  m_SizeDelta: {x: 154.978, y: 54.949}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2139430700
 MonoBehaviour:
@@ -2715,8 +2723,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2139430703}
         m_TargetAssemblyTypeName: TypeButton, Assembly-CSharp
-        m_MethodName: onClickTypeButton
-        m_Mode: 3
+        m_MethodName: OnClickTypeButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2775,6 +2783,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 228baba1dcfed9c4698401fd9b5ba0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 1
+  button: {fileID: 2139430700}
 --- !u!1 &2145977286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2145977288}
   - component: {fileID: 2145977287}
+  - component: {fileID: 2145977289}
   m_Layer: 0
   m_Name: TestGUI
   m_TagString: Untagged
@@ -2807,9 +2818,9 @@ MonoBehaviour:
   contents: {fileID: 265719339}
   listItemGO: {fileID: 4642632345504684490, guid: 418c14e7dcac8514f8666771f43a89a3, type: 3}
   Calender:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 234746031}
+  - {fileID: 387734772}
+  - {fileID: 619634643}
 --- !u!4 &2145977288
 Transform:
   m_ObjectHideFlags: 0
@@ -2825,3 +2836,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2145977289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145977286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
