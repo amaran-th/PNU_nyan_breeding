@@ -2,7 +2,7 @@
   {
     "id": "0",
     "name": "보안수업",
-    "img_path": "aaa",
+    "img_path": "Images/Practice/security",
     "coding_stat": "0",
     "know_stat": "1",
     "security_stat": "4",
@@ -15,7 +15,7 @@
   {
     "id": "1",
     "name": "코딩수업",
-    "img_path": "bbb",
+    "img_path": "Images/Practice/coding",
     "coding_stat": "4",
     "know_stat": "1",
     "security_stat": "0",
@@ -28,7 +28,7 @@
   {
     "id": "2",
     "name": "컴퓨터 이론",
-    "img_path": "ccc",
+    "img_path": "Images/Practice/theory",
     "coding_stat": "0",
     "know_stat": "5",
     "security_stat": "0",
@@ -41,7 +41,7 @@
   {
     "id": "3",
     "name": "교양 수업",
-    "img_path": "ddd",
+    "img_path": "Images/Practice/culture",
     "coding_stat": "0",
     "know_stat": "0",
     "security_stat": "0",

@@ -15,7 +15,7 @@
   {
     "id": "1",
     "name": "산책",
-    "img_path": "bbb",
+    "img_path": "Images/Practice/walk",
     "coding_stat": "0",
     "know_stat": "0",
     "security_stat": "0",
@@ -28,7 +28,7 @@
   {
     "id": "2",
     "name": "회식",
-    "img_path": "ccc",
+    "img_path": "Images/Practice/dinner_together",
     "coding_stat": "0",
     "know_stat": "0",
     "security_stat": "0",

@@ -19,5 +19,12 @@ public class TestListItem : MonoBehaviour
      public void OnClickItem(){ //Activity Type에 따른 텍스트 업데이트
         //text.text=TypeButton.GetActivityType().ToString();
         Debug.Log(img_path);
+        //TODO 실제 리소스 경로로 변경해줘야 함
+        if(TestGUI.scheduleCount<3){
+            TestGUI.scheduleImageList.Add(img_path);
+            //TestGUI.staticCalender[TestGUI.scheduleCount].GetComponent<Image>().sprite=Resources.Load<Sprite>("test/oomoo1") as Sprite;
+            TestGUI.scheduleCount=TestGUI.scheduleImageList.Count;
+            Debug.Log(TestGUI.scheduleCount);
+        }
     }
 }
