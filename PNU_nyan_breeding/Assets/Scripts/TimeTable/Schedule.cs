@@ -5,21 +5,11 @@ using UnityEngine;
 public class Schedule : MonoBehaviour
 {
     public int scheduleNo;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
     public void OnClickSchedule(){
-        if(scheduleNo<TestGUI.scheduleCount){
-            TestGUI.scheduleImageList.RemoveAt(scheduleNo);
-            TestGUI.scheduleCount=TestGUI.scheduleImageList.Count;
+        if(scheduleNo<CalenderController.scheduleCount){
+            CalenderController.scheduleImageList.RemoveAt(scheduleNo);
+            CalenderController.scheduleCount=CalenderController.scheduleImageList.Count;
         }
     }
 }
