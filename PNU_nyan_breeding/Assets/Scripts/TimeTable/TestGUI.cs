@@ -62,7 +62,6 @@ public class TestGUI : MonoBehaviour
     void Update(){
         detectType=currentType;
         detectScheduleCount=scheduleCount;
-
     }
 
     public void UpdateItemList(ActivityType type){
@@ -112,6 +111,6 @@ public class TestGUI : MonoBehaviour
             
         }
     }
-
+    
    
 }
