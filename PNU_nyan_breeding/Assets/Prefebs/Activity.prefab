@@ -181,8 +181,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD14C\uC2A4\uD2B8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
-  m_sharedMaterial: {fileID: -2440819833428231815, guid: d3805fc8ebbbf794cb2698fd76a04aa3, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 30581a37f23ec8c46bbd46d6b0d49f95, type: 2}
+  m_sharedMaterial: {fileID: -4798788714728380423, guid: 30581a37f23ec8c46bbd46d6b0d49f95, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
