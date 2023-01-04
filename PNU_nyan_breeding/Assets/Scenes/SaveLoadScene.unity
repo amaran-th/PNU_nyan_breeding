@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6982ea26a348dd140aaa253b9f8608b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SettingPage: {fileID: 64960094}
+  Page: {fileID: 64960094}
   SaveLoadPage: {fileID: 393019323}
 --- !u!114 &989866339
 MonoBehaviour:

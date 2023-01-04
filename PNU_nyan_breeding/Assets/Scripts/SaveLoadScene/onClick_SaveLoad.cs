@@ -4,12 +4,12 @@ using UnityEngine;
  
 public class onClick_SaveLoad : MonoBehaviour
 {
-    public GameObject SettingPage;
+    public GameObject Page;
     public GameObject SaveLoadPage;
  
     public void saveLoad_btn_clicked()
     {
-        SettingPage.SetActive(false);
+        Page.SetActive(false);
         SaveLoadPage.SetActive(true);
     }
 }
