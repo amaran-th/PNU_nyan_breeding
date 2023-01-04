@@ -3,30 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 
-public class DataManager : MonoBehaviour
+public interface ILoader<Key, Value>
 {
-    public static DataManager Instance;
-    public List<Dictionary<int, RawData>> dicTestData;
+    Dictionary<Key, Value> MakeDict();
+}
+
+public class DataManager: MonoBehaviour
+{
+    public List<Dictionary<int, Activity>> activityDataList=new List<Dictionary<int, Activity>>();
+    private string[] pathList={"Json/activity_study","Json/activity_arbite","Json/activity_leisure","Json/activity_club","Json/activity_competition"};
     
-    void Awake()
+    public void Init()
     {
-        DataManager.Instance=this;
-        this.dicTestData=new List<Dictionary<int, RawData>>();
-    }
-    public void LoadData(string[] path)
-    {   
-        for(int i=0;i<path.Length;i++){
-            var ta=Resources.Load<TextAsset>(path[i]);
-            Debug.Log(ta);
-            var json=ta.text;
-            var arrData=JsonConvert.DeserializeObject<ActivityData[]>(json);
-            Dictionary<int,RawData> dicData=new Dictionary<int,RawData>();
-            foreach(var data in arrData)
-            {
-                dicData.Add(data.id, data);
-            }
-            this.dicTestData.Add(dicData);
+        for(int i=0;i<pathList.Length;i++){
+            activityDataList.Add(LoadJson<ActivityData, int, Activity>(pathList[i]).MakeDict());
         }
-        
     }
+
+    Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>
+    {
+		TextAsset textAsset = Resources.Load<TextAsset>(path); // text 파일이 textAsset에 담긴다. TextAsset 타입은 텍스트파일 에셋이라고 생각하면 됨!
+        return JsonUtility.FromJson<Loader>(textAsset.text);
+	}
 }
