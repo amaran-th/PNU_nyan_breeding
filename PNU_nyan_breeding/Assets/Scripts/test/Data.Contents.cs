@@ -35,3 +35,30 @@ public class ActivityData : ILoader<int, Activity>
 }
 
 #endregion
+
+#region NPC
+
+[System.Serializable]
+public class NPC : RawData
+{
+    public string name;
+    public string img_path;
+    public int pos_x;
+    public int pos_y;
+}
+
+[System.Serializable]
+public class NPCData : ILoader<int, NPC>
+{
+	public NPC[] npcList;  // json 파일에서 여기로 담김
+
+	public Dictionary<int, NPC> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, NPC> dataDict = new Dictionary<int, NPC>();
+		foreach (NPC npc in npcList) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(npc.id, npc); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+#endregion
