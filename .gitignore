@@ -2,15 +2,23 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-**/[Ll]ibrary/
-**/[Tt]emp/
-**/[Oo]bj/
-**/[Bb]uild/
-**/[Bb]uilds/
-**/[Ll]ogs/
-**/[Mm]emoryCaptures/
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+/MentalCare_CNU/[Ll]ibrary/
+/MentalCare_CNU/[Tt]emp/
+/MentalCare_CNU/[Ll]og/
+/MentalCare_CNU/[Bb]uild/
+/MentalCare_CNU/[Bb]uilds/
+/MentalCare_CNU/[Oo]bj/
 
-# Asset meta data should only be ignored when the corresponding asset is also ignored
+
+# Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
@@ -42,11 +50,14 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
+*.txt
+*.pdf
+
 
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta
-*.mdb.meta 
+*.mdb.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -58,3 +69,88 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+*.meta
+*.wav
+*.mp3
+*.jpg
+*.FBX
+*.controller
+*.png
+*.jpeg
+*.mat
+*.physicMaterial
+*.lighting
+*.asset
+*.hdr
+*.mp4
+*.renderTexture
+*.terrainlayer
+*.bin
+*.exr
+*.cginc
+*.asmdef
+*.tga
+*.shader
+*.bmp
+*.obj
+*.tif
+*.ptx
+*.dll
+*.exe
+*.pso
+*.lz4
+*.vso
+*.gso
+*.tiff
+*.tiff
+*.psd
+*.flare
+*.compute
+*.guiskin
+*.preset
+*.mask
+*.raw
+*.ttf
+*.anim
+*.properties
+*.jar
+*.so
+*.zip
+*.xml
+*.mixer
+*.mixer
+*.otf
+*.db
+*.spm
+*.json
+*.dat
+*.graph
+*.info
+*.log
+*.resource
+*.resS
+*.sharedAssets
+*.bundle
+*.prefs
+*.dwlt
+*.13f1 (d4ddf0d95db9)
+*.o
+*.buildreport
+*.md
+*.uss
+*.yml
+*.a
+*.hlsl
+*.cube
+*.aar
+*.config
+*.unity3d
+*.yaml
+*.assets
+*.stamp
+*.catalog
+*.cache
+*.force
+*.CopyComplete
+*.pref
+*.pref
