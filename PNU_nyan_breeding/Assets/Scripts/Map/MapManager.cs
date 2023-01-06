@@ -8,7 +8,6 @@ public class MapManager : MonoBehaviour
     public GameObject npcIcon;
     public RectTransform canvas;
     public GameObject choiceModal;
-    public GameObject selector;
     public static Dictionary<int, NPC> npcData;   //DataManager를 통해 로드된 활동 데이터
 
     //npc
@@ -21,7 +20,6 @@ public class MapManager : MonoBehaviour
             if (newNpc == value) return;
             newNpc = value;
             UpdateModal();
-            UpdateSelector();
         }
         get{
             return newNpc;
@@ -38,7 +36,6 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         UpdateModal();
-        UpdateSelector();
     }
 
     void Update()
@@ -50,13 +47,7 @@ public class MapManager : MonoBehaviour
             var npc=(NPC)npcData[i];
             var npcItem=Instantiate(npcIcon,canvas); //자식 객체 생성
             npcItem.transform.localPosition=new Vector3(npc.pos_x, npc.pos_y, 0f);            
-            (npcItem.GetComponent("NPCIcon") as NPCIcon).index=npc.id;
-            //npcItem.GetComponent<Image>().sprite=Resources.Load<Sprite>(npc.img_path) as Sprite;
-            //npcItem.transform.SetParent(GameObject.Find("").transform); //위치 설정
-            //var testListItem=npcItem.GetComponent<NPCIcon>();
-            //testListItem.Init(npc);
-            Debug.Log(npc.name);
-            //transform.SetParent(GameObject.Find("Content").transform);
+            (npcItem.transform.Find("NpcObject").GetComponent("NPCIcon") as NPCIcon).index=npc.id;
         }
     }
     void UpdateModal(){
@@ -64,15 +55,6 @@ public class MapManager : MonoBehaviour
             choiceModal.SetActive(true);
         }else{
             choiceModal.SetActive(false);
-        }
-    }
-    void UpdateSelector(){
-        if(currentNpc>=0){
-            var currentData=npcData[currentNpc];
-            selector.SetActive(true);
-            selector.transform.localPosition=new Vector3(currentData.pos_x,currentData.pos_y,0f);
-        }else{
-            selector.SetActive(false);
         }
     }
 }

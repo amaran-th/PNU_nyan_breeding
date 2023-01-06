@@ -19,7 +19,11 @@ public class NPCIcon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(MapManager.currentNpc==index){
+            transform.Find("Selector").gameObject.SetActive(true);
+        }else{
+            transform.Find("Selector").gameObject.SetActive(false);
+        }
     }
     public void OnClickIcon(){
         MapManager.currentNpc=index;
