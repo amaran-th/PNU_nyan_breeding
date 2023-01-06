@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 6345802454797984766}
   - component: {fileID: 6761760727337462504}
   - component: {fileID: 1626910451238465418}
+  - component: {fileID: 3099703479809506771}
   m_Layer: 5
-  m_Name: NPC
+  m_Name: NPCIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,15 +122,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 3099703479809506771}
+        m_TargetAssemblyTypeName: NPCIcon, Assembly-CSharp
+        m_MethodName: OnClickIcon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3099703479809506771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532467983438794239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73f1f47df84bf3f45b55c294b3abccd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
