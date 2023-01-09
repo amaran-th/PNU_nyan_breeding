@@ -40,12 +40,11 @@ public class ActivityData : ILoader<int, Activity>
 
 [System.Serializable]
 public class PlayerInfo{
+    //정보
     public string name;
     public int species;
     public string university;
-}
-
-public class PlayerStat{
+    //스탯
     public int coding_stat;
     public int know_stat;
     public int security_stat;
@@ -53,7 +52,6 @@ public class PlayerStat{
     public int interest_stat;
     public int stress_stat;
     public int money_stat;
-    public int flag;
 }
 
 #endregion
