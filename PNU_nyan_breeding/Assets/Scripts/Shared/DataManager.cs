@@ -14,6 +14,7 @@ public class DataManager: MonoBehaviour
     private string[] pathList={"Json/activity_study","Json/activity_arbite","Json/activity_leisure","Json/activity_club","Json/activity_competition"};
     
     public Dictionary<int, CatSpecies> catSpeciesDataList =new Dictionary<int, CatSpecies>();
+    public Dictionary<int, RandomName> randomNameDataList =new Dictionary<int, RandomName>();
 
     public void Init()
     {
@@ -21,6 +22,7 @@ public class DataManager: MonoBehaviour
             activityDataList.Add(LoadJson<ActivityData, int, Activity>(pathList[i]).MakeDict());
         }
          catSpeciesDataList = (LoadJson<CatSpeciesData, int, CatSpecies>("Json/cat_species").MakeDict());
+         randomNameDataList = (LoadJson<RandomNameData, int, RandomName>("Json/random_name").MakeDict());
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

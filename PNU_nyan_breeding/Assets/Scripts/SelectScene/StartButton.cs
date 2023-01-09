@@ -12,6 +12,7 @@ public class StartButton : MonoBehaviour
     public void OnClickStartButton(){
         Managers.Player.playerInfoData.name = NameInputField.text;
         Managers.Player.playerInfoData.university = UniversityInputField.text;
+        Managers.Player.playerInfoData.species = SelectSpecies.currentSpecies;
         Managers.Player.SaveData();
     }
 }

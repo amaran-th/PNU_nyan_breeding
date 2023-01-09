@@ -79,3 +79,25 @@ public class CatSpeciesData : ILoader<int, CatSpecies>
 	}
 }
 #endregion
+
+#region RandomName
+
+[System.Serializable]
+public class RandomName : RawData{
+    public string name;
+}
+
+[System.Serializable]
+public class RandomNameData : ILoader<int, RandomName>
+{
+	public RandomName[] randomNameList;  // json 파일에서 여기로 담김
+
+	public Dictionary<int, RandomName> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, RandomName> dataDict = new Dictionary<int, RandomName>();
+		foreach (RandomName randomName in randomNameList) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(randomName.id, randomName); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+#endregion
