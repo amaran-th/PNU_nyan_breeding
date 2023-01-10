@@ -11,9 +11,6 @@ public class Managers: MonoBehaviour
     DataManager _data = new DataManager();
     public static DataManager Data { get { return Instance._data; } }
 
-    PlayerManager _player = new PlayerManager();
-    public static PlayerManager Player { get { return Instance._player; } }
-
     void Start()
     {
         Init();
@@ -33,7 +30,6 @@ public class Managers: MonoBehaviour
             DontDestroyOnLoad(obj);
             s_instance = obj.GetComponent<Managers>();
             s_instance._data.Init();
-            s_instance._player.Init();
         }		
 	}
 }
