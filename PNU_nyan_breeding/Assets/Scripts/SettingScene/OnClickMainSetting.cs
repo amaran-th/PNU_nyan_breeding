@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.UI;
+
 
 public class OnClickMainSetting : MonoBehaviour
 {
@@ -9,6 +12,12 @@ public class OnClickMainSetting : MonoBehaviour
     public GameObject ProducerInfoOption;
     public GameObject SoundCreditOption;    
     public GameObject HomeOption;
+
+    private AudioSource BGMAudioSource;
+    private GameObject[] musics;
+    public AudioMixer BGM;
+    public Slider BGMSlider;
+    
 
     public void SoundBtnClicked()
     {
@@ -63,5 +72,14 @@ public class OnClickMainSetting : MonoBehaviour
         MainSetting.SetActive(true);
     }
 
+
+
+    public void BGMControl()
+    {
+        float BGMVal = BGMSlider.value;
+
+        BGM.SetFloat("BGMParameters", Mathf.Log10(BGMVal)*20);
+    
+    }
 
 }
