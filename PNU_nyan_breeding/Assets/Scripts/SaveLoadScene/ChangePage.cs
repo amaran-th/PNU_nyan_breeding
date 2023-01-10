@@ -38,12 +38,42 @@ public class ChangePage : MonoBehaviour
     {
         SelectSaveLoadPage.SetActive(false);
         SelectSlotPage.SetActive(true);
+        for (int i=0; i<3; i++)
+        {
+            if(File.Exists(DataManage.instance.path + $"{i}"))
+            {
+                isSaveFileExists[i] = true;
+                DataManage.instance.slotNumber = i;
+                DataManage.instance.LoadData();
+                slotText[i].text = "Already Saved";
+            }
+            else
+            {
+                slotText[i].text = "Empty";
+            }
+        }
+        DataManage.instance.DataClear();
     }
 
     public void SaveBtnClicked()
     {
         SelectSaveLoadPage.SetActive(false);
         SelectSlotPage.SetActive(true);
+        for (int i=0; i<3; i++)
+        {
+            if(File.Exists(DataManage.instance.path + $"{i}"))
+            {
+                isSaveFileExists[i] = true;
+                DataManage.instance.slotNumber = i;
+                DataManage.instance.LoadData();
+                slotText[i].text = "Already Saved";
+            }
+            else
+            {
+                slotText[i].text = "Empty";
+            }
+        }
+        DataManage.instance.DataClear();
     }
 
     // Update is called once per frame
