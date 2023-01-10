@@ -7,14 +7,20 @@ using System.IO;
 public class PlayerManager: MonoBehaviour  
 {
     private string folderPath ;
+    private string PlayerPath="player_info.json"; //이름, 대학, 종
 
-    public PlayerInfo playerInfoData = new PlayerInfo(); 
-    private string playerInfoDataPath="player_info.json"; //이름, 대학, 종
+    public Player playerData = new Player(); // 부모? 클래스  Player 저장
+    public PlayerInfo playerInfoData = new PlayerInfo(); // 부모? 클래스  Player 저장
+    public PlayerStat playerStatData = new PlayerStat(); //이중 클래스 PlayerStat 저장
 
+ 
     public void Init()
     {
-        playerInfoData = LoadJson<PlayerInfo>(playerInfoDataPath);
         folderPath = Application.dataPath + "/Resources/Json/";
+
+        playerData = LoadJson<Player>(PlayerPath); // 부모클래스 json -> object가져옴
+        playerInfoData = playerData.playerInfo;
+        playerStatData = playerData.playerStat; // 부모클래스 -> 이중 클래스 가져오기!!
     }
 
 
@@ -26,7 +32,7 @@ public class PlayerManager: MonoBehaviour
 
     public void SaveData() 
     {
-        string json = JsonUtility.ToJson(playerInfoData);
-        File.WriteAllText(folderPath + playerInfoDataPath, json);
+        string json = JsonUtility.ToJson(playerData);
+        File.WriteAllText(folderPath + PlayerPath, json);
     }
 }

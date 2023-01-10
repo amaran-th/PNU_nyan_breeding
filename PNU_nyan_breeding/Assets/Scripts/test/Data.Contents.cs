@@ -39,12 +39,22 @@ public class ActivityData : ILoader<int, Activity>
 #region Player
 
 [System.Serializable]
-public class PlayerInfo{
+public class Player{
     //정보
+    public PlayerInfo playerInfo;
+    //스탯
+    public PlayerStat playerStat;
+
+}
+[System.Serializable]
+public class PlayerInfo{
     public string name;
     public int species;
     public string university;
-    //스탯
+
+}
+[System.Serializable]
+public class PlayerStat{
     public int coding_stat;
     public int know_stat;
     public int security_stat;
