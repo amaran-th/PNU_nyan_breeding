@@ -75,7 +75,6 @@ crashlytics-build.properties
 *.jpg
 *.FBX
 *.controller
-*.png
 *.jpeg
 *.mat
 *.physicMaterial
@@ -110,8 +109,6 @@ crashlytics-build.properties
 *.preset
 *.mask
 *.raw
-*.ttf
-*.anim
 *.properties
 *.jar
 *.so
@@ -122,7 +119,6 @@ crashlytics-build.properties
 *.otf
 *.db
 *.spm
-*.json
 *.dat
 *.graph
 *.info
