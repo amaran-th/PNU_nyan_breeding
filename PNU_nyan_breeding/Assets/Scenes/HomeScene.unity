@@ -433,15 +433,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 202232079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409d31685ecfe5b49b77c58de99b36d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 0cae151f28bd73f46ab33d7249b4b9bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mailTitle: {fileID: 1625636818}
-  mailSender: {fileID: 700569374}
+  mailSender: {fileID: 1946157784}
   mailSendtime: {fileID: 700569374}
-  title: this is title
-  sender: this is sender
-  sendtime: asdfsdsdkl
+  title: aaaaa
+  sender: bbbbbb
+  sendtime: ccccccc
 --- !u!1 &401281693
 GameObject:
   m_ObjectHideFlags: 0
