@@ -1342,12 +1342,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 989866337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6982ea26a348dd140aaa253b9f8608b1, type: 3}
+  m_Script: {fileID: 11500000, guid: 329d44794f30d114bb68ee1940ac0e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Page: {fileID: 64960094}
-  SaveLoadPage: {fileID: 393019323}
-  SavePopUp: {fileID: 0}
+  path: 
+  slotNumber: 0
 --- !u!114 &989866339
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1441,7 +1440,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 989866337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59b954f67b7434845b1b793a2456ab24, type: 3}
+  m_Script: {fileID: 11500000, guid: f47756829a221ec47a0d5ac669e40dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Page: {fileID: 64960094}
@@ -1463,11 +1462,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 989866337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6bde368a41b0cb4595d1ea9c159cf90, type: 3}
+  m_Script: {fileID: 11500000, guid: 46037367ac59c4f4e88e2aa87c3a8bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path: 
-  slotNumber: 0
+  SavePopUp: {fileID: 0}
 --- !u!1 &1046739583
 GameObject:
   m_ObjectHideFlags: 0

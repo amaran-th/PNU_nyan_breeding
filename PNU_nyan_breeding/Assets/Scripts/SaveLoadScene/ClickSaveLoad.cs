@@ -8,8 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class ClickSaveLoad : MonoBehaviour
 {
-    public GameObject Page;
-    public GameObject SaveLoadPage;
     public GameObject SavePopUp;
 
     void Start()
