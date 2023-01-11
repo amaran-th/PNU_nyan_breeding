@@ -73,7 +73,6 @@ crashlytics-build.properties
 *.mp3
 *.jpg
 *.FBX
-*.controller
 *.jpeg
 *.mat
 *.physicMaterial
