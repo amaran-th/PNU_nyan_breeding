@@ -676,7 +676,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 777020575}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5da1c281258c334fa65ab5af28c00c0, type: 3}
+  m_Script: {fileID: 11500000, guid: 853cb571769daf74fb1c35ef24bc8b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &777020580
@@ -749,7 +749,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 998888522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5cc21b04464b74ab44cfc3ffc0207b, type: 3}
+  m_Script: {fileID: 11500000, guid: c5fe4ee3efa859f4fb07b6d9da761310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1073411530
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1073411530}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6806db64c11276f4a8aecffab1ae6b3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 65d9483a1d3aa5c45b64a561a41e5023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1073411532
@@ -1009,10 +1009,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1698677685}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ce612526cfba9e499f7aacaa88a1a13, type: 3}
+  m_Script: {fileID: 11500000, guid: 5835e222722513e42b48c56175ab2f3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcIcon: {fileID: 532467983438794239, guid: b6f07f74a4fba6647b7bf17c90df1c33, type: 3}
+  npcIcon: {fileID: 532467983438794239, guid: ba369a47fff30ac46ade0ca2df1eb87a, type: 3}
   canvas: {fileID: 736066662}
   choiceModal: {fileID: 1737214716}
 --- !u!1 &1737214716
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1737214716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: badf87b204b00af45ab74ead20f9a120, type: 3}
+  m_Script: {fileID: 11500000, guid: b1f5a05500a55854d8ae5df95afa5237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   modalText: {fileID: 402552563}
