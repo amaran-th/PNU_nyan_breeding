@@ -69,12 +69,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-*.meta
 *.wav
 *.mp3
 *.jpg
 *.FBX
-*.controller
 *.jpeg
 *.mat
 *.physicMaterial

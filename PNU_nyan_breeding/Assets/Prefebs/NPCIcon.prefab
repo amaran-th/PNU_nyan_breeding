@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3813594945341604092}
   - component: {fileID: 6345802454797984766}
   m_Layer: 5
-  m_Name: NpcIcon
+  m_Name: NPCIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6743321671367912789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f1f47df84bf3f45b55c294b3abccd8, type: 3}
+  m_Script: {fileID: 11500000, guid: d767e45b4354b974b882f94867d51ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   index: 0
