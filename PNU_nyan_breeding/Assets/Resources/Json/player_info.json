@@ -1,1 +1,4 @@
-[{"name":"냥이","species":0}]
+{
+    "playerInfo" : {"name":"피피세바스찬","species":2,"university":"피피"},
+    "playerStat" : {"coding_stat":0,"know_stat":0,"security_stat":0,"sociality_stat":0,"interest_stat":0,"stress_stat":0,"money_stat":0}
+    }

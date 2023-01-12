@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Newtonsoft.Json;
 
 public class RandomButton : MonoBehaviour
 {
     public TMP_InputField inputField;
     
-    public string GetRandomName(List<string> nameList){
-        return nameList[Random.Range(0,nameList.Count)];
+    void Awake(){ 
+    }
+
+    public string GetRandomName(Dictionary<int, RandomName> nameList){
+        return  nameList[Random.Range(0,nameList.Count)].name;
     }
     public void OnClickRandomButton(){
-        Debug.Log("click");
-        inputField.text=GetRandomName(PlayerInfoManager.randomNameList);
+        inputField.text=GetRandomName(SelectManager.randomNameData);
     }
 }
