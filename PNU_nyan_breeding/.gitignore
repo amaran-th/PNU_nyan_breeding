@@ -70,7 +70,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 *.wav
-*.mp3
 *.jpg
 *.FBX
 *.jpeg
