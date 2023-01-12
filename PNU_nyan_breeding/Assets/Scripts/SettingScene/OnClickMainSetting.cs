@@ -17,7 +17,6 @@ public class OnClickMainSetting : MonoBehaviour
     public AudioMixer BGM;
     public Slider BGMSlider;
 
-
     public void SoundBtnClicked()
     {
         MainSetting.SetActive(false);
@@ -78,7 +77,6 @@ public class OnClickMainSetting : MonoBehaviour
         float BGMVal = BGMSlider.value;
 
         BGM.SetFloat("BGMParameters", Mathf.Log10(BGMVal)*20);
-
     }
 
 }

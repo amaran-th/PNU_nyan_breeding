@@ -1,0 +1,32 @@
+{
+  "npcList": [
+    {
+      "id": 0,
+      "name": "교수님",
+      "img_path": "Images/Icon/professor",
+      "pos_x": -400,
+      "pos_y": 200
+    },
+    {
+      "id": 1,
+      "name": "깜냥이",
+      "img_path": "Images/Icon/friendCat",
+      "pos_x": -150,
+      "pos_y": -400
+    },
+    {
+      "id": 2,
+      "name": "아무",
+      "img_path": "Images/Icon/dice",
+      "pos_x": 100,
+      "pos_y": 100
+    },
+    {
+      "id": 3,
+      "name": "거나",
+      "img_path": "Images/Icon/dice",
+      "pos_x": 300,
+      "pos_y": 150
+    }
+  ]
+}
