@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-
 public class OnClickMainSetting : MonoBehaviour
 {
     public GameObject MainSetting;
@@ -17,7 +16,6 @@ public class OnClickMainSetting : MonoBehaviour
     private GameObject[] musics;
     public AudioMixer BGM;
     public Slider BGMSlider;
-    
 
     public void SoundBtnClicked()
     {
@@ -79,7 +77,6 @@ public class OnClickMainSetting : MonoBehaviour
         float BGMVal = BGMSlider.value;
 
         BGM.SetFloat("BGMParameters", Mathf.Log10(BGMVal)*20);
-    
     }
 
 }
