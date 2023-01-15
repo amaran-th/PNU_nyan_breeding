@@ -6,16 +6,19 @@ using UnityEngine.UI;
 public class SpeciesIcon : MonoBehaviour
 {
     public int index;
-
+    void Start()
+    {
+        var data=(CatSpecies)SelectManager.catSpeciesData[index];
+        transform.Find("CatImage").GetComponent<Image>().sprite=Resources.Load<Sprite>(data.img_path) as Sprite;
+        
+    }    
     void Update()
     {
         if(SelectSpecies.currentSpecies == index){
-            GetComponent<Image>().color= new Color32(255, 255, 255, 255);;
+            transform.Find("CatImage").gameObject.SetActive(true);
         }else{
-            GetComponent<Image>().color= new Color32(100, 100, 100, 100);;
+            transform.Find("CatImage").gameObject.SetActive(false);
         }
     }
-    public void OnClickIcon(){
-        SelectSpecies.currentSpecies = index;
-    }
+
 }
