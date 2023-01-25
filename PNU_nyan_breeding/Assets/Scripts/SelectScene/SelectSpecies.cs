@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class SelectSpecies : MonoBehaviour
 {
     public GameObject species;
-    public static int currentSpecies = -1;
-    int newSpecies = -1;
+    public static int currentSpecies = 0;
+    int newSpecies = 0;
     
     //현재 선택된 npc가 변할 때마다
     public int detectSpecies{
@@ -32,9 +32,9 @@ public class SelectSpecies : MonoBehaviour
             var catSpecies=(CatSpecies)SelectManager.catSpeciesData[i];
             var speciesItem=Instantiate(species,transform); //자식 객체 생성
             speciesItem.name = "SpeciesObj";//자식객체 이름 설정
-            speciesItem.transform.localPosition=new Vector3(80f*catSpecies.id, 0f, 0f);      
-            speciesItem.GetComponent<Image>().sprite=Resources.Load<Sprite>(catSpecies.img_path) as Sprite;      
+            speciesItem.transform.localPosition=new Vector3(0f, 0f, 0f);           
             speciesItem.GetComponent<SpeciesIcon>().index = catSpecies.id;
+    
         }
     }
 }
