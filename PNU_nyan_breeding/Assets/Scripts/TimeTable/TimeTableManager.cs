@@ -10,12 +10,15 @@ public class TimeTableManager : MonoBehaviour
     public static int month=12;
     public static int curMoney=300;
     public static int selectedMoney=0;
+    public static GameObject tooltip;
     public GameObject shareData;
 
     void Awake(){
         //Json 파일로부터 데이터 로드
         activityDataList = Managers.Data.activityDataList;
         DontDestroyOnLoad(shareData);  
+        tooltip = GameObject.Find("Tooltip");
+        tooltip.SetActive(false);
     }
     
 }

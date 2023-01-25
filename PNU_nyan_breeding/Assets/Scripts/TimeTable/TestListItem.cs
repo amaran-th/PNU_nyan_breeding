@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System;
 using UnityEngine.UI;
 using TMPro;
 
@@ -9,8 +10,9 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 {
     public ScrollRect scrollRect;
     public TMP_Text text;
+    
     private Activity activity;
-
+    
     public void Init(Activity activity){
         this.activity=activity;
         //this.id=activity.id;
@@ -45,4 +47,36 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             Debug.Log(CalenderController.scheduleCount);
         }
     }
+    public void OnHoverItem(){
+        TimeTableManager.tooltip.transform.position=Input.mousePosition;
+        TimeTableManager.tooltip.SetActive(true);
+        TimeTableManager.tooltip.transform.Find("Title").gameObject.GetComponent<TMP_Text>().text=activity.name;
+        var stats=TimeTableManager.tooltip.transform.Find("Stats").gameObject;
+        Tuple<string, string> stat=GetStat();
+        stats.transform.Find("Up").gameObject.GetComponent<TMP_Text>().text=stat.Item1;
+        stats.transform.Find("Down").gameObject.GetComponent<TMP_Text>().text=stat.Item2;
+    }
+    public void OnLeaveItem(){
+        TimeTableManager.tooltip.SetActive(false);
+    }
+    private Tuple<string,string> GetStat(){
+        var upStr="";
+        var downStr="";
+        if(activity.coding_stat>0) upStr+="코딩 ▲ ";
+        else if(activity.coding_stat>0) downStr+="코딩 ▼ ";
+        if(activity.know_stat>0) upStr+="이론 ▲ ";
+        else if(activity.know_stat>0) downStr+="이론 ▼ ";
+        if(activity.security_stat>0) upStr+="보안 ▲ ";
+        else if(activity.security_stat>0) downStr+="보안 ▼ ";
+        if(activity.sociality_stat>0) upStr+="사회성 ▲ ";
+        else if(activity.sociality_stat>0) downStr+="사회성 ▼ ";
+        if(activity.interest_stat>0) upStr+="흥미 ▲ ";
+        else if(activity.interest_stat>0) downStr+="흥미 ▼ ";
+        if(activity.stress_stat<0) upStr+="스트레스 ▼ ";
+        else if(activity.stress_stat>0) downStr+="스트레스 ▲ ";
+        if(activity.money_stat>0) upStr+="생활비 ▲ ";
+        else if(activity.money_stat>0) downStr+="생활비 ▼ ";
+
+        return new Tuple<string,string>(upStr,downStr);
+    } 
 }
