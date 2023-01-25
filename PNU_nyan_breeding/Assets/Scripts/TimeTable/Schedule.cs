@@ -8,8 +8,9 @@ public class Schedule : MonoBehaviour
     
     public void OnClickSchedule(){
         if(scheduleNo<CalenderController.scheduleCount){
-            CalenderController.scheduleImageList.RemoveAt(scheduleNo);
-            CalenderController.scheduleCount=CalenderController.scheduleImageList.Count;
+            TimeTableManager.selectedMoney-=CalenderController.scheduleList[scheduleNo].money_stat;
+            CalenderController.scheduleList.RemoveAt(scheduleNo);
+            CalenderController.scheduleCount=CalenderController.scheduleList.Count;
         }
     }
 }

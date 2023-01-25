@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FinishButton : MonoBehaviour
 {
@@ -37,6 +38,7 @@ public class FinishButton : MonoBehaviour
         finishButton.gameObject.SetActive(false);
         shield.SetActive(true);
         Debug.Log("Finish!");
-
+        ShareData.fixedScheduleList=CalenderController.scheduleList;
+        SceneManager.LoadScene("TestS");
     }
 }

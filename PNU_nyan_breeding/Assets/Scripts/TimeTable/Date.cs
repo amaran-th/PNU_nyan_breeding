@@ -14,11 +14,4 @@ public class Date : MonoBehaviour
         month.text=TimeTableManager.month+"월";
     }
 
-    void Start(){
-        
-    }
-
-    void Update(){
-        
-    }
 }

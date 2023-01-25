@@ -9,15 +9,14 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 {
     public ScrollRect scrollRect;
     public TMP_Text text;
-    private int id;
-    private string name;
-    private string img_path;
+    private Activity activity;
 
     public void Init(Activity activity){
-        this.id=activity.id;
-        this.name=activity.name;
-        this.img_path=activity.img_path;
-        text.text=name;
+        this.activity=activity;
+        //this.id=activity.id;
+        //this.name=activity.name;
+        //this.img_path=activity.img_path;
+        text.text=activity.name;
         scrollRect=transform.parent.parent.parent.GetComponent<ScrollRect>();
     }
     public void OnBeginDrag(PointerEventData e){
@@ -36,9 +35,13 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         //text.text=TypeButton.GetActivityType().ToString();
         //Debug.Log(img_path);
         if(CalenderController.scheduleCount<3){
-            CalenderController.scheduleImageList.Add(Resources.Load<Sprite>(img_path) as Sprite);
-            //TimeTableManager.calender[CalenderController.scheduleCount].GetComponent<Image>().sprite=Resources.Load<Sprite>("test/oomoo1") as Sprite;
-            CalenderController.scheduleCount=CalenderController.scheduleImageList.Count;
+            if(TimeTableManager.curMoney+TimeTableManager.selectedMoney+activity.money_stat<0){
+                Debug.Log("돈이 부족하다!");
+                return;
+            }
+            CalenderController.scheduleList.Add(activity);
+            CalenderController.scheduleCount=CalenderController.scheduleList.Count;
+            TimeTableManager.selectedMoney+=activity.money_stat;
             Debug.Log(CalenderController.scheduleCount);
         }
     }
