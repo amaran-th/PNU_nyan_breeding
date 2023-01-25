@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: add84273eb20ca7498d7debc6ede101e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainsetting: {instanceID: 0}
+  - soundoption: {instanceID: 0}
+  - saveloadoption: {instanceID: 0}
+  - homeoption: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
