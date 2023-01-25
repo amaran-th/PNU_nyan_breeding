@@ -164,3 +164,30 @@ public class DialogueData : ILoader<int, EndingDialogue>
 }
 
 #endregion
+
+
+#region Standing
+
+[System.Serializable]
+public class Standing : RawData
+{
+    public string name;
+    public string image;
+    public int locationX;
+}
+
+[System.Serializable]
+public class StandingData : ILoader<int, Standing>
+{
+	public Standing[] standingList;  // json 파일에서 여기로 담김
+
+	public Dictionary<int, Standing> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, Standing> dataDict = new Dictionary<int, Standing>();
+		foreach (Standing standing in standingList) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(standing.id, standing); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+#endregion
