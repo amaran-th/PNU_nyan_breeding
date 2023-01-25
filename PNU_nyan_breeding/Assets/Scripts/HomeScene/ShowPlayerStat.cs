@@ -13,7 +13,7 @@ public class ShowPlayerStat : MonoBehaviour
     public Slider InterestStat;
     public Slider StressStat;
 
-    public TMP_Text moneyStat;
+
 
     void Start()
     {
@@ -25,7 +25,6 @@ public class ShowPlayerStat : MonoBehaviour
         InterestStat.value = HomeManager.playerStatData.interest_stat;
         StressStat.value = HomeManager.playerStatData.stress_stat;
 
-        moneyStat.text =  HomeManager.playerStatData.money_stat.ToString();
     }
 
     // Update is called once per frame

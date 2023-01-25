@@ -8,7 +8,11 @@ public class ShowPlayerInfo : MonoBehaviour
 {
     public TMP_Text Name;
     public TMP_Text University;
+    public TMP_Text Grade;
+    public TMP_Text Month;
+    public TMP_Text moneyStat;
     public GameObject Cat;
+    
 
     void Start()
     {
@@ -22,6 +26,11 @@ public class ShowPlayerInfo : MonoBehaviour
             Cat.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Cat/0103삼색이스탠딩") as Sprite;
         else if(HomeManager.playerInfoData.species == 2)
             Cat.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Cat/0103치즈스탠딩") as Sprite;
+
+        Grade.text = HomeManager.playerInfoData.grade.ToString();
+        Month.text = HomeManager.playerInfoData.month.ToString();
+        moneyStat.text =  HomeManager.playerInfoData.money_stat.ToString();
+        
     }
 
     // Update is called once per frame
