@@ -181,8 +181,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uD14C\uC2A4\uD2B8"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 30581a37f23ec8c46bbd46d6b0d49f95, type: 2}
-  m_sharedMaterial: {fileID: -4798788714728380423, guid: 30581a37f23ec8c46bbd46d6b0d49f95, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d6e8dee4d3f0d4c488461955b2178e7c, type: 2}
+  m_sharedMaterial: {fileID: 2095859021403279311, guid: d6e8dee4d3f0d4c488461955b2178e7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -206,15 +206,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -340,6 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbce2f3c1657cde46a27df736b5268be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollRect: {fileID: 0}
   text: {fileID: 3410780231587264330}
 --- !u!114 &6689569604266001391
 MonoBehaviour:
