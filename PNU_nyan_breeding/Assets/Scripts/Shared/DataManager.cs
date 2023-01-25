@@ -16,6 +16,7 @@ public class DataManager: MonoBehaviour
     public Dictionary<int, NPC> npcData=new Dictionary<int, NPC>();
     public Dictionary<int, CatSpecies> catSpeciesDataList =new Dictionary<int, CatSpecies>();
     public Dictionary<int, RandomName> randomNameDataList =new Dictionary<int, RandomName>();
+    public Dictionary<int, EndingDialogue> dialogueList=new Dictionary<int, EndingDialogue>(); 
 
     public void Init()
     {
@@ -25,6 +26,7 @@ public class DataManager: MonoBehaviour
         npcData=LoadJson<NPCData, int, NPC>("Json/npc").MakeDict();
          catSpeciesDataList = (LoadJson<CatSpeciesData, int, CatSpecies>("Json/cat_species").MakeDict());
          randomNameDataList = (LoadJson<RandomNameData, int, RandomName>("Json/random_name").MakeDict());
+        dialogueList = (LoadJson<DialogueData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

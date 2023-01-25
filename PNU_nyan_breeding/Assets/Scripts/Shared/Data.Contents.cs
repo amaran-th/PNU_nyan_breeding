@@ -138,3 +138,29 @@ public class RandomNameData : ILoader<int, RandomName>
 	}
 }
 #endregion
+
+
+#region Diagloue
+
+[System.Serializable]
+public class EndingDialogue : RawData
+{
+    public string name;
+    public string script;
+}
+
+[System.Serializable]
+public class DialogueData : ILoader<int, EndingDialogue>
+{
+	public EndingDialogue[] dialogueList;  // json 파일에서 여기로 담김
+
+	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
+		foreach (EndingDialogue dialogue in dialogueList) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+#endregion

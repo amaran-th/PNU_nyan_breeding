@@ -5,15 +5,19 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+    public static Dictionary<int,EndingDialogue> dialogueList;
     public TextMeshProUGUI textComponent;
-    public string[] lines;
     public float textSpeed;
     private int index;
 
     // Start is called before the first frame update
+    void Awake() {
+        dialogueList = Managers.Data.dialogueList;
+    }
     void Start()
     {
         textComponent.text = string.Empty;
+        Debug.Log(dialogueList[0].script);
         StartDialogue();
     }
 
@@ -22,14 +26,14 @@ public class Dialogue : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
-            if (textComponent.text == lines[index])
+            if (textComponent.text == dialogueList[index].script)
             {
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
+                textComponent.text = dialogueList[index].script;
             }
         }
     }
@@ -42,7 +46,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in lines[index].ToCharArray())
+        foreach (char c in dialogueList[index].script.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -51,7 +55,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
-        if(index < lines.Length - 1)
+        if(index < dialogueList.Count - 1)
         {
             index++;
             textComponent.text = string.Empty;
