@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class TestListItem : MonoBehaviour
+public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IScrollHandler
 {
+    public ScrollRect scrollRect;
     public TMP_Text text;
     private int id;
     private string name;
@@ -16,6 +18,19 @@ public class TestListItem : MonoBehaviour
         this.name=activity.name;
         this.img_path=activity.img_path;
         text.text=name;
+        scrollRect=transform.parent.parent.parent.GetComponent<ScrollRect>();
+    }
+    public void OnBeginDrag(PointerEventData e){
+        scrollRect.OnBeginDrag(e);
+    }
+    public void OnDrag(PointerEventData e){
+        scrollRect.OnDrag(e);
+    }
+    public void OnEndDrag(PointerEventData e){
+        scrollRect.OnEndDrag(e);
+    }
+    public void OnScroll(PointerEventData e){
+        scrollRect.OnScroll(e);
     }
      public void OnClickItem(){ //Activity Type에 따른 텍스트 업데이트
         //text.text=TypeButton.GetActivityType().ToString();

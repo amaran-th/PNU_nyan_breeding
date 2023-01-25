@@ -41,7 +41,7 @@ public class CalenderController : MonoBehaviour
             calender[i].GetComponent<Image>().sprite=scheduleImageList[i];
             }
         for(int i=scheduleCount;i<3;i++){
-            calender[i].GetComponent<Image>().sprite=Resources.Load<Sprite>("Images/Practice/empty") as Sprite;
+            calender[i].GetComponent<Image>().sprite=Resources.Load<Sprite>("Images/Practice/todo_empty") as Sprite;
         }
     }
 }

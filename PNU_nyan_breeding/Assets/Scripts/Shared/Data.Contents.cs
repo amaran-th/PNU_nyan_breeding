@@ -18,6 +18,7 @@ public class Activity : RawData
     public int stress_stat;
     public int money_stat;
     public int flag;
+	public int grade;
 }
 
 [System.Serializable]
