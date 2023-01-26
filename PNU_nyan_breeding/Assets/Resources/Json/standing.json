@@ -3,13 +3,13 @@
     {
       "id": 0,
       "name": "npc1",
-      "image": "cat1.jpg",
+      "image": "Images/temp_dialog_image/cat1",
       "locationX": -244
     },
     {
       "id": 1,
       "name": "주인공",
-      "image": "cat2.jpg",
+      "image": "Images/temp_dialog_image/cat2",
       "locationX": 244
     }
   ]

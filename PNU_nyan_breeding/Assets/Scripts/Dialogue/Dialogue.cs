@@ -56,7 +56,7 @@ public class Dialogue : MonoBehaviour
         index = 0;
         textComponent2.text = dialogueList[index].name;
         var spriteId = staindingId[dialogueList[index].name];
-        tempImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
+        tempImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image) as Sprite;
         tempImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,tempImg.transform.localPosition.y,tempImg.transform.localPosition.z);
         StartCoroutine(TypeLine());
     }
