@@ -11,7 +11,7 @@ public interface ILoader<Key, Value>
 public class DataManager: MonoBehaviour
 {
     public List<Dictionary<int, Activity>> activityDataList=new List<Dictionary<int, Activity>>();
-    private string[] pathList={"Json/activity_study","Json/activity_arbite","Json/activity_leisure","Json/activity_club","Json/activity_competition"};
+    private string[] pathList={"Json/activity_major", "Json/activity_culture","Json/activity_club","Json/activity_leisure","Json/activity_arbite","Json/activity_event"};
     
     public Dictionary<int, NPC> npcData=new Dictionary<int, NPC>();
     public Dictionary<int, CatSpecies> catSpeciesDataList =new Dictionary<int, CatSpecies>();
