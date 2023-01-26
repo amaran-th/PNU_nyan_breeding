@@ -1,0 +1,102 @@
+{
+  "activities": [
+    {
+      "id": 0,
+      "name": "CTF",
+      "img_path": "Images/Practice/",
+      "coding_stat": 0,
+      "know_stat": 1,
+      "security_stat": 4,
+      "sociality_stat": 1,
+      "interest_stat": 2,
+      "stress_stat": 2,
+      "money_stat": 1000,
+      "flag": 0,
+      "grade": -2
+    },
+    {
+      "id": 1,
+      "name": "해커톤",
+      "img_path": "Images/Practice/",
+      "coding_stat": 4,
+      "know_stat": 1,
+      "security_stat": 0,
+      "sociality_stat": 1,
+      "interest_stat": 2,
+      "stress_stat": 2,
+      "money_stat": 1000,
+      "flag": 0,
+      "grade": -4
+    },
+    {
+      "id": 2,
+      "name": "알고리즘 대회",
+      "img_path": "Images/Practice/",
+      "coding_stat": 3,
+      "know_stat": 2,
+      "security_stat": 0,
+      "sociality_stat": 1,
+      "interest_stat": 2,
+      "stress_stat": 2,
+      "money_stat": 1000,
+      "flag": 0,
+      "grade": -6
+    },
+    {
+      "id": 3,
+      "name": "요리대회",
+      "img_path": "Images/Practice/",
+      "coding_stat": 0,
+      "know_stat": 0,
+      "security_stat": 0,
+      "sociality_stat": 1,
+      "interest_stat": -1,
+      "stress_stat": 0,
+      "money_stat": 300,
+      "flag": 0,
+      "grade": -8
+    },
+    {
+      "id": 4,
+      "name": "벚꽃놀이",
+      "img_path": "Images/Practice/",
+      "coding_stat": 0,
+      "know_stat": 0,
+      "security_stat": 0,
+      "sociality_stat": 1,
+      "interest_stat": -1,
+      "stress_stat": -2,
+      "money_stat": -100,
+      "flag": 0,
+      "grade": -4
+    },
+    {
+      "id": 5,
+      "name": "할로윈 축제",
+      "img_path": "Images/Practice/",
+      "coding_stat": 0,
+      "know_stat": 0,
+      "security_stat": 0,
+      "sociality_stat": 3,
+      "interest_stat": -1,
+      "stress_stat": -3,
+      "money_stat": -100,
+      "flag": 0,
+      "grade": -10
+    },
+    {
+      "id": 6,
+      "name": "연말파티",
+      "img_path": "Images/Practice/",
+      "coding_stat": 0,
+      "know_stat": 0,
+      "security_stat": 0,
+      "sociality_stat": 3,
+      "interest_stat": -1,
+      "stress_stat": -3,
+      "money_stat": -100,
+      "flag": 0,
+      "grade": -12
+    }
+  ]
+}

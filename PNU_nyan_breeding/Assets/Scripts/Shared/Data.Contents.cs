@@ -18,6 +18,7 @@ public class Activity : RawData
     public int stress_stat;
     public int money_stat;
     public int flag;
+	public int grade;
 }
 
 [System.Serializable]
@@ -78,6 +79,9 @@ public class PlayerInfo{
     public string name;
     public int species;
     public string university;
+	public int grade;
+	public int month;
+	public int money_stat;
 
 }
 [System.Serializable]
@@ -88,7 +92,6 @@ public class PlayerStat{
     public int sociality_stat;
     public int interest_stat;
     public int stress_stat;
-    public int money_stat;
 }
 
 #endregion

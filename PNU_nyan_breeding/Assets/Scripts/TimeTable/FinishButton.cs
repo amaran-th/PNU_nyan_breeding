@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FinishButton : MonoBehaviour
 {
     public GameObject practiceSelect;
     public Button finishButton;
+    public GameObject shield;
     void Start(){
+        shield.SetActive(false);
         UpdateFinishButton();
     }
     void Update()
@@ -33,6 +36,9 @@ public class FinishButton : MonoBehaviour
         //TODO 메모장 치우는 애니메이션 추가
         practiceSelect.SetActive(false);
         finishButton.gameObject.SetActive(false);
+        shield.SetActive(true);
         Debug.Log("Finish!");
+        ShareData.fixedScheduleList=CalenderController.scheduleList;
+        SceneManager.LoadScene("TestS");
     }
 }

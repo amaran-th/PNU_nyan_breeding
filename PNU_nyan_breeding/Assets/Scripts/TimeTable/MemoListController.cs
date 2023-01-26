@@ -43,6 +43,7 @@ public class MemoListController : MonoBehaviour
         RemoveItemList();
         for(int i=0;i<activityDict.Count;i++){
             var activity=(Activity)activityDict[i];
+            if(activity.grade!=0&&!(activity.grade==TimeTableManager.grade||activity.grade==-TimeTableManager.month)) continue;
             var listItem=Instantiate(listItemGO, contents); //자식 객체 생성
             listItem.transform.SetParent(GameObject.Find("Content").transform); //위치 설정
             var testListItem=listItem.GetComponent<TestListItem>();
