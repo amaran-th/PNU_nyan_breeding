@@ -1,0 +1,25 @@
+{
+  "dialogueList": [
+    {
+      "id": 0,
+      "name": "npc1",
+      "script": "script script script script script "
+    },
+    {
+      "id": 1,
+      "name": "주인공",
+      "script": "script  script script  script "
+    },
+    {
+      "id": 2,
+      "name": "npc1",
+      "script": "script script "
+    },
+
+    {
+      "id": 3,
+      "name": "npc1",
+      "script": "script script script script "
+    }
+  ]
+}
