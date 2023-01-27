@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class StartButton : MonoBehaviour
         Managers.Player.playerInfoData.species = SelectSpecies.currentSpecies;
         Managers.Player.playerInfoData.grade = 1;
         Managers.Player.playerInfoData.month = 1;
-        Managers.Player.playerInfoData.money_stat = 9999;
+        Managers.Player.playerInfoData.money_stat = 30000;
        
         Managers.Player.SaveData();
+
+        SceneManager.LoadScene("HomeScene");
     }
 }
