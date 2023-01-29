@@ -5,9 +5,10 @@ using UnityEngine;
 public class ShareData : MonoBehaviour
 {
     static ShareData s_instance;
-    static ShareData Instance { get { Init(); return s_instance; } }
+    public static ShareData Instance { get { Init(); return s_instance; } }
     
-    public static List<Activity> fixedScheduleList=new List<Activity>();
+    List<Activity> _schedule=new List<Activity>();
+    public static List<Activity> fixedScheduleList {get{return Instance._schedule;} set{Instance._schedule=value;} }
     
     void Start()
     {
@@ -27,7 +28,10 @@ public class ShareData : MonoBehaviour
 
             DontDestroyOnLoad(obj);
             s_instance = obj.GetComponent<ShareData>();
+
             
         }		
 	}
+
+    
 }
