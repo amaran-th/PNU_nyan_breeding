@@ -51,10 +51,25 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         TimeTableManager.tooltip.transform.position=Input.mousePosition;
         TimeTableManager.tooltip.SetActive(true);
         TimeTableManager.tooltip.transform.Find("Title").gameObject.GetComponent<TMP_Text>().text=activity.name;
+        
         var stats=TimeTableManager.tooltip.transform.Find("Stats").gameObject;
         Tuple<string, string> stat=GetStat();
         stats.transform.Find("Up").gameObject.GetComponent<TMP_Text>().text=stat.Item1;
         stats.transform.Find("Down").gameObject.GetComponent<TMP_Text>().text=stat.Item2;
+
+        var money=TimeTableManager.tooltip.transform.Find("Money").gameObject;
+        TMP_Text moneyText=money.transform.Find("Amount").gameObject.GetComponent<TMP_Text>();
+        if(activity.money_stat==0) return;
+        moneyText.text=activity.money_stat+"냥";
+        if(activity.money_stat>0){
+            moneyText.text+="수입";
+            moneyText.color=new Color(0.4666667f,0.6455813f,0.7843137f,1f);
+        }else if(activity.money_stat<0){
+            moneyText.text+="지출";
+            moneyText.color=new Color(1f, 0.5026245f, 0.4283019f, 1f);
+        }
+        
+        
     }
     public void OnLeaveItem(){
         TimeTableManager.tooltip.SetActive(false);
@@ -74,8 +89,6 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         else if(activity.interest_stat>0) downStr+="흥미 ▼ ";
         if(activity.stress_stat<0) upStr+="스트레스 ▼ ";
         else if(activity.stress_stat>0) downStr+="스트레스 ▲ ";
-        if(activity.money_stat>0) upStr+="생활비 ▲ ";
-        else if(activity.money_stat>0) downStr+="생활비 ▼ ";
 
         return new Tuple<string,string>(upStr,downStr);
     } 
