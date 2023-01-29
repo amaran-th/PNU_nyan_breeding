@@ -16,7 +16,7 @@ public class ShowStat : MonoBehaviour
             statItem.name = "statObj";//자식객체 이름 설정
             statItem.transform.localPosition=new Vector3(0f,70f+ -i*30f, 0f); 
 
-            Debug.Log(MonthlyResultManager.Diff[i]);
+        
             if(MonthlyResultManager.Diff[i]>0){
                 statItem.transform.Find("Origin").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i];
                 statItem.transform.Find("Change").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i] + MonthlyResultManager.Diff[i];
@@ -26,7 +26,9 @@ public class ShowStat : MonoBehaviour
                 statItem.transform.Find("Origin").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i] + MonthlyResultManager.Diff[i];
 
                 statItem.transform.Find("Change").Find("Fill Area").Find("Fill").GetComponent<Image>().color  = new Color(0,0,255); //파란색
-
+            }
+            else{
+                statItem.transform.Find("Origin").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i];
             }
         }
     }
