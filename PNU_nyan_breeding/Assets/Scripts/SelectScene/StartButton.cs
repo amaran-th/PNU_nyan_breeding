@@ -15,7 +15,7 @@ public class StartButton : MonoBehaviour
         Managers.Player.playerInfoData.university = UniversityInputField.text;
         Managers.Player.playerInfoData.species = SelectSpecies.currentSpecies;
         Managers.Player.playerInfoData.grade = 1;
-        Managers.Player.playerInfoData.month = 1;
+        Managers.Player.playerInfoData.month = 3;
         Managers.Player.playerInfoData.money_stat = 30000;
        
         Managers.Player.SaveData();

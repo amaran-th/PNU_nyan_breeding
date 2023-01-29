@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class TimeTableManager : MonoBehaviour
 {
     public static List<Dictionary<int, Activity>> activityDataList;   //DataManager를 통해 로드된 활동 데이터
-    public static int grade=1;
-    public static int month=12;
-    public static int curMoney=300;
+    public static int grade=Managers.Player.playerInfoData.grade;
+    public static int month=Managers.Player.playerInfoData.month;
+    public static int curMoney=Managers.Player.playerInfoData.money_stat;
     public static int selectedMoney=0;
     public static GameObject tooltip;
     public GameObject shareData;
