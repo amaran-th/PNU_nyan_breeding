@@ -15,8 +15,7 @@ public class TimeTableManager : MonoBehaviour
 
     void Awake(){
         //Json 파일로부터 데이터 로드
-        activityDataList = Managers.Data.activityDataList;
-        DontDestroyOnLoad(shareData);  
+        activityDataList = Managers.Data.activityDataList; 
         tooltip = GameObject.Find("Tooltip");
         tooltip.SetActive(false);
     }

@@ -11,7 +11,7 @@ public class CalenderController : MonoBehaviour
     //캘린더
     public static int scheduleCount;
     int newCount=0;
-    public static List<Activity> scheduleList=new List<Activity>();
+    public static List<Activity> scheduleList;
 
     //캘린더의 크기(선택된 활동 개수) 변할 때마다
     public int detectScheduleCount{
@@ -27,6 +27,7 @@ public class CalenderController : MonoBehaviour
     }
     void Awake(){
         scheduleCount=0;
+        scheduleList=new List<Activity>();
     }
 
     void Start(){ 
