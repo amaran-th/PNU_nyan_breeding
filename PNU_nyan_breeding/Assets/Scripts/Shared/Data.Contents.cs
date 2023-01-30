@@ -19,6 +19,10 @@ public class Activity : RawData
     public int money_stat;
     public int flag;
 	public int grade;
+
+	public List<int> GetStatList(){
+		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, stress_stat, money_stat};
+	}
 }
 
 [System.Serializable]
@@ -82,7 +86,13 @@ public class PlayerInfo{
 	public int grade;
 	public int month;
 	public int money_stat;
-
+	
+	//grade, month, money 업데이트
+	public void UpdateInfo(int moneyDiff){
+		if(month==2) grade+=1;
+		month=(month+1)%12;
+		money_stat+=moneyDiff;
+	}
 }
 [System.Serializable]
 public class PlayerStat{
@@ -92,6 +102,19 @@ public class PlayerStat{
     public int sociality_stat;
     public int interest_stat;
     public int stress_stat;
+
+	public List<int> GetStatList(){
+		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, stress_stat};
+	}
+	public void UpdateStat(List<int> diff){
+		coding_stat += diff[0];
+        know_stat   += diff[1];
+        security_stat   += diff[2];
+        sociality_stat  += diff[3];
+        interest_stat   += diff[4];
+        stress_stat += diff[5];
+        
+	}
 }
 
 #endregion

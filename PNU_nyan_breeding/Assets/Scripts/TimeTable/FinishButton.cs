@@ -39,6 +39,6 @@ public class FinishButton : MonoBehaviour
         shield.SetActive(true);
         Debug.Log("Finish!");
         ShareData.fixedScheduleList=CalenderController.scheduleList;
-        SceneManager.LoadScene("TestS");
+        SceneManager.LoadScene("MonthlyResultScene");
     }
 }
