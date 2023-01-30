@@ -3,17 +3,17 @@
     {
       "id": 0,
       "name": "고등어",
-      "img_path": "Images/Cat/0109고등어프로필"
+      "img_path": "Images/Cat/profile_go"
     },
     {
       "id": 1,
       "name": "삼색이",
-      "img_path": "Images/Cat/0109삼색이프로필"
+      "img_path": "Images/Cat/profile_sam"
     },
     {
       "id": 2,
       "name": "치즈",
-      "img_path": "Images/Cat/0109치즈프로필"
+      "img_path": "Images/Cat/profile_ch"
     }
   ]
 }
