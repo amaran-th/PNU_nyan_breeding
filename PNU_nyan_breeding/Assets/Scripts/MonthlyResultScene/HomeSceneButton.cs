@@ -11,6 +11,7 @@ public class HomeSceneButton : MonoBehaviour
         MonthlyResultManager.playerStatData.UpdateStat(MonthlyResultManager.Diff);
         //===========================
         MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.Diff[6]);
+        ShareData.fixedScheduleList=new List<Activity>();
         SceneManager.LoadScene("HomeScene");
     }
 }
