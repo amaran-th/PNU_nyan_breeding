@@ -9,15 +9,12 @@ public class StartButton : MonoBehaviour
 {
     public TMP_InputField NameInputField;
     public TMP_InputField UniversityInputField;
-    public bool flag = false;
     
     public void OnClickStartButton(){
         if (NameInputField.text == "" || UniversityInputField.text == "" ){
            ModalManager.instance.OpenModal("이름 또는 대학을 입력해주세요!");
         }
         else{
-            flag=true;
-
             Managers.Player.playerInfoData.name = NameInputField.text;
             Managers.Player.playerInfoData.university = UniversityInputField.text;
             Managers.Player.playerInfoData.species = SelectSpecies.currentSpecies;
@@ -27,12 +24,8 @@ public class StartButton : MonoBehaviour
         
             Managers.Player.SaveData();
 
-            Invoke("NextScene", 1f);
+            SceneManager.LoadScene("HomeScene");
         }
         
-    }
-
-    public void NextScene() {
-        SceneManager.LoadScene("HomeScene");
     }
 }

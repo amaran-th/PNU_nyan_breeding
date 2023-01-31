@@ -11,6 +11,11 @@ public class FinishButton : MonoBehaviour
     public GameObject shield;
     public bool flag;
 
+
+    private float speed = 0.1f;
+    Animator anim;
+    bool movefig;
+
     void Start(){
         shield.SetActive(false);
         UpdateFinishButton();
@@ -45,7 +50,7 @@ public class FinishButton : MonoBehaviour
         Debug.Log("Finish!");
         ShareData.fixedScheduleList=CalenderController.scheduleList;
 
-        Invoke("NextScene", 1f);
+        Invoke("NextScene", 1.5f);
         //SceneManager.LoadScene("MonthlyResultScene");
     }
 
