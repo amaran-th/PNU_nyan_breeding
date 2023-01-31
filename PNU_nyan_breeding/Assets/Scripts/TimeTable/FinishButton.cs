@@ -50,7 +50,7 @@ public class FinishButton : MonoBehaviour
         Debug.Log("Finish!");
         ShareData.fixedScheduleList=CalenderController.scheduleList;
 
-        Invoke("NextScene", 1.5f);
+        Invoke("NextScene", 1.0f);
         //SceneManager.LoadScene("MonthlyResultScene");
     }
 
