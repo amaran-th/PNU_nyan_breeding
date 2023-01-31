@@ -4,23 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class FinishButton : MonoBehaviour
+public class FinishButton1 : MonoBehaviour
 {
     public GameObject practiceSelect;
     public Button finishButton;
     public GameObject shield;
-    public bool flag;
-
-
-    private float speed = 0.1f;
-    Animator anim;
-    bool movefig;
-
     void Start(){
         shield.SetActive(false);
         UpdateFinishButton();
-
-        flag = false;
     }
     void Update()
     {
@@ -43,19 +34,11 @@ public class FinishButton : MonoBehaviour
 
     public void OnClickFinishButton(){
         //TODO 메모장 치우는 애니메이션 추가
-        //practiceSelect.SetActive(false);
-        flag=true;
+        practiceSelect.SetActive(false);
         finishButton.gameObject.SetActive(false);
         shield.SetActive(true);
         Debug.Log("Finish!");
         ShareData.fixedScheduleList=CalenderController.scheduleList;
-
-        Invoke("NextScene", 1.5f);
-        //SceneManager.LoadScene("MonthlyResultScene");
-    }
-
-    public void NextScene() {
         SceneManager.LoadScene("MonthlyResultScene");
     }
-
 }
