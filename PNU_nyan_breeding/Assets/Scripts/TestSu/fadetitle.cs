@@ -38,7 +38,7 @@ public class fadetitle : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && fade) {
             Debug.Log("click");
-            //PlayFadeIn();
+            //PlayFadeIn();   
             StartCoroutine("FadeIn");
         }
     }

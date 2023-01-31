@@ -28,7 +28,7 @@ EditorBuildSettings:
     guid: c5ca28bdb6c20734c93d01b04396e23e
   - enabled: 1
     path: Assets/Scenes/SettingScene.unity
-    guid: d568e43864342994cb92431cb163c10b
+    guid: a3c8ac9e0284b774286e9a00c5a6b48f
   - enabled: 1
     path: Assets/Scenes/TestMS.unity
     guid: 0ffbac8514399f54d9bd752f9a241723
@@ -40,7 +40,7 @@ EditorBuildSettings:
     guid: 6e9c97822b578444b975c84e5197fbc9
   - enabled: 1
     path: Assets/Scenes/TitleScene.unity
-    guid: b7eefd81cb9322d4a85565ae9ddb45f5
+    guid: 49e30accfb3a30747863e5f2f4cd887b
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: e20cadafd76207f4787b971ed1c35d17
