@@ -38,7 +38,8 @@ public class startgame : MonoBehaviour
         }
         if(time>=2 && stopIn==false){
             stopIn = true;
-            time = 0;                
+            time = 0;
+            fadeImage.gameObject.SetActive(false);             
             Debug.Log("StopIn");
         }
         if(time>=2 && stopOut==false){
