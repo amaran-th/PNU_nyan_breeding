@@ -2,24 +2,98 @@
   "dialogueList": [
     {
       "id": 0,
-      "name": "npc1",
-      "script": "script script script script script "
+      "name": "교수님",
+      "script": "EMPloyment"
     },
     {
       "id": 1,
-      "name": "주인공",
+      "name": "깜냥이",
       "script": "script  script script  script "
     },
     {
       "id": 2,
-      "name": "npc1",
+      "name": "교수님",
       "script": "script script "
     },
 
     {
       "id": 3,
-      "name": "npc1",
+      "name": "교수님",
       "script": "script script script script "
+    }
+  ],
+  "employmentEnd": [
+    {
+      "id": 0,
+      "name": "교수님",
+      "script": "EMPloyment"
+    },
+    {
+      "id": 1,
+      "name": "깜냥이",
+      "script": "script  script script  script "
+    },
+    {
+      "id": 2,
+      "name": "교수님",
+      "script": "script script "
+    },
+
+    {
+      "id": 3,
+      "name": "교수님",
+      "script": "script script script script "
+    }
+  ],
+  "joblessEnd": [
+    {
+      "id": 0,
+      "name": "교수님",
+      "script": "joblessEnd"
+    },
+    {
+      "id": 1,
+      "name": "깜냥이",
+      "script": "script  script script  script "
+    },
+    {
+      "id": 2,
+      "name": "교수님",
+      "script": "script script "
+    },
+
+    {
+      "id": 3,
+      "name": "교수님",
+      "script": "script script script script "
+    }
+  ],
+  "graduateSchoolEnd": [
+    {
+      "id": 0,
+      "name": "깜냥이",
+      "script": "graduate ending "
+    },
+    {
+      "id": 1,
+      "name": "나레이션",
+      "script": "blah blah i've done an wrong decision"
+    },
+    {
+      "id": 2,
+      "name": "교수님",
+      "script": "welcome to my lab"
+    },
+
+    {
+      "id": 3,
+      "name": "나레이션",
+      "script": "but i had no choice my spec was too low to get a job"
+    },
+    {
+      "id": 4,
+      "name": "나레이션",
+      "script": "this was my only choice..."
     }
   ]
 }
