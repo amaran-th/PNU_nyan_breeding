@@ -1,0 +1,19 @@
+{
+  "illustList": [
+    {
+      "id": 0,
+      "name": "employmentEnd",
+      "img_path": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 1,
+      "name": "joblessEnd",
+      "img_path": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 2,
+      "name": "graduateSchoolEnd",
+      "img_path": "Images/EndingIllust/graduateSchool"
+    }
+  ]
+}
