@@ -15,13 +15,14 @@ public class Activity : RawData
     public int security_stat;
     public int sociality_stat;
     public int interest_stat;
+	public int creative_stat;
     public int stress_stat;
     public int money_stat;
     public int flag;
 	public int grade;
 
 	public List<int> GetStatList(){
-		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, stress_stat, money_stat};
+		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, creative_stat, stress_stat, money_stat};
 	}
 }
 
@@ -101,10 +102,11 @@ public class PlayerStat{
     public int security_stat;
     public int sociality_stat;
     public int interest_stat;
+	public int creative_stat;
     public int stress_stat;
 
 	public List<int> GetStatList(){
-		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, stress_stat};
+		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat,creative_stat, stress_stat};
 	}
 	public void UpdateStat(List<int> diff){
 		coding_stat += diff[0];
@@ -112,7 +114,8 @@ public class PlayerStat{
         security_stat   += diff[2];
         sociality_stat  += diff[3];
         interest_stat   += diff[4];
-        stress_stat += diff[5];
+		creative_stat += diff[5];
+        stress_stat += diff[6];
         
 	}
 }

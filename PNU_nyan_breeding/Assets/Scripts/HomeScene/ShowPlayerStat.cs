@@ -6,25 +6,21 @@ using TMPro;
 
 public class ShowPlayerStat : MonoBehaviour
 {
-    public Slider CodingStat;
-    public Slider KnowStat;
-    public Slider SecurityStat;
-    public Slider SocialityStat;
-    public Slider InterestStat;
-    public Slider StressStat;
-
-
-
+    public GameObject stat; // stat prefabs
+    
+    //     CodingStat.value = HomeManager.playerStatData.coding_stat;
     void Start()
     {
- 
-        CodingStat.value = HomeManager.playerStatData.coding_stat;
-        KnowStat.value = HomeManager.playerStatData.know_stat;
-        SecurityStat.value = HomeManager.playerStatData.security_stat;
-        SocialityStat.value = HomeManager.playerStatData.sociality_stat;
-        InterestStat.value = HomeManager.playerStatData.interest_stat;
-        StressStat.value = HomeManager.playerStatData.stress_stat;
+        
+          for(int i=0;i<7;i++){//money stat제외
+            
+            var statItem=Instantiate(stat,transform); //자식 객체 생성
+            statItem.name = "statObj";//자식객체 이름 설정
+            statItem.transform.localPosition=new Vector3(0f,200f+ -i*60f, 0f); 
 
+        
+            statItem.transform.Find("Origin").GetComponent<Slider>().value = HomeManager.playerStat[i];
+        }
     }
 
     // Update is called once per frame

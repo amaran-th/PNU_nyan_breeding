@@ -10,11 +10,11 @@ public class ShowStat : MonoBehaviour
     
     void Start()
     {
-          for(int i=0;i<6;i++){//money stat제외
+          for(int i=0;i<7;i++){//money stat제외
             
             var statItem=Instantiate(stat,transform); //자식 객체 생성
             statItem.name = "statObj";//자식객체 이름 설정
-            statItem.transform.localPosition=new Vector3(0f,70f+ -i*30f, 0f); 
+            statItem.transform.localPosition=new Vector3(0f,200f+ -i*60f, 0f); 
 
         
             if(MonthlyResultManager.Diff[i]>0){

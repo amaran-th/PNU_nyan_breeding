@@ -6,11 +6,14 @@ public class HomeManager : MonoBehaviour
 {
     public static PlayerInfo playerInfoData;
     public static PlayerStat playerStatData;
+
+    public static List<int> playerStat = new List<int>();
+
     void Awake()
     {
         playerInfoData = Managers.Player.playerInfoData;  
         playerStatData = Managers.Player.playerStatData;  
-        Debug.Log(playerInfoData.name);
+        playerStat = playerStatData.GetStatList();
     }
 
     // Update is called once per frame
