@@ -3,19 +3,19 @@
     {
       "id": 0,
       "name": "교수님",
-      "image": "Images/temp_dialog_image/cat1",
+      "image": "Images/StandingImage/cat1",
       "locationX": -244
     },
     {
       "id": 1,
       "name": "깜냥이",
-      "image": "Images/temp_dialog_image/cat2",
+      "image": "Images/StandingImage/cat2",
       "locationX": 244
     },
     {
       "id": 2,
       "name": "나레이션",
-      "image": "Images/temp_dialog_image/narration",
+      "image": "Images/StandingImage/narration",
       "locationX": 244
     }
   ]

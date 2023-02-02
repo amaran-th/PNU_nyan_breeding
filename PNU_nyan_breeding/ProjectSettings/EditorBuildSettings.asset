@@ -38,9 +38,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TimeTableScene.unity
     guid: 6e9c97822b578444b975c84e5197fbc9
-  - enabled: 1
-    path: Assets/Scenes/TitleScene.unity
-    guid: 49e30accfb3a30747863e5f2f4cd887b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: e20cadafd76207f4787b971ed1c35d17
