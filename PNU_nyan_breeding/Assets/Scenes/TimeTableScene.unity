@@ -5977,9 +5977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plan: {fileID: 1128930943}
-  firstActivity: {fileID: 707477693}
-  secondActivity: {fileID: 2048029524}
-  thirdActivity: {fileID: 793052408}
+  activities:
+  - {fileID: 707477693}
+  - {fileID: 2048029524}
+  - {fileID: 793052408}
 --- !u!224 &1990404998
 RectTransform:
   m_ObjectHideFlags: 0
