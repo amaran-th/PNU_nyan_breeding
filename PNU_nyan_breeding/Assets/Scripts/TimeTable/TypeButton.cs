@@ -27,9 +27,6 @@ public class TypeButton : MonoBehaviour
         }
     }
     public void OnClickTypeButton(){
-        MemoListController.currentType=(ActivityType)type; //type 업데이트
-        
-        //TimeTableManager.onTypeChange(); //목록 업데이트
-        Debug.Log(type);    
+        MemoListController.currentType=(ActivityType)type; //type 업데이트   
     }
 }

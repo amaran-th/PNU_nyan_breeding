@@ -48,7 +48,10 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
     }
     public void OnHoverItem(){
-        TimeTableManager.tooltip.transform.position=Input.mousePosition;
+        Vector3 temp=transform.position;
+        temp.x-=15f;
+        temp.y+=10f;
+        TimeTableManager.tooltip.transform.position=temp;
         TimeTableManager.tooltip.SetActive(true);
         TimeTableManager.tooltip.transform.Find("Title").gameObject.GetComponent<TMP_Text>().text=activity.name;
         
