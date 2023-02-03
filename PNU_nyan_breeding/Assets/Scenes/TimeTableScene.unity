@@ -2099,8 +2099,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035, y: 0}
-  m_SizeDelta: {x: 323.46, y: 100}
+  m_AnchoredPosition: {x: -8.475001, y: 0}
+  m_SizeDelta: {x: 350.05, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685596238
 MonoBehaviour:
@@ -2156,7 +2156,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -0.00001526367, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4618,6 +4618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contents: {fileID: 265719339}
   listItemGO: {fileID: 4642632345504684490, guid: 418c14e7dcac8514f8666771f43a89a3, type: 3}
+  categoryName: {fileID: 1728941672}
 --- !u!4 &1621464979
 Transform:
   m_ObjectHideFlags: 0
@@ -5569,7 +5570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 263.98, y: 60}
+  m_AnchoredPosition: {x: 255.98, y: 60}
   m_SizeDelta: {x: 198, y: 547.372}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1921680502

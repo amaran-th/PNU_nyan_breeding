@@ -4,7 +4,7 @@ using UnityEngine;
 
     //열거형
 public enum ActivityType{
-    Study, Arbite, Leisure, Club, Competition
+    Major, Culture, Club, Leisure,Arbite, Event
 }
     
     
