@@ -22,7 +22,10 @@ public class Activity : RawData
 	public int grade;
 
 	public List<int> GetStatList(){
-		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, creative_stat, stress_stat, money_stat};
+		return new List<int>(){coding_stat, know_stat, security_stat, sociality_stat, interest_stat, creative_stat, stress_stat};
+	}
+	public int GetMoney(){
+		return money_stat;
 	}
 }
 
@@ -87,12 +90,14 @@ public class PlayerInfo{
 	public int grade;
 	public int month;
 	public int money_stat;
+	public int[] npc_bond;
 	
 	//grade, month, money 업데이트
-	public void UpdateInfo(int moneyDiff){
+	public void UpdateInfo(int moneyDiff, int npcId){
 		if(month==2) grade+=1;
 		month=(month+1)%12;
 		money_stat+=moneyDiff;
+		if(npcId!=-1) npc_bond[npcId]+=1;
 	}
 }
 [System.Serializable]

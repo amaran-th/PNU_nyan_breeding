@@ -8,11 +8,10 @@ using TMPro;
 
 public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler,IScrollHandler
 {
-    public ScrollRect scrollRect;
     public TMP_Text text;
     
     private Activity activity;
-    
+    private ScrollRect scrollRect;
     public void Init(Activity activity){
         this.activity=activity;
         //this.id=activity.id;

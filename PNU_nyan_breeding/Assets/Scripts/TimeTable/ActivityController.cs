@@ -28,7 +28,9 @@ public class ActivityController : MonoBehaviour
         }
     }
 
-    
+    public void ViewActivity(){
+        Invoke("ViewFirstActivity",1f);
+    }
     void ViewFirstActivity(){
         trigger=false;
         activities[0].SetActive(true);
@@ -50,10 +52,7 @@ public class ActivityController : MonoBehaviour
 
     void NextScene() {
         ShareData.fixedScheduleList=CalenderController.scheduleList;
-        SceneManager.LoadScene("MonthlyResultScene");
+        SceneManager.LoadScene("MapScene");
     }
-    public void ViewActivity(){
-        Debug.Log("aaa");
-        Invoke("ViewFirstActivity",1f);
-    }
+    
 }
