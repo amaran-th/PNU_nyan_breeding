@@ -9,6 +9,9 @@ public class ShareData : MonoBehaviour
     
     List<Activity> _schedule=new List<Activity>();
     public static List<Activity> fixedScheduleList {get{return Instance._schedule;} set{Instance._schedule=value;} }
+
+    int _npcId=-1;
+    public static int selectedNPCId {get{return Instance._npcId;} set{Instance._npcId=value;} }
     
     void Start()
     {

@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class MemoListController : MonoBehaviour
 {
     public RectTransform contents;
     public GameObject listItemGO;
+    public TMP_Text categoryName;
 
     //활동 카테고리
-    public static ActivityType currentType = ActivityType.Study;
-    ActivityType newType = ActivityType.Study;
+    public static ActivityType currentType = ActivityType.Major;
+    ActivityType newType = ActivityType.Major;
 
     //활동 카테고리가 변할 때마다
     public ActivityType detectType{
@@ -24,7 +26,7 @@ public class MemoListController : MonoBehaviour
         }
     }
     void Awake(){
-        currentType=ActivityType.Study; //초기 활동을 [수업듣기]로 설정
+        currentType=ActivityType.Major; //초기 활동을 [수업듣기]로 설정
     }
     void Start()
     {
@@ -39,6 +41,7 @@ public class MemoListController : MonoBehaviour
 
     //활동 카테고리가 바뀔 때마다 활동 목록을 새로 Display한다.
     public void UpdateItemList(ActivityType type){
+        categoryName.text=ConvertTypeToStr(newType);
         var activityDict=TimeTableManager.activityDataList[(int)type];
         RemoveItemList();
         for(int i=0;i<activityDict.Count;i++){
@@ -52,6 +55,14 @@ public class MemoListController : MonoBehaviour
             //transform.SetParent(GameObject.Find("Content").transform);
         
         }
+    }
+    string ConvertTypeToStr(ActivityType type){
+        if(type==ActivityType.Major) return "전공 수업";
+        if(type==ActivityType.Culture) return "교양 수업";
+        if(type==ActivityType.Club) return "동아리";
+        if(type==ActivityType.Leisure) return "여가 활동";
+        if(type==ActivityType.Arbite) return "알바";
+        return "이벤트";
     }
     public void RemoveItemList(){
         Transform[] oldItemList = GameObject.Find("Content").GetComponentsInChildren<Transform>();

@@ -24,6 +24,7 @@ public class StartButton : MonoBehaviour
             Managers.Player.playerInfoData.grade = 1;
             Managers.Player.playerInfoData.month = 3;
             Managers.Player.playerInfoData.money_stat = 30000;
+            Managers.Player.playerInfoData.npc_bond = new int[4]{0,0,0,0};
         
             Managers.Player.SaveData();
 

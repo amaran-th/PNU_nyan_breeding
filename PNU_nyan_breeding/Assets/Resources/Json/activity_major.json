@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "이산수학",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 0,
       "know_stat": 6,
       "security_stat": 1,
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "name": "확률통계",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 0,
       "know_stat": 6,
       "security_stat": 1,
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "파이썬 프로그래밍",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 4,
       "know_stat": 2,
       "security_stat": 0,
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "프로그래밍 실습",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 4,
       "know_stat": 2,
       "security_stat": 0,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "인터넷과 웹기초",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 3,
       "know_stat": 3,
       "security_stat": 1,
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "보안의 기초",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 0,
       "know_stat": 2,
       "security_stat": 5,
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "name": "해킹 기초",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 0,
       "know_stat": 2,
       "security_stat": 5,
@@ -108,7 +108,7 @@
     {
       "id": 7,
       "name": "컴퓨터 시스템 이론",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 5,
       "security_stat": 1,
@@ -123,7 +123,7 @@
     {
       "id": 8,
       "name": "공학선형대수학",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 0,
       "know_stat": 6,
       "security_stat": 1,
@@ -138,7 +138,7 @@
     {
       "id": 9,
       "name": "이산수학2",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 2,
       "know_stat": 4,
       "security_stat": 1,
@@ -153,7 +153,7 @@
     {
       "id": 10,
       "name": "C언어 프로그래밍",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 5,
       "know_stat": 1,
       "security_stat": 1,
@@ -168,7 +168,7 @@
     {
       "id": 11,
       "name": "AI 프로그래밍",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 3,
       "know_stat": 3,
       "security_stat": 1,
@@ -183,7 +183,7 @@
     {
       "id": 12,
       "name": "보안 응용",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 2,
       "security_stat": 4,
@@ -198,7 +198,7 @@
     {
       "id": 13,
       "name": "해킹 심화",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 1,
       "security_stat": 5,
@@ -213,7 +213,7 @@
     {
       "id": 14,
       "name": "C++ 프로그래밍",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 5,
       "know_stat": 2,
       "security_stat": 0,
@@ -228,7 +228,7 @@
     {
       "id": 15,
       "name": "알고리즘",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 2,
       "know_stat": 4,
       "security_stat": 1,
@@ -243,7 +243,7 @@
     {
       "id": 16,
       "name": "리눅스 실습",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 2,
       "know_stat": 3,
       "security_stat": 2,
@@ -258,7 +258,7 @@
     {
       "id": 17,
       "name": "네트워크",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 5,
       "security_stat": 1,
@@ -273,7 +273,7 @@
     {
       "id": 18,
       "name": "운영체제 이론",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 6,
       "security_stat": 0,
@@ -288,7 +288,7 @@
     {
       "id": 19,
       "name": "컴퓨터 구조 이론",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 5,
       "security_stat": 0,
@@ -303,7 +303,7 @@
     {
       "id": 20,
       "name": "설계공학 이론",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 5,
       "security_stat": 0,
@@ -318,7 +318,7 @@
     {
       "id": 21,
       "name": "네트워크 보안",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 1,
       "security_stat": 5,
@@ -333,7 +333,7 @@
     {
       "id": 22,
       "name": "해킹 실습",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 2,
       "know_stat": 1,
       "security_stat": 4,
@@ -348,7 +348,7 @@
     {
       "id": 23,
       "name": "정보보안",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 1,
       "know_stat": 1,
       "security_stat": 5,
@@ -363,7 +363,7 @@
     {
       "id": 24,
       "name": "웹해킹",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 3,
       "know_stat": 1,
       "security_stat": 3,
@@ -378,7 +378,7 @@
     {
       "id": 25,
       "name": "모바일해킹",
-      "img_path": "Images/Practice/",
+      "img_path": "Images/Practice/todo_pink",
       "coding_stat": 3,
       "know_stat": 1,
       "security_stat": 3,

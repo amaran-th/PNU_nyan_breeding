@@ -8,6 +8,7 @@ public class ToBadEnding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(MonthlyResultManager.playerStatData.stress_stat>=50) 
         {
             if(Input.GetMouseButtonDown(0)) 
@@ -15,5 +16,6 @@ public class ToBadEnding : MonoBehaviour
                 SceneManager.LoadScene("EndingScene");
             }
         }
+        */
     }
 }

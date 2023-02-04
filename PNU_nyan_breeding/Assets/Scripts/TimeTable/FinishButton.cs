@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class FinishButton : MonoBehaviour
 {
@@ -10,7 +9,6 @@ public class FinishButton : MonoBehaviour
     public Button finishButton;
     public GameObject shield;
     public bool flag;
-
 
     private float speed = 0.1f;
     Animator anim;
@@ -47,15 +45,7 @@ public class FinishButton : MonoBehaviour
         flag=true;
         finishButton.gameObject.SetActive(false);
         shield.SetActive(true);
-        Debug.Log("Finish!");
-        ShareData.fixedScheduleList=CalenderController.scheduleList;
-
-        Invoke("NextScene", 1.0f);
-        //SceneManager.LoadScene("MonthlyResultScene");
-    }
-
-    public void NextScene() {
-        SceneManager.LoadScene("MonthlyResultScene");
+        ActivityController.trigger=true;
     }
 
 }
