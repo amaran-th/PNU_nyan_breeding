@@ -14,8 +14,11 @@ public class OKButton : MonoBehaviour
         SceneManager.LoadScene("MonthlyResultScene");
     }
     public void OnClickLottoOK(){
-        ShareData.lotto=Random.Range(0,100);
+        //ShareData.lotto=Random.Range(0,100);
+        ShareData.isLotto=true;
         SceneManager.LoadScene("MonthlyResultScene");
+        
+        
     }
 
 }
