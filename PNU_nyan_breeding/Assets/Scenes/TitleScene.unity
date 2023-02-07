@@ -305,8 +305,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animTime: 3
-  fadeText: {fileID: 0}
-  fade: 1
+  fadeImage: {fileID: 413122328}
+  loadbtn: {fileID: 689957297}
+  newbtn: {fileID: 413122325}
 --- !u!1 &448457147
 GameObject:
   m_ObjectHideFlags: 0
@@ -675,8 +676,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animTime: 3
-  fadeText: {fileID: 0}
-  fade: 1
+  fadeImage: {fileID: 689957300}
+  loadbtn: {fileID: 689957297}
+  newbtn: {fileID: 413122325}
 --- !u!1 &795812807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,5 +1284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animTime: 3
-  fadeText: {fileID: 0}
-  fade: 1
+  fadeImage: {fileID: 2142799440}
+  loadbtn: {fileID: 689957297}
+  newbtn: {fileID: 413122325}

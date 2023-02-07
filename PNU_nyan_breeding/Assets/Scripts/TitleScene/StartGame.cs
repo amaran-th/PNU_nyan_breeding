@@ -52,31 +52,19 @@ public class StartGame : MonoBehaviour
 
     void PlayFadeIn()  
     {  
-        // 경과 시간 계산.  
         // 2초(animTime)동안 재생될 수 있도록 animTime으로 나누기.  
         time += Time.deltaTime / animTime;  
-
-        // Image 컴포넌트의 색상 값 읽어오기.  
         Color color = fadeImage.color;  
-        // 알파 값 계산.  
         color.a = Mathf.Lerp(start, end, time);  
-        // 계산한 알파 값 다시 설정.  
         fadeImage.color = color;  
-        // Debug.Log(time);
     }  
 
     // 투명->흰색
     void PlayFadeOut()  
     {  
-        // 경과 시간 계산.  
-        // 2초(animTime)동안 재생될 수 있도록 animTime으로 나누기.  
         time += Time.deltaTime / animTime;  
-
-        // Image 컴포넌트의 색상 값 읽어오기.  
         Color color = fadeImage.color;  
-        // 알파 값 계산.  
         color.a = Mathf.Lerp(end, start, time);  //FadeIn과는 달리 start, end가 반대다.
-        // 계산한 알파 값 다시 설정.  
         fadeImage.color = color;  
     }  
 
