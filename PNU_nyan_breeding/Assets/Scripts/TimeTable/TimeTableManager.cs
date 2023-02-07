@@ -7,15 +7,19 @@ using TMPro;
 public class TimeTableManager : MonoBehaviour
 {
     public static List<Dictionary<int, Activity>> activityDataList;   //DataManager를 통해 로드된 활동 데이터
-    public static int grade=Managers.Player.playerInfoData.grade;
-    public static int month=Managers.Player.playerInfoData.month;
-    public static int curMoney=Managers.Player.playerInfoData.money_stat;
-    public static int selectedMoney=0;
+    public static int grade;
+    public static int month;
+    public static int curMoney;
+    public static int selectedMoney;
     public static GameObject tooltip;
     public GameObject dateUI;
     public GameObject moneyUI;
 
     void Awake(){
+        grade=Managers.Player.playerInfoData.grade;
+        month=Managers.Player.playerInfoData.month;
+        curMoney=Managers.Player.playerInfoData.money_stat;
+        selectedMoney=0;
         //Json 파일로부터 데이터 로드
         activityDataList = Managers.Data.activityDataList; 
         tooltip = GameObject.Find("Tooltip");
