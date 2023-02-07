@@ -8,17 +8,13 @@ public class HomeManager : MonoBehaviour
     public static PlayerStat playerStatData;
 
     public static List<int> playerStat = new List<int>();
+    public static Dictionary<int, NPC> npcData;
 
     void Awake()
     {
         playerInfoData = Managers.Player.playerInfoData;  
         playerStatData = Managers.Player.playerStatData;  
         playerStat = playerStatData.GetStatList();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        npcData = Managers.Data.npcData;  
     }
 }
