@@ -13,6 +13,8 @@ public class ShareData : MonoBehaviour
     int _npcId=-1;
     public static int selectedNPCId {get{return Instance._npcId;} set{Instance._npcId=value;} }
     
+    int _lotto=-1;
+    public static int lotto {get{return Instance._lotto;} set{Instance._lotto=value;}}
     void Start()
     {
         Init();

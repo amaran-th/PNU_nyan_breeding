@@ -5,8 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class OKButton : MonoBehaviour
 {
-    public void OnClickButton(){
+    public void OnClickNpcOK(){
         ShareData.selectedNPCId=MapManager.currentNpc;
+        //TODO NpcEventScene으로 보내줄 예정
         SceneManager.LoadScene("MonthlyResultScene");
     }
+    public void OnClickSkipOK(){
+        SceneManager.LoadScene("MonthlyResultScene");
+    }
+    public void OnClickLottoOK(){
+        ShareData.lotto=Random.Range(0,100);
+        SceneManager.LoadScene("MonthlyResultScene");
+    }
+
 }

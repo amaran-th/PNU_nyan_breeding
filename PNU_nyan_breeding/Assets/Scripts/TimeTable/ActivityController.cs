@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class ActivityController : MonoBehaviour
 {
     public GameObject plan;
     public GameObject[] activities=new GameObject[3];
+    public GameObject nextButton;
     public static bool trigger;
     void Awake(){
         trigger=false;
@@ -47,12 +47,11 @@ public class ActivityController : MonoBehaviour
     }
     void ViewThirdActivity(){
         activities[2].gameObject.SetActive(true);
-        Invoke("NextScene",2f);
+        Invoke("ActiveNextButton",2f);
     }
-
-    void NextScene() {
-        ShareData.fixedScheduleList=CalenderController.scheduleList;
-        SceneManager.LoadScene("MapScene");
+    void ActiveNextButton(){
+        nextButton.SetActive(true);
     }
+    
     
 }
