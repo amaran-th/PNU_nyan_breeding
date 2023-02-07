@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 43973616}
   - component: {fileID: 43973618}
   - component: {fileID: 43973619}
+  - component: {fileID: 43973620}
   m_Layer: 5
   m_Name: Save
   m_TagString: Untagged
@@ -400,7 +401,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -450,6 +451,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SaveSlotPage: {fileID: 1276620461}
+--- !u!95 &43973620
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43973614}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7df0789de5c7bad47a30ad53f69cecc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &50017701
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +837,7 @@ GameObject:
   - component: {fileID: 153075038}
   - component: {fileID: 153075037}
   - component: {fileID: 153075040}
+  - component: {fileID: 153075041}
   m_Layer: 5
   m_Name: TimeTableButton
   m_TagString: Untagged
@@ -863,7 +885,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -950,6 +972,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4bd947e4b9e2b4989a3ed96bd3c353, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &153075041
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153075035}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c25bc15a211e91c4e9f39be67c2ee6a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &174440675
 GameObject:
   m_ObjectHideFlags: 0
@@ -3041,6 +3083,7 @@ GameObject:
   - component: {fileID: 813542450}
   - component: {fileID: 813542449}
   - component: {fileID: 813542448}
+  - component: {fileID: 813542451}
   m_Layer: 5
   m_Name: RejectButton
   m_TagString: Untagged
@@ -3088,7 +3131,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -3163,6 +3206,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813542446}
   m_CullTransparentMesh: 1
+--- !u!95 &813542451
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813542446}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a296b76962572834ab59a36e04cade02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &820511402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5228,6 +5291,7 @@ GameObject:
   - component: {fileID: 1727090345}
   - component: {fileID: 1727090344}
   - component: {fileID: 1727090343}
+  - component: {fileID: 1727090346}
   m_Layer: 5
   m_Name: AllowButton
   m_TagString: Untagged
@@ -5275,7 +5339,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
