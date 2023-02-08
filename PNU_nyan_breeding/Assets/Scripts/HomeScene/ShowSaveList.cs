@@ -11,7 +11,7 @@ public class ShowSaveList : MonoBehaviour
     public GameObject SaveSlotPage;
     public GameObject CloseBtn;
     private string path;
-    public static int slotNumber;
+    public int slotNumber;
 
     bool[] isSaveFileExists = new bool[3];
     public TMP_Text[] slotText;
@@ -44,11 +44,6 @@ public class ShowSaveList : MonoBehaviour
             }
         }
         //DataManage.instance.DataClear();
-    }
-
-    public int GetSlotNumber()
-    {
-        return slotNumber;
     }
 
     private void Awake()
