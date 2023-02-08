@@ -65,7 +65,7 @@ public class MailController : MonoBehaviour
     public void OnClickReceiveButton(){
         //TODO 부자 관련 플래그 세우기
         CloseAllButton();
-        SceneManager.LoadScene("EnddingScene");
+        SceneManager.LoadScene("EndingScene");
     }
     void ActiveNpcMail(){
         mailFlag=true;
