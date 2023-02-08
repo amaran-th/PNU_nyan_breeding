@@ -15,10 +15,16 @@ public class SettingPopUpScene : MonoBehaviour
     public GameObject SettingPopUp;
     public GameObject SoundPopUp;
     public GameObject InfoPopUp;
+    public GameObject TitlePopUp;
     
     public AudioMixer BGMSource;
     public Slider BGMSourceSlider;
     public Slider EffectSlider;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     
     public void BGMSourceControl()
     {
@@ -29,6 +35,9 @@ public class SettingPopUpScene : MonoBehaviour
     public void TitleYesClicked()
     {
         SceneManager.LoadScene("TitleScene");
+        TitlePopUp.SetActive(false);
+        SettingPopUp.SetActive(false);
+
         
     }
 
