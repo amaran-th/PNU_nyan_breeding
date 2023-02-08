@@ -12,6 +12,7 @@ public class ShowEnding : MonoBehaviour
     public TextMeshProUGUI textComponent2;
     public GameObject DialogueBox;
     public GameObject ReturnButton;
+    public GameObject NameSlot;
     public float textSpeed;
     private int index = 0;
     public Dictionary<int,EndingDialogue> ending =  new Dictionary<int,EndingDialogue>();
@@ -42,6 +43,8 @@ public class ShowEnding : MonoBehaviour
         Debug.Log(standingList[index]);
         Debug.Log(ending[index]);
         Debug.Log(ending[index].script);
+        
+        Debug.Log("ending count: "+ending.Count+" index: "+index);
         NextLine();
     }
 
@@ -50,6 +53,9 @@ public class ShowEnding : MonoBehaviour
     {
         if(Input.GetMouseButtonDown(0))
         {
+            Debug.Log(textComponent.text);
+            Debug.Log(ending[index].script);
+            Debug.Log("ending count: "+ending.Count+" index: "+index);
             if (textComponent.text == ending[index].script)
             {
                 
@@ -76,14 +82,16 @@ public class ShowEnding : MonoBehaviour
 
     void NextLine()
     {
-        if(index < ending.Count - 1)
+        
+        Debug.Log("ending count: "+ending.Count+" index: "+index+"index < ending.Count-1 ?: "+(index < ending.Count));
+        if(index < ending.Count  )
         {
             UpdateBeforeDialogue(index);
             StartCoroutine(TypeLine());
         }    
         else
         {
-            //DialogueBox.SetActive(false);
+            DialogueBox.SetActive(false);
             ReturnButton.SetActive(true);
         }  
     }
@@ -93,8 +101,14 @@ public class ShowEnding : MonoBehaviour
 
         textComponent.text = string.Empty;
         if (standingList[spriteId].id == 2)
+        {
          textComponent2.text = string.Empty;
-        else textComponent2.text = ending[index].name;
+         NameSlot.SetActive(false);
+         }
+        else {
+            textComponent2.text = ending[index].name;
+            NameSlot.SetActive(true);
+            }
 
         Debug.Log(standingList[spriteId].image);
         tempImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
