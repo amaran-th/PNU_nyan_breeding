@@ -41,13 +41,11 @@ public class CalenderController : MonoBehaviour
     public void UpdateCalender(){
         for(int i=0;i<scheduleCount;i++){
             calender[i].GetComponent<Image>().sprite=Resources.Load<Sprite>(scheduleList[i].img_path) as Sprite;
-            //TODO 임시
             calender[i].transform.Find("Text (TMP)").gameObject.GetComponent<TMP_Text>().text=scheduleList[i].name;
             }
         
         for(int i=scheduleCount;i<3;i++){
             calender[i].GetComponent<Image>().sprite=Resources.Load<Sprite>("Images/Practice/todo_empty") as Sprite;
-            //TODO 임시
             calender[i].transform.Find("Text (TMP)").gameObject.GetComponent<TMP_Text>().text="";
         }
     }

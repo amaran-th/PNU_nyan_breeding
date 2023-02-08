@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FadeTitle : MonoBehaviour
+public class FadeButton : MonoBehaviour
 {
     public float animTime = 3f;
     public Image fadeImage;
     public GameObject loadbtn;
     public GameObject newbtn;
-
+    //public GameObject[] loadbtn=new GameObject[2];
+    //public GameObject[] newbtn=new GameObject[2];
+    private Image btn1;
+    private Image btn2;
     Color color1;
     ColorBlock colorBlock;
-    private bool fade = true;
+    private bool fade = false;
 
     void Awake() {
         fadeImage = GetComponent<Image>();
@@ -31,8 +34,8 @@ public class FadeTitle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && fade) {
-            Debug.Log("click");
+        if (Input.GetMouseButtonDown(0)) {
+            Debug.Log("click11111111111");
             loadbtn.SetActive(true);
             newbtn.SetActive(true);
             StartCoroutine("FadeIn");
@@ -40,7 +43,6 @@ public class FadeTitle : MonoBehaviour
     }
 
     IEnumerator FadeIn() {
-        fade=false;
         for (int i=0;i<10;i++) {
             float f = i/10.0f;
             Color color = color1;
