@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.UI;
 
 
 // 일단은 슬롯을 총 3개로 가정
@@ -38,6 +39,11 @@ public class CheckSave : MonoBehaviour
         System.IO.File.Copy(playerInfoPath, saveFilePath + slotNumber.ToString(), true);
         // vstring data = JsonUtility.ToJson(nowPlayer);
         // File.WriteAllText(path + slotNumber.ToString(), data);
+    }
+
+    void Update()
+    {
+        slotNumber = ShowSaveList.slotNumber;
     }
 
     
