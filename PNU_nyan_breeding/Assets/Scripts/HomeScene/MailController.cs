@@ -48,7 +48,7 @@ public class MailController : MonoBehaviour
         sendTime.text="방금 전";
         content.text="안녕하세요"+Managers.Player.playerInfoData.name+"님, 로또 이벤트에 참여해주셔서 감사합니다.\n하단의 버튼을 누르시면 결과를 확인할 수 있습니다. ";
     }
-    
+    //test
     public void OnClickLottoButton(){
         ShareData.isLotto=false;
         var lottoNum=Random.Range(0,100);
