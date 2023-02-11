@@ -255,6 +255,30 @@ public class GraduateSchoolEndData : ILoader<int, EndingDialogue>
 
 #endregion
 
+#region tempEvent
+[System.Serializable]
+public class TempEvent : RawData
+{
+    public string name;
+    public string script;
+}
+
+[System.Serializable]   
+public class TempEventData : ILoader<int, TempEvent>
+{
+	public TempEvent[] tempEvent;   
+
+	public Dictionary<int, TempEvent> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, TempEvent> dataDict = new Dictionary<int, TempEvent>();
+		foreach (TempEvent dialogue in tempEvent) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+#endregion
+
 
 #region Standing
 
@@ -303,6 +327,31 @@ public class EndingIllustData : ILoader<int, EndingIllust>
 		Dictionary<int, EndingIllust> dataDict = new Dictionary<int, EndingIllust>();
 		foreach (EndingIllust illust in illustList) // 리스트에서 Dictionary로 옮기는 작업
 			dataDict.Add(illust.id, illust); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+#endregion
+
+#region Background
+
+[System.Serializable]
+public class Background : RawData
+{
+    public string name;
+    public string img_path;
+}
+
+[System.Serializable]
+public class BackgroundData : ILoader<int, Background>
+{
+	public Background[] backgroundList;  // json 파일에서 여기로 담김
+
+	public Dictionary<int, Background> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, Background> dataDict = new Dictionary<int, Background>();
+		foreach (Background background in backgroundList) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(background.id, background); // level을 ID(Key)로 
 		return dataDict;
 	}
 }

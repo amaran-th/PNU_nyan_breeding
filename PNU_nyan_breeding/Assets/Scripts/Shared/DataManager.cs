@@ -21,8 +21,10 @@ public class DataManager: MonoBehaviour
     public Dictionary<int, EndingDialogue> employmentEnd =new Dictionary<int, EndingDialogue>(); 
     public Dictionary<int, EndingDialogue> joblessEnd =new Dictionary<int, EndingDialogue>(); 
     public Dictionary<int, EndingDialogue> graduateSchoolEnd =new Dictionary<int, EndingDialogue>(); 
+    public Dictionary<int, TempEvent> tempEvent =new Dictionary<int, TempEvent>();
     public Dictionary<int, Standing> standingList =new Dictionary<int, Standing>(); 
     public Dictionary<int, EndingIllust> illustList =new Dictionary<int, EndingIllust>(); 
+    public Dictionary<int, Background> backgroundList =new Dictionary<int, Background>(); 
 
     public void Init()
     {
@@ -36,8 +38,10 @@ public class DataManager: MonoBehaviour
         employmentEnd = (LoadJson<EmploymentEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
         joblessEnd = (LoadJson<JoblessEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
         graduateSchoolEnd = (LoadJson<GraduateSchoolEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
+        tempEvent = (LoadJson<TempEventData, int, TempEvent>("Json/npcEvent").MakeDict());
         standingList = (LoadJson<StandingData, int, Standing>("Json/standing").MakeDict());
         illustList = (LoadJson<EndingIllustData, int, EndingIllust>("Json/endingIllust").MakeDict());
+        backgroundList = (LoadJson<BackgroundData, int, Background>("Json/background").MakeDict());
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>
