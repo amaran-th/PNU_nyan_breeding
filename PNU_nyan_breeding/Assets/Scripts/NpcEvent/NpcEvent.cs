@@ -37,8 +37,6 @@ public class NpcEvent : MonoBehaviour
         Debug.Log("NpcEvent");
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
-        resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
-        resNpcId = GameObject.Find("Canvas").GetComponent<EventList>().resNpcId;
         standingList = Managers.Data.standingList;
     }
 
@@ -48,11 +46,11 @@ public class NpcEvent : MonoBehaviour
 
     void Start()
     {
-        
         index2 = index+1;
         textComponent.text = string.Empty;
         textComponent2.text = string.Empty;
         resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
+        resNpcId = GameObject.Find("Canvas").GetComponent<EventList>().resNpcId;
 
         setIndex2();
         NextLine();
