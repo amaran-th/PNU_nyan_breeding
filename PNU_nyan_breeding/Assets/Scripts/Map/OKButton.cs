@@ -7,8 +7,7 @@ public class OKButton : MonoBehaviour
 {
     public void OnClickNpcOK(){
         ShareData.selectedNPCId=MapManager.currentNpc;
-        //TODO NpcEventScene으로 보내줄 예정
-        SceneManager.LoadScene("MonthlyResultScene");
+        SceneManager.LoadScene("NpcEventScene");
     }
     public void OnClickSkipOK(){
         SceneManager.LoadScene("MonthlyResultScene");
@@ -17,8 +16,7 @@ public class OKButton : MonoBehaviour
         //ShareData.lotto=Random.Range(0,100);
         ShareData.isLotto=true;
         SceneManager.LoadScene("MonthlyResultScene");
-        
-        
+
     }
 
 }

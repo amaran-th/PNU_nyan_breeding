@@ -1,0 +1,59 @@
+{
+  "presidentEvent": [
+    {
+      "id": 0,
+      "name": "교수님",
+      "script": "presidentEvent0"
+    },
+    {
+      "id": 1,
+      "name": "깜냥이",
+      "script": "script  script script  script "
+    },
+    {
+      "id": 2,
+      "name": "교수님",
+      "script": "script script "
+    },
+    {
+      "id": 3,
+      "name": "교수님",
+      "script": "script script script script "
+    },
+    {
+      "id": 4,
+      "name": "선택지1",
+      "script": "예"
+    },
+    {
+      "id": 5,
+      "name": "교수님",
+      "script": "선택지1 1"
+    },
+    {
+      "id": 6,
+      "name": "깜냥이",
+      "script": "선택지1 2"
+    },
+    {
+      "id": 7,
+      "name": "end",
+      "script": ""
+    },
+    {
+      "id": 8,
+      "name": "선택지2",
+      "script": "아니오"
+    },
+    {
+      "id": 9,
+      "name": "교수님",
+      "script": "선택지2 1"
+    },
+    {
+      "id": 10,
+      "name": "깜냥이",
+      "script": "선택지2 2"
+    }
+  ]
+}
