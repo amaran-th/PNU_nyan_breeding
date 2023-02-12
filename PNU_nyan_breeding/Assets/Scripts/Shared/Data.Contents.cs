@@ -91,18 +91,14 @@ public class PlayerInfo{
 	public int month;
 	public int money_stat;
 	public int[] npc_bond;
-
-	public int profEventCount;
-	public int blackCatEventCount;
-	public int butlerEventCount;
-	public int presidentEventCount;
+	public int[] npc_story_count;
 	
 	//grade, month, money 업데이트
 	public void UpdateInfo(int moneyDiff, int npcId){
 		if(month==2) grade+=1;
 		month=(month+1)%12;
 		money_stat+=moneyDiff;
-		//if(npcId!=-1) npc_bond[npcId]+=1;
+		if(npcId!=-1) npc_story_count[npcId]+=1;
 	}
 }
 [System.Serializable]

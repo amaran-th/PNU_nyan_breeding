@@ -15,6 +15,11 @@ public class ShareData : MonoBehaviour
     
     bool _lotto=false;
     public static bool isLotto {get{return Instance._lotto;} set{Instance._lotto=value;}}
+    
+    //TODO NpcEvent Scene에서 활성화 시킨다
+    bool[] _npcMail={false,false,false};
+    public static bool[] npcMail {get{return Instance._npcMail;} set{Instance._npcMail=value;}}
+
     void Start()
     {
         Init();

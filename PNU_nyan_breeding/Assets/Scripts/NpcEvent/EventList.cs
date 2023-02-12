@@ -11,39 +11,41 @@ public class EventList : MonoBehaviour
     public Image backgroundImg;
 
     public Dictionary<int, Background> backgroundList =new Dictionary<int, Background>(); 
-
+    
+    public static int[] npc_story_count;
     public static List<Dictionary<int, ProfessorEvent>> professorEventList;
     public static List<Dictionary<int, ProfessorEvent>> blackCatEventList; 
     public static List<Dictionary<int, ProfessorEvent>> butlerEventList;
     public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
     public Dictionary<int, ProfessorEvent> resEvent;
     public int resNpcId;
-    
+    public int resNpcCount;
 
     void Awake() {
 
         Debug.Log("EventList");
         backgroundList = Managers.Data.backgroundList;
-
+        npc_story_count=Managers.Player.playerInfoData.npc_story_count;
         professorEventList = Managers.Data.professorEvent;
         blackCatEventList = Managers.Data.blackCatEvent;
         butlerEventList = Managers.Data.butlerEvent;
         presidentEventList = Managers.Data.presidentEvent;
 
         resNpcId = ShareData.selectedNPCId;
+        resNpcCount=npc_story_count[resNpcId];
         switch (resNpcId)
         {
             case 0: 
-                resEvent = professorEventList[Managers.Player.playerInfoData.profEventCount];
+                resEvent = professorEventList[resNpcCount];
                 break;
             case 1: 
-                resEvent = blackCatEventList[Managers.Player.playerInfoData.blackCatEventCount];
+                resEvent = blackCatEventList[resNpcCount];
                 break;
             case 2:
-                resEvent = butlerEventList[Managers.Player.playerInfoData.butlerEventCount];
+                resEvent = butlerEventList[resNpcCount];
                 break;
             case 3:
-                resEvent = presidentEventList[Managers.Player.playerInfoData.presidentEventCount];
+                resEvent = presidentEventList[resNpcCount];
                 break;
             default: break;
         }
