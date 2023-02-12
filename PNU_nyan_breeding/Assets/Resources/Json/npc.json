@@ -16,17 +16,17 @@
     },
     {
       "id": 2,
-      "name": "학생회장",
-      "img_path": "Images/Icon/npc2_64",
-      "pos_x": 100,
-      "pos_y": 100
-    },
-    {
-      "id": 3,
       "name": "캔따개",
       "img_path": "Images/Icon/npc1_64",
       "pos_x": 300,
       "pos_y": 150
+    },
+    {
+      "id": 3,
+      "name": "학생회장",
+      "img_path": "Images/Icon/npc2_64",
+      "pos_x": 100,
+      "pos_y": 100
     }
   ]
 }

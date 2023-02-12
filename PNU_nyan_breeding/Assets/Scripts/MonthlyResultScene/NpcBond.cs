@@ -15,16 +15,16 @@ public class NpcBond : MonoBehaviour
     public Image noFill;
     
     
-    public void Init(NPC npc, int bond){
+    public void Init(NPC npc, int storyCount, int bond){
         this.icon.sprite=Resources.Load<Sprite>(npc.img_path) as Sprite;
         this.name.text=npc.name;
-        this.bondStat.text=bond.ToString();
+        this.bondStat.text=storyCount.ToString();
         LoadBond(bond);
         //npcList=transform.parent.parent.parent.GetComponent<ScrollRect>();
     }
     
     void LoadBond(int num){
-        for(int i=0;i<10;i++){
+        for(int i=0;i<5;i++){
             var heart=fill;
             if(i>=num) heart=noFill;
             var listItem=Instantiate(heart, contents); //자식 객체 생성

@@ -24,6 +24,15 @@ public class HomeSceneButton : MonoBehaviour
         MonthlyResultManager.playerStatData.UpdateStat(MonthlyResultManager.Diff);
         //===========================
         MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.MoneyDiff,ShareData.selectedNPCId);
+        
+        //메일 발송 여부 결정하는 코드
+        var npcId=ShareData.selectedNPCId;
+        if(npcId!=-1&&npcId<3){
+            if(MonthlyResultManager.playerInfoData.npc_bond[npcId]==5&&MonthlyResultManager.playerInfoData.npc_story_count[npcId]==9){
+                ShareData.npcMail[npcId]=true;
+            }
+        }
+        //ShareData 초기화
         ShareData.fixedScheduleList=new List<Activity>();
         ShareData.selectedNPCId=-1;
         SceneManager.LoadScene("HomeScene");

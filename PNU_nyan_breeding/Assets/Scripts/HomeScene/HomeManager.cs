@@ -32,7 +32,6 @@ public class HomeManager : MonoBehaviour
     public void YesButton()
     {
         Debug.Log("네");
-        ///SceneManager.LoadScene("");
     }
 
     public void NoButton()

@@ -25,7 +25,8 @@ public class ShowNpcBond : MonoBehaviour
             listItem.transform.SetParent(GameObject.Find("Content").transform); //위치 설정
             var testListItem=listItem.GetComponent<NpcBond>();
             var bond=MonthlyResultManager.playerInfoData.npc_bond[i];
-            testListItem.Init(MonthlyResultManager.npcData[i], bond);        
+            var storyCount=MonthlyResultManager.playerInfoData.npc_story_count[i];
+            testListItem.Init(MonthlyResultManager.npcData[i], storyCount, bond);        
         }
     }
 }

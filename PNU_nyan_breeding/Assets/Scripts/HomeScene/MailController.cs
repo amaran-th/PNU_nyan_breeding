@@ -17,8 +17,6 @@ public class MailController : MonoBehaviour
     GameObject winButton;
     bool mailFlag=false;    //메일 이벤트가 여러개 중복될 경우 순차적으로 실행되게 하기 위한 플래그
 
-    //TODO ShareData로 변경
-    int npcMail=1;
     void Awake(){
         title=mailModal.transform.Find("TextTitle").GetComponent<TextMeshProUGUI>();
         sender=mailModal.transform.Find("TextSender").GetComponent<TextMeshProUGUI>();
@@ -28,13 +26,17 @@ public class MailController : MonoBehaviour
         npcButton=mailModal.transform.Find("NpcButton").gameObject; //승낙/거절 버튼. 이걸 쓸 지 모르겠네
         lottoButton=mailModal.transform.Find("LottoButton").gameObject; //로또 결과 확인 버튼
         winButton=mailModal.transform.Find("WinButton").gameObject; //로또 당첨금 수령 버튼. 클릭하면 바로 부자엔딩으로 직행
+
     }
     void Update(){
         if(mailFlag==false&&ShareData.isLotto){
             ActiveLottoMail();
         }
-        if(mailFlag==false&&npcMail>=0){
-            ActiveNpcMail();
+        for(int i=0;mailFlag==false&&i<3;i++){
+            if(ShareData.npcMail[i]){
+                ShareData.npcMail[i]=false;
+                ActiveNpcMail(HomeManager.npcData[i]);
+            }
         }
     }
    
@@ -67,16 +69,16 @@ public class MailController : MonoBehaviour
         CloseAllButton();
         SceneManager.LoadScene("EndingScene");
     }
-    void ActiveNpcMail(){
+
+    void ActiveNpcMail(NPC npc){
         mailFlag=true;
         mailModal.SetActive(true);
         normalButton.SetActive(true);
 
-        title.text="선택지 이벤트";
-        sender.text=HomeManager.npcData[npcMail].name;
+        title.text=npc.name+"로부터 도착한...";
+        sender.text=npc.name;
         sendTime.text="방금 전";
-        content.text=HomeManager.npcData[npcMail].name+"로부터 도착한 메세지~";
-        npcMail=-1;
+        content.text=HomeManager.playerInfoData.name+"~~ 잠깐 와줄 수 있어?";
     }
     public void OnClickCloseButton(){
         mailModal.SetActive(false);
