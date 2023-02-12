@@ -29,6 +29,7 @@ public class NpcEvent : MonoBehaviour
     };
     
     public Dictionary<int, ProfessorEvent> resEvent;
+    public int resNpcId;
 
     public Image tempImg;
 
@@ -37,12 +38,12 @@ public class NpcEvent : MonoBehaviour
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
         resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
+        resNpcId = GameObject.Find("Canvas").GetComponent<EventList>().resNpcId;
         standingList = Managers.Data.standingList;
     }
 
     void setIndex2() {
         while(resEvent[index2].name != "선택지2") index2++;
-        Debug.Log("index2: "+index2);
     }
 
     void Start()
@@ -54,10 +55,6 @@ public class NpcEvent : MonoBehaviour
         resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
 
         setIndex2();
-        Debug.Log(resEvent[index]);
-        Debug.Log(resEvent[index].script);
-        
-        Debug.Log("event count: "+resEvent.Count+" index: "+index);
         NextLine();
     }
 
@@ -66,7 +63,6 @@ public class NpcEvent : MonoBehaviour
     {
         if(Input.GetMouseButtonUp(0) && !preventClick)
         {
-            Debug.Log(textComponent.text);
             Debug.Log(resEvent[index].script);
             Debug.Log("event count: "+resEvent.Count+" index: "+index);
             if (textComponent.text == resEvent[index].script)
@@ -96,7 +92,6 @@ public class NpcEvent : MonoBehaviour
     void NextLine()
     {
         
-        //Debug.Log("event count: "+resEvent.Count+" index: "+index+"index < event.Count-1 ?: "+(index < resEvent.Count));
         if(index < resEvent.Count && resEvent[index].name != "end")
         {
             if(resEvent[index].name == "선택지1") activeSelect();
@@ -107,6 +102,18 @@ public class NpcEvent : MonoBehaviour
         }    
         else
         {
+            if(resEvent[index].name == "end") {
+                switch (resEvent[index].script) {
+                    case "up": 
+                        if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
+                        Debug.Log(Managers.Player.playerInfoData.npc_bond[resNpcId]);
+                        break;
+                    case "down":
+                        if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;
+                        break;
+                    default: return;
+                }
+            }
             DialogueBox.SetActive(false);
             StaindingImg.SetActive(false);
             SceneManager.LoadScene("MonthlyResultScene");

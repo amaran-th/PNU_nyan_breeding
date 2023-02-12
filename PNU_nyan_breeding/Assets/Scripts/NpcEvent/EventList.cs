@@ -17,6 +17,7 @@ public class EventList : MonoBehaviour
     public static List<Dictionary<int, ProfessorEvent>> butlerEventList;
     public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
     public Dictionary<int, ProfessorEvent> resEvent;
+    public int resNpcId;
     
 
     void Awake() {
@@ -29,8 +30,8 @@ public class EventList : MonoBehaviour
         butlerEventList = Managers.Data.butlerEvent;
         presidentEventList = Managers.Data.presidentEvent;
 
-        var npcId = ShareData.selectedNPCId;
-        switch (npcId)
+        resNpcId = ShareData.selectedNPCId;
+        switch (resNpcId)
         {
             case 0: 
                 resEvent = professorEventList[Managers.Player.playerInfoData.profEventCount];

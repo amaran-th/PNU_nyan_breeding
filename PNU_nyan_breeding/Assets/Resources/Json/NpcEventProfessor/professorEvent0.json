@@ -38,7 +38,7 @@
     {
       "id": 7,
       "name": "end",
-      "script": ""
+      "script": "up"
     },
     {
       "id": 8,
@@ -54,6 +54,11 @@
       "id": 10,
       "name": "깜냥이",
       "script": "선택지2 2"
+    },
+    {
+      "id": 11,
+      "name": "end",
+      "script": "down"
     }
   ]
 }
