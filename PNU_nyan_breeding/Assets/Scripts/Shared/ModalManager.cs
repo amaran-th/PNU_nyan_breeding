@@ -26,6 +26,8 @@ public class ModalManager : MonoBehaviour
     
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
         OKButton = OneButton.GetComponent<Button>();
         YesButton = YesOrNoButton.transform.Find("YesButton").gameObject.GetComponent<Button>();
         NoButton = YesOrNoButton.transform.Find("NoButton").gameObject.GetComponent<Button>();
@@ -37,6 +39,8 @@ public class ModalManager : MonoBehaviour
         if(instance == null){
             instance = this;
         }
+
+        ModalInit();
     }
 
     private void ModalInit() // 초기화

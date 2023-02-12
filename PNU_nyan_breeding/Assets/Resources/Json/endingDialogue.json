@@ -26,23 +26,23 @@
     {
       "id": 0,
       "name": "교수님",
-      "script": "EMPloyment"
+      "script": "자네 대학원에 가게"
     },
     {
       "id": 1,
-      "name": "깜냥이",
-      "script": "script  script script  script "
+      "name": "나",
+      "script": "이럴수가"
     },
     {
       "id": 2,
       "name": "교수님",
-      "script": "script script "
+      "script": "대학원의 문은 언제나 활짝 열려있다네"
     },
 
     {
       "id": 3,
-      "name": "교수님",
-      "script": "script script script script "
+      "name": "나",
+      "script": "안돼ㅐㅐㅐㅐㅐ"
     }
   ],
   "joblessEnd": [

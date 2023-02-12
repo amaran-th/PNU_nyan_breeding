@@ -3,13 +3,13 @@
     {
       "id": 0,
       "name": "교수님",
-      "image": "Images/StandingImage/cat1",
+      "image": "Images/StandingImage/npc_3",
       "locationX": -244
     },
     {
       "id": 1,
       "name": "깜냥이",
-      "image": "Images/StandingImage/cat2",
+      "image": "Images/StandingImage/npc_nya",
       "locationX": 244
     },
     {
