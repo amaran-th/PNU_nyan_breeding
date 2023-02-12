@@ -20,7 +20,6 @@ public class NpcEvent : MonoBehaviour
     private int index = 0;
     private int index2=0;
     private bool preventClick = false;
-    public Dictionary<int, TempEvent> resEvent =new Dictionary<int, TempEvent>();
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public Dictionary<string, int> staindingId = new Dictionary<string, int>()
     {
@@ -28,6 +27,8 @@ public class NpcEvent : MonoBehaviour
       {"깜냥이", 1 },
       {"나레이션", 2}
     };
+    
+    public Dictionary<int, ProfessorEvent> resEvent;
 
     public Image tempImg;
 
@@ -35,6 +36,7 @@ public class NpcEvent : MonoBehaviour
         Debug.Log("NpcEvent");
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
+        resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
         standingList = Managers.Data.standingList;
     }
 
@@ -107,6 +109,7 @@ public class NpcEvent : MonoBehaviour
         {
             DialogueBox.SetActive(false);
             StaindingImg.SetActive(false);
+            SceneManager.LoadScene("MonthlyResultScene");
         }  
     }
 

@@ -91,13 +91,18 @@ public class PlayerInfo{
 	public int month;
 	public int money_stat;
 	public int[] npc_bond;
+
+	public int profEventCount;
+	public int blackCatEventCount;
+	public int butlerEventCount;
+	public int presidentEventCount;
 	
 	//grade, month, money 업데이트
 	public void UpdateInfo(int moneyDiff, int npcId){
 		if(month==2) grade+=1;
 		month=(month+1)%12;
 		money_stat+=moneyDiff;
-		if(npcId!=-1) npc_bond[npcId]+=1;
+		//if(npcId!=-1) npc_bond[npcId]+=1;
 	}
 }
 [System.Serializable]
@@ -255,28 +260,69 @@ public class GraduateSchoolEndData : ILoader<int, EndingDialogue>
 
 #endregion
 
-#region tempEvent
+#region professorEvent
 [System.Serializable]
-public class TempEvent : RawData
+public class ProfessorEvent : RawData
 {
     public string name;
     public string script;
 }
 
 [System.Serializable]   
-public class TempEventData : ILoader<int, TempEvent>
+public class ProfessorEventData : ILoader<int, ProfessorEvent>
 {
-	public TempEvent[] tempEvent;   
+	public ProfessorEvent[] professorEvent;   
 
-	public Dictionary<int, TempEvent> MakeDict() // 오버라이딩
+	public Dictionary<int, ProfessorEvent> MakeDict() // 오버라이딩
 	{
-		Dictionary<int, TempEvent> dataDict = new Dictionary<int, TempEvent>();
-		foreach (TempEvent dialogue in tempEvent) // 리스트에서 Dictionary로 옮기는 작업
+		Dictionary<int, ProfessorEvent> dataDict = new Dictionary<int, ProfessorEvent>();
+		foreach (ProfessorEvent dialogue in professorEvent) // 리스트에서 Dictionary로 옮기는 작업
 			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
 		return dataDict;
 	}
 }
 
+[System.Serializable]   
+public class BlackCatEventData : ILoader<int, ProfessorEvent>
+{
+	public ProfessorEvent[] blackCatEvent;   
+
+	public Dictionary<int, ProfessorEvent> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, ProfessorEvent> dataDict = new Dictionary<int, ProfessorEvent>();
+		foreach (ProfessorEvent dialogue in blackCatEvent) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+[System.Serializable]   
+public class ButlerEventData : ILoader<int, ProfessorEvent>
+{
+	public ProfessorEvent[] butlerEvent;   
+
+	public Dictionary<int, ProfessorEvent> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, ProfessorEvent> dataDict = new Dictionary<int, ProfessorEvent>();
+		foreach (ProfessorEvent dialogue in butlerEvent) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+[System.Serializable]   
+public class PresidentEventData : ILoader<int, ProfessorEvent>
+{
+	public ProfessorEvent[] presidentEvent;   
+
+	public Dictionary<int, ProfessorEvent> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, ProfessorEvent> dataDict = new Dictionary<int, ProfessorEvent>();
+		foreach (ProfessorEvent dialogue in presidentEvent) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
 #endregion
 
 

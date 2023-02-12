@@ -1,9 +1,9 @@
 {
-  "tempEvent": [
+  "blackCatEvent": [
     {
       "id": 0,
-      "name": "교수님",
-      "script": "EMPloyment"
+      "name": "깜냥",
+      "script": "event1"
     },
     {
       "id": 1,

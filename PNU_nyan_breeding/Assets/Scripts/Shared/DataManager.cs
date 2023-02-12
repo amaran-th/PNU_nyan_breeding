@@ -21,10 +21,18 @@ public class DataManager: MonoBehaviour
     public Dictionary<int, EndingDialogue> employmentEnd =new Dictionary<int, EndingDialogue>(); 
     public Dictionary<int, EndingDialogue> joblessEnd =new Dictionary<int, EndingDialogue>(); 
     public Dictionary<int, EndingDialogue> graduateSchoolEnd =new Dictionary<int, EndingDialogue>(); 
-    public Dictionary<int, TempEvent> tempEvent =new Dictionary<int, TempEvent>();
     public Dictionary<int, Standing> standingList =new Dictionary<int, Standing>(); 
     public Dictionary<int, EndingIllust> illustList =new Dictionary<int, EndingIllust>(); 
     public Dictionary<int, Background> backgroundList =new Dictionary<int, Background>(); 
+
+    public List<Dictionary<int, ProfessorEvent>> professorEvent=new List<Dictionary<int, ProfessorEvent>>();
+    private string[] professorEventPath={"Json/NpcEventProfessor/professorEvent0", "Json/NpcEventProfessor/professorEvent1","Json/NpcEventProfessor/professorEvent3","Json/NpcEventProfessor/professorEvent4","Json/NpcEventProfessor/professorEvent5","Json/NpcEventProfessor/professorEvent6","Json/NpcEventProfessor/professorEvent7","Json/NpcEventProfessor/professorEvent8","Json/NpcEventProfessor/professorEvent9"};
+    public List<Dictionary<int, ProfessorEvent>> blackCatEvent=new List<Dictionary<int, ProfessorEvent>>();
+    private string[] blackCatEventPath={"Json/NpcEventBlackCat/blackCatEvent0", "Json/NpcEventBlackCat/blackCatEvent1","Json/NpcEventBlackCat/blackCatEvent3","Json/NpcEventBlackCat/blackCatEvent4","Json/NpcEventBlackCat/blackCatEvent5","Json/NpcEventBlackCat/blackCatEvent6","Json/NpcEventBlackCat/blackCatEvent7","Json/NpcEventBlackCat/blackCatEvent8","Json/NpcEventBlackCat/blackCatEvent9"};
+    public List<Dictionary<int, ProfessorEvent>> butlerEvent=new List<Dictionary<int, ProfessorEvent>>();
+    private string[] butlerEventPath={"Json/NpcEventButler/butlerEvent0", "Json/NpcEventButler/butlerEvent1","Json/NpcEventButler/butlerEvent3","Json/NpcEventButler/butlerEvent4","Json/NpcEventButler/butlerEvent5","Json/NpcEventButler/butlerEvent6","Json/NpcEventButler/butlerEvent7","Json/NpcEventButler/butlerEvent8","Json/NpcEventButler/butlerEvent9"};
+    public List<Dictionary<int, ProfessorEvent>> presidentEvent=new List<Dictionary<int, ProfessorEvent>>();
+    private string[] presidentEventPath={"Json/NpcEventPresident/presidentEvent0", "Json/NpcEventPresident/presidentEvent1","Json/NpcEventPresident/presidentEvent3","Json/NpcEventPresident/presidentEvent4","Json/NpcEventPresident/presidentEvent5","Json/NpcEventPresident/presidentEvent6","Json/NpcEventPresident/presidentEvent7","Json/NpcEventPresident/presidentEvent8","Json/NpcEventPresident/presidentEvent9"};
 
     public void Init()
     {
@@ -38,10 +46,22 @@ public class DataManager: MonoBehaviour
         employmentEnd = (LoadJson<EmploymentEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
         joblessEnd = (LoadJson<JoblessEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
         graduateSchoolEnd = (LoadJson<GraduateSchoolEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
-        tempEvent = (LoadJson<TempEventData, int, TempEvent>("Json/npcEvent").MakeDict());
         standingList = (LoadJson<StandingData, int, Standing>("Json/standing").MakeDict());
         illustList = (LoadJson<EndingIllustData, int, EndingIllust>("Json/endingIllust").MakeDict());
         backgroundList = (LoadJson<BackgroundData, int, Background>("Json/background").MakeDict());
+    
+        for(int i=0;i<professorEventPath.Length;i++){
+            professorEvent.Add(LoadJson<ProfessorEventData, int, ProfessorEvent>(professorEventPath[i]).MakeDict());
+        }
+        for(int i=0;i<blackCatEventPath.Length;i++){
+            blackCatEvent.Add(LoadJson<BlackCatEventData, int, ProfessorEvent>(blackCatEventPath[i]).MakeDict());
+        }
+        for(int i=0;i<butlerEventPath.Length;i++){
+            butlerEvent.Add(LoadJson<ButlerEventData, int, ProfessorEvent>(butlerEventPath[i]).MakeDict());
+        }
+        for(int i=0;i<presidentEventPath.Length;i++){
+            presidentEvent.Add(LoadJson<PresidentEventData, int, ProfessorEvent>(presidentEventPath[i]).MakeDict());
+        }
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

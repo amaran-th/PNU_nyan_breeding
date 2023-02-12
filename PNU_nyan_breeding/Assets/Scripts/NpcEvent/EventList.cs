@@ -10,31 +10,43 @@ public class EventList : MonoBehaviour
     public int eventIndex;
     public Image backgroundImg;
 
-    public Dictionary<int, TempEvent> tempEvent =new Dictionary<int, TempEvent>();
-    public Dictionary<int,TempEvent>[] EventName = new Dictionary<int,TempEvent>[3];
-    public Dictionary<int,TempEvent> resEvent = new Dictionary<int,TempEvent>();
     public Dictionary<int, Background> backgroundList =new Dictionary<int, Background>(); 
+
+    public static List<Dictionary<int, ProfessorEvent>> professorEventList;
+    public static List<Dictionary<int, ProfessorEvent>> blackCatEventList; 
+    public static List<Dictionary<int, ProfessorEvent>> butlerEventList;
+    public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
+    public Dictionary<int, ProfessorEvent> resEvent;
     
 
     void Awake() {
 
-        eventIndex = 0;
-
         Debug.Log("EventList");
         backgroundList = Managers.Data.backgroundList;
-        DeclareEvent();
+
+        professorEventList = Managers.Data.professorEvent;
+        blackCatEventList = Managers.Data.blackCatEvent;
+        butlerEventList = Managers.Data.butlerEvent;
+        presidentEventList = Managers.Data.presidentEvent;
+
+        var npcId = ShareData.selectedNPCId;
+        switch (npcId)
+        {
+            case 0: 
+                resEvent = professorEventList[Managers.Player.playerInfoData.profEventCount];
+                break;
+            case 1: 
+                resEvent = blackCatEventList[Managers.Player.playerInfoData.blackCatEventCount];
+                break;
+            case 2:
+                resEvent = butlerEventList[Managers.Player.playerInfoData.butlerEventCount];
+                break;
+            case 3:
+                resEvent = presidentEventList[Managers.Player.playerInfoData.presidentEventCount];
+                break;
+            default: break;
+        }
         DeclareIllust();
-    }
-
-     void DeclareEvent()
-    {
-        tempEvent = Managers.Data.tempEvent;
-        EventName[0]=tempEvent;
-        EventName[1] = tempEvent;
-        EventName[2] = tempEvent;
-
-        resEvent = EventName[eventIndex];
-        Debug.Log(resEvent[0]);
     }
 
     // Update is called once per frame

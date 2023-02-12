@@ -24,10 +24,6 @@ public class ShowNpcBond : MonoBehaviour
             var listItem=Instantiate(listItemGO, contents); //자식 객체 생성
             listItem.transform.SetParent(GameObject.Find("Content").transform); //위치 설정
             var testListItem=listItem.GetComponent<NpcBond>();
-            var bond=MonthlyResultManager.playerInfoData.npc_bond[i];
-            if(ShareData.selectedNPCId==i){
-                bond+=1;
-            }
             testListItem.Init(MonthlyResultManager.npcData[i], bond);        
         }
     }
