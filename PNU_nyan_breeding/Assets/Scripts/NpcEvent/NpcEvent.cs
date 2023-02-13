@@ -54,22 +54,7 @@ public class NpcEvent : MonoBehaviour
         presidentEventList = Managers.Data.presidentEvent;
 
         resNpcId = ShareData.selectedNPCId;
-        switch (resNpcId)
-        {
-            case 0: 
-                resEvent = professorEventList[Managers.Player.playerInfoData.profEventCount];
-                break;
-            case 1: 
-                resEvent = blackCatEventList[Managers.Player.playerInfoData.blackCatEventCount];
-                break;
-            case 2:
-                resEvent = butlerEventList[Managers.Player.playerInfoData.butlerEventCount];
-                break;
-            case 3:
-                resEvent = presidentEventList[Managers.Player.playerInfoData.presidentEventCount];
-                break;
-            default: break;
-        }
+        resEvent = professorEventList[Managers.Player.playerInfoData.npc_story_count[0]];
         DeclareIllust();
     }
 
