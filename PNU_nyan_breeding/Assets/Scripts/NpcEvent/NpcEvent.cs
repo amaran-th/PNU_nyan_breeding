@@ -16,28 +16,66 @@ public class NpcEvent : MonoBehaviour
     public GameObject StaindingImg;
     public GameObject NameSlot;
     public float textSpeed;
+    public Image standingImg;
+    public Image backgroundImg;
 
     private int index = 0;
     private int index2=0;
     private bool preventClick = false;
-    public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
+
     public Dictionary<string, int> staindingId = new Dictionary<string, int>()
     {
       {"교수님", 0 },
       {"깜냥이", 1 },
       {"나레이션", 2}
     };
-    
+    public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
+    public static List<Dictionary<int, ProfessorEvent>> professorEventList;
+    public static List<Dictionary<int, ProfessorEvent>> blackCatEventList; 
+    public static List<Dictionary<int, ProfessorEvent>> butlerEventList;
+    public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
     public Dictionary<int, ProfessorEvent> resEvent;
     public int resNpcId;
 
-    public Image tempImg;
-
     void Awake() {
-        Debug.Log("NpcEvent");
+        
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
         standingList = Managers.Data.standingList;
+        DeclareEvent();
+    }
+
+    void DeclareEvent() {
+        Debug.Log("DeclareEvent");
+
+        professorEventList = Managers.Data.professorEvent;
+        blackCatEventList = Managers.Data.blackCatEvent;
+        butlerEventList = Managers.Data.butlerEvent;
+        presidentEventList = Managers.Data.presidentEvent;
+
+        resNpcId = ShareData.selectedNPCId;
+        switch (resNpcId)
+        {
+            case 0: 
+                resEvent = professorEventList[Managers.Player.playerInfoData.profEventCount];
+                break;
+            case 1: 
+                resEvent = blackCatEventList[Managers.Player.playerInfoData.blackCatEventCount];
+                break;
+            case 2:
+                resEvent = butlerEventList[Managers.Player.playerInfoData.butlerEventCount];
+                break;
+            case 3:
+                resEvent = presidentEventList[Managers.Player.playerInfoData.presidentEventCount];
+                break;
+            default: break;
+        }
+        DeclareIllust();
+    }
+
+    void DeclareIllust() {
+        Debug.Log(resEvent[index].background);
+        backgroundImg.sprite = Resources.Load<Sprite>(resEvent[index].background);
     }
 
     void setIndex2() {
@@ -46,12 +84,9 @@ public class NpcEvent : MonoBehaviour
 
     void Start()
     {
-        index2 = index+1;
+        Debug.Log("NpcEvent");
         textComponent.text = string.Empty;
         textComponent2.text = string.Empty;
-        resEvent = GameObject.Find("Canvas").GetComponent<EventList>().resEvent;
-        resNpcId = GameObject.Find("Canvas").GetComponent<EventList>().resNpcId;
-
         setIndex2();
         NextLine();
     }
@@ -92,6 +127,7 @@ public class NpcEvent : MonoBehaviour
         
         if(index < resEvent.Count && resEvent[index].name != "end")
         {
+            DeclareIllust();
             if(resEvent[index].name == "선택지1") activeSelect();
             else {
             UpdateBeforeDialogue(index);
@@ -133,8 +169,8 @@ public class NpcEvent : MonoBehaviour
             }
 
         Debug.Log(standingList[spriteId].image);
-        tempImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
-        tempImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,tempImg.transform.localPosition.y,tempImg.transform.localPosition.z);
+        standingImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
+        standingImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,standingImg.transform.localPosition.y,standingImg.transform.localPosition.z);
     }
 
     void activeSelect() {
