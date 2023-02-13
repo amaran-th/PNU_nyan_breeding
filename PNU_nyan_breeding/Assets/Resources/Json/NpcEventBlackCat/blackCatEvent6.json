@@ -2,58 +2,69 @@
   "blackCatEvent": [
     {
       "id": 0,
-      "name": "깜냥",
-      "script": "evvent2"
+      "name": "교수님",
+      "script": "blackCatEvent",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 1,
       "name": "깜냥이",
-      "script": "script  script script  script "
+      "script": "script  script script  script ",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 2,
       "name": "교수님",
-      "script": "script script "
+      "script": "script script ",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 3,
       "name": "교수님",
-      "script": "script script script script "
+      "script": "script script script script ",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 4,
       "name": "선택지1",
-      "script": "예"
+      "script": "예",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 5,
       "name": "교수님",
-      "script": "선택지1 1"
+      "script": "선택지1 1",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 6,
       "name": "깜냥이",
-      "script": "선택지1 2"
+      "script": "선택지1 2",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 7,
       "name": "end",
-      "script": ""
+      "script": "",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 8,
       "name": "선택지2",
-      "script": "아니오"
+      "script": "아니오",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 9,
       "name": "교수님",
-      "script": "선택지2 1"
+      "script": "선택지2 1",
+      "background": "Images/EndingIllust/employment"
     },
     {
       "id": 10,
       "name": "깜냥이",
-      "script": "선택지2 2"
+      "script": "선택지2 2",
+      "background": "Images/EndingIllust/employment"
     }
   ]
 }

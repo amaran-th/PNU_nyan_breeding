@@ -262,6 +262,7 @@ public class ProfessorEvent : RawData
 {
     public string name;
     public string script;
+	public string background;
 }
 
 [System.Serializable]   

@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialScene.unity
     guid: e20cadafd76207f4787b971ed1c35d17
+  - enabled: 1
+    path: Assets/Scenes/NpcEventScene.unity
+    guid: 676607df6144b164cb1945b24d2c1273
   m_configObjects: {}
