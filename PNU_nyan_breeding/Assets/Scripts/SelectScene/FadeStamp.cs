@@ -27,7 +27,6 @@ public class FadeStamp : MonoBehaviour
         if (btn.flag) {
             color.a=1;
             gameObject.GetComponent<Image>().color = color; 
-            Debug.Log("stamp!");
             transform.localScale = Vector3.one * (1-time*speed);
             if (time > 0.2f) {
                 time=0;
