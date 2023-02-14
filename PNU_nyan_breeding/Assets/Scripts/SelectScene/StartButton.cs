@@ -28,7 +28,7 @@ public class StartButton : MonoBehaviour
             Managers.Player.playerInfoData.npc_story_count = new int[4]{0,0,0,0};
             
             
-            Managers.Player.SaveData();
+            // Managers.Player.SaveData();
 
             Invoke("NextScene", 1f);
         }
