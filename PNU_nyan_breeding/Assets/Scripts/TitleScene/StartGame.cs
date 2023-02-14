@@ -30,22 +30,18 @@ public class StartGame : MonoBehaviour
     {
         if(stopIn==false && time<=2){
             PlayFadeIn();  
-            Debug.Log("In");
         }
         if(stopOut==false && time<=2){
             PlayFadeOut();
-            Debug.Log("out");
         }
         if(time>=2 && stopIn==false){
             stopIn = true;
             time = 0;                
-            Debug.Log("StopIn");
         }
         if(time>=2 && stopOut==false){
             stopIn = false; //하얗게 전환되고 나서 씬 전환 후 다시 풀거라 넣었다. 그냥 게임 끝낼거면 넣을 필요 없음.
             stopOut = true;
             time = 0;                
-            Debug.Log("StopOut");
         }
 
     }
