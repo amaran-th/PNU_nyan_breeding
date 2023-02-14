@@ -37,4 +37,10 @@ public class PlayerManager: MonoBehaviour
     //     string json = JsonUtility.ToJson(playerData);
     //     File.WriteAllText(SavePath, json);
     // }
+
+    public Loader LoadJson<Loader>(string path) 
+    {
+        string data = File.ReadAllText(path);
+        return JsonUtility.FromJson<Loader>(data);
+    }
 }
