@@ -14,6 +14,6 @@ public class NewGameButton : MonoBehaviour
     // Update is called once per frame
     public void OnClickNewGameButton()
     {
-        SceneManager.LoadScene("SelectScene");
+        SceneManager.LoadScene("LoadingScene");
     }
 }
