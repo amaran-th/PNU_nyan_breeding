@@ -5,28 +5,36 @@
       "name": "교수님",
       "img_path": "Images/Icon/npc3_64",
       "pos_x": -400,
-      "pos_y": 200
+      "pos_y": 200,
+      "mail_title": "나 김교수일세",
+      "mail_content": "잠깐 할 말이 있으니 교수실로 오게나."
     },
     {
       "id": 1,
       "name": "하루",
       "img_path": "Images/Icon/npcn_64",
       "pos_x": -150,
-      "pos_y": -400
+      "pos_y": -400,
+      "mail_title": "먀~~(야 꼬질이)",
+      "mail_content": "애옹~(늘 만나던 곳 알지? 거기로 와.)\n먀옭.(기다리고 있을테니까.)"
     },
     {
       "id": 2,
       "name": "캔따개",
       "img_path": "Images/Icon/npc1_64",
       "pos_x": 300,
-      "pos_y": 150
+      "pos_y": 150,
+      "mail_title": "야옹아 잘 지냈어?",
+      "mail_content": "너한테 할 말이 있는데...여기서 말하긴 좀 그러니까 늘 밥 주던 곳 알지?? 거기로 와줘!"
     },
     {
       "id": 3,
       "name": "학생회장",
       "img_path": "Images/Icon/npc2_64",
       "pos_x": 100,
-      "pos_y": 100
+      "pos_y": 100,
+      "mail_title": "",
+      "mail_content": ""
     }
   ]
 }

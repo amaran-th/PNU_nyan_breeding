@@ -14,9 +14,6 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     private ScrollRect scrollRect;
     public void Init(Activity activity){
         this.activity=activity;
-        //this.id=activity.id;
-        //this.name=activity.name;
-        //this.img_path=activity.img_path;
         text.text=activity.name;
         scrollRect=transform.parent.parent.parent.GetComponent<ScrollRect>();
     }
@@ -37,7 +34,7 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         //Debug.Log(img_path);
         if(CalenderController.scheduleCount<3){
             if(TimeTableManager.curMoney+TimeTableManager.selectedMoney+activity.money_stat<0){
-                Debug.Log("돈이 부족하다!");
+                ModalManager.instance.OpenModal("돈이 부족해!");
                 return;
             }
             CalenderController.scheduleList.Add(activity);
@@ -47,28 +44,23 @@ public class TestListItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
     }
     public void OnHoverItem(){
-        Vector3 temp=transform.position;
-        temp.x-=15f;
-        temp.y+=10f;
-        TimeTableManager.tooltip.transform.position=temp;
         TimeTableManager.tooltip.SetActive(true);
         TimeTableManager.tooltip.transform.Find("Title").gameObject.GetComponent<TMP_Text>().text=activity.name;
         
-        var stats=TimeTableManager.tooltip.transform.Find("Stats").gameObject;
+        var stats=TimeTableManager.tooltip.transform.Find("Stats").gameObject.GetComponent<TMP_Text>();
         Tuple<string, string> stat=GetStat();
-        stats.transform.Find("Up").gameObject.GetComponent<TMP_Text>().text=stat.Item1;
-        stats.transform.Find("Down").gameObject.GetComponent<TMP_Text>().text=stat.Item2;
-
-        var money=TimeTableManager.tooltip.transform.Find("Money").gameObject;
-        TMP_Text moneyText=money.transform.Find("Amount").gameObject.GetComponent<TMP_Text>();
-        if(activity.money_stat==0) return;
-        moneyText.text=activity.money_stat+"냥";
+        stats.text="<color=blue>"+stat.Item1+"</color>\n";
+        stats.text+="<color=red>"+stat.Item2+"</color>";
+        
+        var money=TimeTableManager.tooltip.transform.Find("Amount").gameObject.GetComponent<TMP_Text>();
+        if(activity.money_stat==0){
+            money.text="";
+            return;
+        }
         if(activity.money_stat>0){
-            moneyText.text+="수입";
-            moneyText.color=new Color(0.4666667f,0.6455813f,0.7843137f,1f);
+            money.text="<color=blue>"+activity.money_stat+"냥 수입</color>";
         }else if(activity.money_stat<0){
-            moneyText.text+="지출";
-            moneyText.color=new Color(1f, 0.5026245f, 0.4283019f, 1f);
+            money.text="<color=red>"+Mathf.Abs(activity.money_stat)+"냥 지출</color>";
         }
         
         

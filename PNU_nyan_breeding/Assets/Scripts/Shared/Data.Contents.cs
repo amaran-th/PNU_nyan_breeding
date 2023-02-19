@@ -54,6 +54,8 @@ public class NPC : RawData
     public string img_path;
     public int pos_x;
     public int pos_y;
+	public string mail_title;
+	public string mail_content;
 }
 
 [System.Serializable]

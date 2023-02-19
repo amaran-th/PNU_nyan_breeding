@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "CTF",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 0,
       "know_stat": 1,
       "security_stat": 4,
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "name": "해커톤",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 4,
       "know_stat": 1,
       "security_stat": 0,
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "알고리즘 대회",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 3,
       "know_stat": 2,
       "security_stat": 0,
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "요리대회",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "벚꽃놀이",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "할로윈 축제",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "name": "연말파티",
-      "img_path": "Images/Practice/todo_purple",
+      "img_path": "Images/Practice/Calender/todo_purple",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
