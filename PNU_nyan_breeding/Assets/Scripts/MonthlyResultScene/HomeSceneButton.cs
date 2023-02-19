@@ -23,7 +23,7 @@ public class HomeSceneButton : MonoBehaviour
     {
         MonthlyResultManager.playerStatData.UpdateStat(MonthlyResultManager.Diff);
         //===========================
-        MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.MoneyDiff,ShareData.selectedNPCId);
+        MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.MoneyDiff);
         
         //메일 발송 여부 결정하는 코드
         var npcId=ShareData.selectedNPCId;
@@ -35,6 +35,14 @@ public class HomeSceneButton : MonoBehaviour
         //ShareData 초기화
         ShareData.fixedScheduleList=new List<Activity>();
         ShareData.selectedNPCId=-1;
-        SceneManager.LoadScene("HomeScene");
+        if(CheckHiddenEnding()) SceneManager.LoadScene("EndingScene");
+        else SceneManager.LoadScene("HomeScene");
+    }
+    bool CheckHiddenEnding(){
+        if(Managers.Player.playerInfoData.money_stat<0){
+            //길냥이 엔딩 TOENDING
+            return true;
+        }
+        return false;
     }
 }

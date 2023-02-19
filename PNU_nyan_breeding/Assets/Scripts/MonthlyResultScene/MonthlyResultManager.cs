@@ -23,7 +23,7 @@ public class MonthlyResultManager : MonoBehaviour
         playerStatData= Managers.Player.playerStatData;
         npcData=Managers.Data.npcData;
         Diff = new List<int>(){0,0,0,0,0,0,0};
-        MoneyDiff=0;
+        MoneyDiff=-1000;    //고정지출
         playerStat = playerStatData.GetStatList();
         for(int i=0;i<3;i++){
             temp=fixedScheduleList[i].GetStatList();

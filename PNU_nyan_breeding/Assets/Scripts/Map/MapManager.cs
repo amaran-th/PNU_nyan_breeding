@@ -9,7 +9,7 @@ public class MapManager : MonoBehaviour
     public RectTransform canvas;
     public GameObject choiceModal;
     public static Dictionary<int, NPC> npcData;   //DataManager를 통해 로드된 활동 데이터
-
+    public static PlayerInfo playerInfoData;
     //npc
     public static int currentNpc = -1;
     int newNpc = -1;
@@ -19,7 +19,6 @@ public class MapManager : MonoBehaviour
         set{
             if (newNpc == value) return;
             newNpc = value;
-            UpdateModal();
         }
         get{
             return newNpc;
@@ -30,12 +29,9 @@ public class MapManager : MonoBehaviour
     void Awake(){
         //Json 파일로부터 데이터 로드
         npcData = Managers.Data.npcData;  
+        playerInfoData= Managers.Player.playerInfoData;
         currentNpc=-1;  
         CreateNPCIcons();
-    }
-    void Start()
-    {
-        UpdateModal();
     }
 
     void Update()
@@ -50,11 +46,6 @@ public class MapManager : MonoBehaviour
             (npcItem.transform.Find("NpcObject").GetComponent("NPCIcon") as NPCIcon).index=npc.id;
         }
     }
-    void UpdateModal(){
-        if(currentNpc>=0){
-            choiceModal.SetActive(true);
-        }else{
-            choiceModal.SetActive(false);
-        }
-    }
+
+
 }

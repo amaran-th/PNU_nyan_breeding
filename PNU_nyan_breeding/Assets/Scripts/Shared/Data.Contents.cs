@@ -96,10 +96,12 @@ public class PlayerInfo{
 	public int[] npc_story_count;
 	
 	//grade, month, money 업데이트
-	public void UpdateInfo(int moneyDiff, int npcId){
+	public void UpdateInfo(int moneyDiff){
 		if(month==2) grade+=1;
 		month=(month+1)%12;
 		money_stat+=moneyDiff;
+	}
+	public void UpdateStoryCount(int npcId){
 		if(npcId!=-1) npc_story_count[npcId]+=1;
 	}
 }

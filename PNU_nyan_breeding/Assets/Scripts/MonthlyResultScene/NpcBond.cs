@@ -8,8 +8,6 @@ public class NpcBond : MonoBehaviour
 {
     public Image icon;
     public TMP_Text name;
-    public TMP_Text bondStat;
-    
     public RectTransform contents;
     public Image fill;
     public Image noFill;
@@ -18,7 +16,7 @@ public class NpcBond : MonoBehaviour
     public void Init(NPC npc, int storyCount, int bond){
         this.icon.sprite=Resources.Load<Sprite>(npc.img_path) as Sprite;
         this.name.text=npc.name;
-        this.bondStat.text=storyCount.ToString();
+        Debug.Log(npc.name+"과"+storyCount.ToString()+"번 만났고, 호감도는"+bond);
         LoadBond(bond);
         //npcList=transform.parent.parent.parent.GetComponent<ScrollRect>();
     }
