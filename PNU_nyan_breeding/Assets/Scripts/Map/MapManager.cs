@@ -57,4 +57,6 @@ public class MapManager : MonoBehaviour
             choiceModal.SetActive(false);
         }
     }
+
+
 }
