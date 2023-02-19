@@ -9,7 +9,7 @@ public class MapManager : MonoBehaviour
     public RectTransform canvas;
     public GameObject choiceModal;
     public static Dictionary<int, NPC> npcData;   //DataManager를 통해 로드된 활동 데이터
-
+    public static PlayerInfo playerInfoData;
     //npc
     public static int currentNpc = -1;
     int newNpc = -1;
@@ -30,6 +30,7 @@ public class MapManager : MonoBehaviour
     void Awake(){
         //Json 파일로부터 데이터 로드
         npcData = Managers.Data.npcData;  
+        playerInfoData= Managers.Player.playerInfoData;
         currentNpc=-1;  
         CreateNPCIcons();
     }

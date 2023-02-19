@@ -7,6 +7,7 @@ public class MapButtonController : MonoBehaviour
 {
     public void OnClickNpcOK(){
         ShareData.selectedNPCId=MapManager.currentNpc;
+        MapManager.playerInfoData.UpdateStoryCount(MapManager.currentNpc);
         SceneManager.LoadScene("NpcEventScene");
     }
     public void OnClickLottoButton(){
