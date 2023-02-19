@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "전시 구경",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "name": "집에서 휴식",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "회식",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "쇼핑",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "바캉스",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "독서&영화관람",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "name": "친목 모임",
-      "img_path": "Images/Practice/todo_cyan",
+      "img_path": "Images/Practice/Calender/todo_cyan",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,

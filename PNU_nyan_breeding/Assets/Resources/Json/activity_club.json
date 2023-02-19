@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "보안 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 2,
       "know_stat": 1,
       "security_stat": 4,
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "name": "개발 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 4,
       "know_stat": 2,
       "security_stat": 1,
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "코딩 교육봉사 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 2,
       "know_stat": 4,
       "security_stat": 1,
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "운동 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "예술 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "창업 동아리",
-      "img_path": "Images/Practice/todo_orange",
+      "img_path": "Images/Practice/Calender/todo_orange",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,

@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "코딩 학원",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 1,
       "security_stat": 0,
@@ -18,7 +18,7 @@
     {
       "id": 1,
       "name": "과외",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -33,7 +33,7 @@
     {
       "id": 2,
       "name": "과사 근로",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -48,7 +48,7 @@
     {
       "id": 3,
       "name": "치킨집 알바",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -63,7 +63,7 @@
     {
       "id": 4,
       "name": "코딩 외주 알바",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 2,
       "know_stat": 0,
       "security_stat": 0,
@@ -78,7 +78,7 @@
     {
       "id": 5,
       "name": "빵집 알바",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "name": "물류센터 알바",
-      "img_path": "Images/Practice/todo_yellow",
+      "img_path": "Images/Practice/Calender/todo_yellow",
       "coding_stat": 0,
       "know_stat": 0,
       "security_stat": 0,
