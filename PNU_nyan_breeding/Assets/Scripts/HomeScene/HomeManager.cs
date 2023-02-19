@@ -21,17 +21,16 @@ public class HomeManager : MonoBehaviour
 
     void Start()
     {
-        ModalManager.instance.OpenModal("1번째 튜토리얼입니다~",  YesOrNoButton );  
-    }
-
-    public void YesOrNoButton()
-    {
-         ModalManager.instance.YesOrNoOpenModal("튜토리얼 볼것인가 말것인가!",YesButton,NoButton);  
+       // ModalManager.instance.OpenModal("1번째 튜토리얼입니다~",  YesOrNoButton );  
+        if (playerInfoData.month == 3 && playerInfoData.grade == 1 ){
+            ModalManager.instance.YesOrNoOpenModal("튜토리얼 볼것인가 말것인가!",YesButton,NoButton);  
+        }
     }
 
     public void YesButton()
     {
         Debug.Log("네");
+         SceneManager.LoadScene("TutorialHomeScene");
     }
 
     public void NoButton()
