@@ -19,7 +19,6 @@ public class MapManager : MonoBehaviour
         set{
             if (newNpc == value) return;
             newNpc = value;
-            UpdateModal();
         }
         get{
             return newNpc;
@@ -34,10 +33,6 @@ public class MapManager : MonoBehaviour
         currentNpc=-1;  
         CreateNPCIcons();
     }
-    void Start()
-    {
-        UpdateModal();
-    }
 
     void Update()
     {
@@ -49,13 +44,6 @@ public class MapManager : MonoBehaviour
             var npcItem=Instantiate(npcIcon,canvas); //자식 객체 생성
             npcItem.transform.localPosition=new Vector3(npc.pos_x, npc.pos_y, 0f);            
             (npcItem.transform.Find("NpcObject").GetComponent("NPCIcon") as NPCIcon).index=npc.id;
-        }
-    }
-    void UpdateModal(){
-        if(currentNpc>=0){
-            choiceModal.SetActive(true);
-        }else{
-            choiceModal.SetActive(false);
         }
     }
 

@@ -24,7 +24,9 @@ public class ActivityController : MonoBehaviour
         for(int i=0;i<3;i++){
             //TODO Activity에 gif_path, info 추가 
             activities[i].transform.Find("Illust").GetComponent<Image>().sprite=Resources.Load<Sprite>(CalenderController.scheduleList[i].img_path) as Sprite;
+            activities[i].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2);
             activities[i].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=CalenderController.scheduleList[i].name+"을 했다!";
+            
         }
     }
 

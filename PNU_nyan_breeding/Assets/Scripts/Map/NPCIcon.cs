@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NPCIcon : MonoBehaviour
 {
@@ -27,6 +28,13 @@ public class NPCIcon : MonoBehaviour
     }
     public void OnClickIcon(){
         MapManager.currentNpc=index;
+        ModalManager.instance.YesOrNoOpenModal(MapManager.npcData[index].name+"을(를) 만나러 갈까?",OnClickNpcOK,OnClickCancel);
         Debug.Log(MapManager.currentNpc);
     }
+    public void OnClickNpcOK(){
+        ShareData.selectedNPCId=MapManager.currentNpc;
+        MapManager.playerInfoData.UpdateStoryCount(MapManager.currentNpc);
+        SceneManager.LoadScene("NpcEventScene");
+    }
+    public void OnClickCancel(){}
 }
