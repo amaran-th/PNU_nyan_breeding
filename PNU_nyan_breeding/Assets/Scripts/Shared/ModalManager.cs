@@ -16,6 +16,7 @@ public class ModalManager : MonoBehaviour
     public enum ModalResponse { OK, YES, NO }
     
     public GameObject Modal;
+    public GameObject BackGround;
     public GameObject MessageBox;
     public GameObject OneButton;
     public GameObject YesOrNoButton;
@@ -46,6 +47,7 @@ public class ModalManager : MonoBehaviour
     private void ModalInit() // 초기화
     {
         Modal.SetActive(false);
+        BackGround.SetActive(false);
         YesOrNoButton.SetActive(false);
         OneButton.SetActive(false);
     }
@@ -54,6 +56,7 @@ public class ModalManager : MonoBehaviour
     {
         ModalInit();
         Modal.SetActive(true);
+        BackGround.SetActive(true);
         OneButton.SetActive(true);
         MessageBox.GetComponent<TextMeshProUGUI>().text = message;
 
@@ -64,6 +67,7 @@ public class ModalManager : MonoBehaviour
     {
         ModalInit();
         Modal.SetActive(true);
+        BackGround.SetActive(true);
         OneButton.SetActive(true);
         MessageBox.GetComponent<TextMeshProUGUI>().text = message;
         
@@ -74,6 +78,7 @@ public class ModalManager : MonoBehaviour
     {
         ModalInit();
         Modal.SetActive(true);
+        BackGround.SetActive(true);
         YesOrNoButton.SetActive(true);
         MessageBox.GetComponent<TextMeshProUGUI>().text = message;
 
