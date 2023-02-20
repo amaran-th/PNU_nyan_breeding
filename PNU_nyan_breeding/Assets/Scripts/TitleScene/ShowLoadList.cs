@@ -63,7 +63,9 @@ public class ShowLoadList : MonoBehaviour
     {
         playerData = Managers.Player.LoadJson<Player>(Application.persistentDataPath + $"/save{index}");
         Managers.Player.playerInfoData = playerData.playerInfo;
-        SceneManager.LoadScene("HomeScene");
+        PlayerPrefs.SetInt("continue", 1);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("LoadingScene");
     }
 
     private void Awake()
