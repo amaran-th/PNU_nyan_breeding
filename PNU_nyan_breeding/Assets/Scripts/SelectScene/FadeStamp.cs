@@ -7,6 +7,8 @@ public class FadeStamp : MonoBehaviour
 {
 
     public StartButton btn;
+    public GameObject panel;
+
     private float speed=3f;
     private float time;
 
@@ -19,12 +21,14 @@ public class FadeStamp : MonoBehaviour
         color = gameObject.GetComponent<Image>().color;
         color.a=0;
         gameObject.GetComponent<Image>().color = color;
+        panel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (btn.flag) {
+            panel.SetActive(true);
             color.a=1;
             gameObject.GetComponent<Image>().color = color; 
             transform.localScale = Vector3.one * (1-time*speed);
