@@ -4149,7 +4149,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a7b76f34398425348b55e6b734c351b3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5108,6 +5108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Modal: {fileID: 1980960088}
+  BackGround: {fileID: 0}
   MessageBox: {fileID: 513335301}
   OneButton: {fileID: 1770933046}
   YesOrNoButton: {fileID: 810222867}
