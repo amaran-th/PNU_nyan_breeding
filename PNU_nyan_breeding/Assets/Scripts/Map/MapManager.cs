@@ -40,10 +40,13 @@ public class MapManager : MonoBehaviour
     }
     public void CreateNPCIcons(){   //NPC 아이콘 생성
         for(int i=0;i<npcData.Count;i++){
-            var npc=(NPC)npcData[i];
-            var npcItem=Instantiate(npcIcon,canvas); //자식 객체 생성
-            npcItem.transform.localPosition=new Vector3(npc.pos_x, npc.pos_y, 0f);            
-            (npcItem.transform.Find("NpcObject").GetComponent("NPCIcon") as NPCIcon).index=npc.id;
+            if (Managers.Player.playerInfoData.npc_story_count[i] == 10 && Managers.Player.playerInfoData.npc_bond[i] < 5) ;
+            else {
+                var npc=(NPC)npcData[i];
+                var npcItem=Instantiate(npcIcon,canvas); //자식 객체 생성
+                npcItem.transform.localPosition=new Vector3(npc.pos_x, npc.pos_y, 0f);            
+                (npcItem.transform.Find("NpcObject").GetComponent("NPCIcon") as NPCIcon).index=npc.id;
+            }
         }
     }
 

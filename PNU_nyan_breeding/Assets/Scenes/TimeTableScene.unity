@@ -5108,7 +5108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Modal: {fileID: 1980960088}
-  BackGround: {fileID: 0}
+  BackGround: {fileID: 677885833}
   MessageBox: {fileID: 513335301}
   OneButton: {fileID: 1770933046}
   YesOrNoButton: {fileID: 810222867}
