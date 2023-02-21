@@ -5,6 +5,7 @@ using UnityEngine;
 public class LoadGame : MonoBehaviour
 {
     public GameObject LoadSlotPage;
+    public GameObject Shadow;
     private Player playerData = new Player();
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class LoadGame : MonoBehaviour
 
     public void OnClickLoadGameButton()
     {
+        Shadow.SetActive(true);
         LoadSlotPage.SetActive(true);
     }
 
