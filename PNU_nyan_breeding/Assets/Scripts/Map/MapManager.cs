@@ -40,7 +40,7 @@ public class MapManager : MonoBehaviour
     }
     public void CreateNPCIcons(){   //NPC 아이콘 생성
         for(int i=0;i<npcData.Count;i++){
-            if (Managers.Player.playerInfoData.npc_story_count[i] == 10 && Managers.Player.playerInfoData.npc_bond[i] < 5) ;
+            if (Managers.Player.playerInfoData.npc_story_count[i] == 9 && Managers.Player.playerInfoData.npc_bond[i] < 5) ;
             else {
                 var npc=(NPC)npcData[i];
                 var npcItem=Instantiate(npcIcon,canvas); //자식 객체 생성

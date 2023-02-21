@@ -36,6 +36,7 @@ public class NpcEvent : MonoBehaviour
     public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
     //public static List<Dictionary<int, ProfessorEvent>>[] npcEventList = {professorEventList,blackCatEventList,butlerEventList,presidentEventList}; //왜 안됨?ㅋㅋ
     public Dictionary<int, ProfessorEvent> resEvent;
+    public static PlayerInfo playerInfoData;
     public int resNpcId;
 
     void Awake() {
@@ -43,6 +44,7 @@ public class NpcEvent : MonoBehaviour
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
         standingList = Managers.Data.standingList;
+        playerInfoData = Managers.Player.playerInfoData; 
         DeclareEvent();
     }
 
@@ -152,6 +154,7 @@ public class NpcEvent : MonoBehaviour
             }
             DialogueBox.SetActive(false);
             StaindingImg.SetActive(false);
+            playerInfoData.UpdateStoryCount(resNpcId);
             SceneManager.LoadScene("MonthlyResultScene");
         }  
     }
@@ -199,10 +202,12 @@ public class NpcEvent : MonoBehaviour
 
     public void bondUpSkip() {
         if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
+        playerInfoData.UpdateStoryCount(resNpcId);
         SceneManager.LoadScene("MonthlyResultScene");
     }
     public void bondDownSkip() {
         if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;              
+        playerInfoData.UpdateStoryCount(resNpcId);
         SceneManager.LoadScene("MonthlyResultScene");
     }
 
