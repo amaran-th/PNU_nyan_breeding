@@ -16,18 +16,18 @@ public class TutorialShowPlayerInfo : MonoBehaviour
     void Start()
     {
         
-        Name.text = TutorialManager.playerInfoData.name;
+        Name.text = TutorialController.playerInfoData.name;
 
-        if(TutorialManager.playerInfoData.species == 0)
+        if(TutorialController.playerInfoData.species == 0)
             Cat.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Cat/0103고등어스탠딩") as Sprite;
-        else if(TutorialManager.playerInfoData.species == 1)
+        else if(TutorialController.playerInfoData.species == 1)
             Cat.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Cat/0103삼색이스탠딩") as Sprite;
-        else if(TutorialManager.playerInfoData.species == 2)
+        else if(TutorialController.playerInfoData.species == 2)
             Cat.GetComponent<Image>().sprite = Resources.Load<Sprite>("Images/Cat/0103치즈스탠딩") as Sprite;
 
-        Grade.text = TutorialManager.playerInfoData.grade.ToString();
-        Month.text = TutorialManager.playerInfoData.month.ToString();
-        moneyStat.text =  TutorialManager.playerInfoData.money_stat.ToString();        
+        Grade.text = TutorialController.playerInfoData.grade.ToString();
+        Month.text = TutorialController.playerInfoData.month.ToString();
+        moneyStat.text =  TutorialController.playerInfoData.money_stat.ToString();        
     }
 
     // Update is called once per frame

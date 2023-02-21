@@ -18,7 +18,7 @@ public class TutorialShowPlayerStat : MonoBehaviour
             statItem.transform.localPosition=new Vector3(50f, 200f + -i*68f, 0f); 
 
         
-            statItem.transform.Find("Origin").GetComponent<Slider>().value = TutorialManager.playerStat[i];
+            statItem.transform.Find("Origin").GetComponent<Slider>().value = TutorialController.playerStat[i];
         }
     }
 
