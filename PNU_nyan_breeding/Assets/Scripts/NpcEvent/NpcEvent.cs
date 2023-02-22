@@ -34,7 +34,9 @@ public class NpcEvent : MonoBehaviour
     public static List<Dictionary<int, ProfessorEvent>> blackCatEventList; 
     public static List<Dictionary<int, ProfessorEvent>> butlerEventList;
     public static List<Dictionary<int, ProfessorEvent>> presidentEventList;
+    //public static List<Dictionary<int, ProfessorEvent>>[] npcEventList = {professorEventList,blackCatEventList,butlerEventList,presidentEventList}; //왜 안됨?ㅋㅋ
     public Dictionary<int, ProfessorEvent> resEvent;
+    public static PlayerInfo playerInfoData;
     public int resNpcId;
 
     void Awake() {
@@ -42,6 +44,7 @@ public class NpcEvent : MonoBehaviour
         selectUi.SetActive(false);
         DialogueBox.SetActive(true);
         standingList = Managers.Data.standingList;
+        playerInfoData = Managers.Player.playerInfoData; 
         DeclareEvent();
     }
 
@@ -54,7 +57,23 @@ public class NpcEvent : MonoBehaviour
         presidentEventList = Managers.Data.presidentEvent;
 
         resNpcId = ShareData.selectedNPCId;
-        resEvent = professorEventList[Managers.Player.playerInfoData.npc_story_count[0]];
+        //resNpcId = 1; //개발용 temp
+        switch (resNpcId) {
+            case 0: resEvent = professorEventList[Managers.Player.playerInfoData.npc_story_count[0]];
+                    //resEvent = professorEventList[0]; // 개발용 temp
+                    break;
+            case 1: resEvent = blackCatEventList[Managers.Player.playerInfoData.npc_story_count[1]];
+                    //resEvent = blackCatEventList[0]; // 개발용 temp
+                    break;
+            case 2: resEvent = butlerEventList[Managers.Player.playerInfoData.npc_story_count[2]];
+                    //resEvent = butlerEventList[0]; // 개발용 temp
+                    break;
+            case 3: resEvent = presidentEventList[Managers.Player.playerInfoData.npc_story_count[3]];
+                    //resEvent = presidentEventList[0]; // 개발용 temp
+                    break;
+        }
+        //resEvent = npcEvent[Managers.Player.playerInfoData.npc_story_count[0]];
+        Debug.Log("스토리:"+Managers.Player.playerInfoData.npc_story_count[resNpcId]);
         DeclareIllust();
     }
 
@@ -109,8 +128,8 @@ public class NpcEvent : MonoBehaviour
 
     void NextLine()
     {
-        
-        if(index < resEvent.Count && resEvent[index].name != "end")
+        Debug.Log("event count: "+resEvent.Count+" index: "+index);
+        if(index <= resEvent.Count && resEvent[index].name != "end")
         {
             DeclareIllust();
             if(resEvent[index].name == "선택지1") activeSelect();
@@ -135,6 +154,7 @@ public class NpcEvent : MonoBehaviour
             }
             DialogueBox.SetActive(false);
             StaindingImg.SetActive(false);
+            playerInfoData.UpdateStoryCount(resNpcId);
             SceneManager.LoadScene("MonthlyResultScene");
         }  
     }
@@ -178,6 +198,17 @@ public class NpcEvent : MonoBehaviour
         index = index2+1;
         preventClick = false;
         NextLine();
+    }
+
+    public void bondUpSkip() {
+        if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
+        playerInfoData.UpdateStoryCount(resNpcId);
+        SceneManager.LoadScene("MonthlyResultScene");
+    }
+    public void bondDownSkip() {
+        if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;              
+        playerInfoData.UpdateStoryCount(resNpcId);
+        SceneManager.LoadScene("MonthlyResultScene");
     }
 
 }

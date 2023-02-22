@@ -3,7 +3,7 @@
     {
       "id": 0,
       "name": "교수님",
-      "script": "presidentEvent0",
+      "script": "presidentEvent2 ",
       "background": "Images/EndingIllust/employment"
     },
     {
@@ -45,7 +45,7 @@
     {
       "id": 7,
       "name": "end",
-      "script": "",
+      "script": "up",
       "background": "Images/EndingIllust/employment"
     },
     {
@@ -63,7 +63,19 @@
     {
       "id": 10,
       "name": "깜냥이",
-      "script": "선택지2 2",
+      "script": "선택지2 2 next is end",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 11,
+      "name": "end",
+      "script": "down",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 12,
+      "name": "end",
+      "script": "down",
       "background": "Images/EndingIllust/employment"
     }
   ]
