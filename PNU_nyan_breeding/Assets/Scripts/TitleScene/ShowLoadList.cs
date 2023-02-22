@@ -11,6 +11,7 @@ public class ShowLoadList : MonoBehaviour
 {
     private Player playerData = new Player();
     public GameObject LoadSlotPage;
+    public GameObject Shadow;
     public GameObject CloseBtn;
     private string path;
     public static int slotNumber;
@@ -24,11 +25,13 @@ public class ShowLoadList : MonoBehaviour
     public void CloseBtnClicked()
     {
         LoadSlotPage.SetActive(false);
+        Shadow.SetActive(false);
     }
 
     public void LoadSlot(int number)
     {
         slotNumber = number;
+        Shadow.SetActive(false);
         LoadSlotPage.SetActive(false);
     }
 
