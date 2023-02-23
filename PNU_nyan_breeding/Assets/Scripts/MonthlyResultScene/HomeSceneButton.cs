@@ -23,7 +23,7 @@ public class HomeSceneButton : MonoBehaviour
     {
         MonthlyResultManager.playerStatData.UpdateStat(MonthlyResultManager.Diff);
         //===========================
-        MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.MoneyDiff);
+        MonthlyResultManager.playerInfoData.UpdateInfo(MonthlyResultManager.MoneyTotalDiff);
         
         //메일 발송 여부 결정하는 코드
         var npcId=ShareData.selectedNPCId;
