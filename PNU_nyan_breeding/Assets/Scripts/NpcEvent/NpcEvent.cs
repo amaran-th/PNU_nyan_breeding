@@ -24,10 +24,14 @@ public class NpcEvent : MonoBehaviour
     private bool preventClick = false;
 
     public Dictionary<string, int> staindingId = new Dictionary<string, int>()
-    {
-      {"교수님", 0 },
-      {"깜냥이", 1 },
-      {"나레이션", 2}
+    {      
+      {"부대냥", 0 },
+      {"캔따개", 1 },
+      {"학생회장", 2},
+      {"교수님", 3 },
+      {"캔따개", 11 },
+      {"나레이션", 12},
+      {"일러스트", 13}
     };
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public static List<Dictionary<int, ProfessorEvent>> professorEventList;
@@ -163,7 +167,7 @@ public class NpcEvent : MonoBehaviour
         var spriteId = staindingId[resEvent[index].name];
 
         textComponent.text = string.Empty;
-        if (standingList[spriteId].id == 2)
+        if (spriteId == 12)
         {
          textComponent2.text = string.Empty;
          NameSlot.SetActive(false);
