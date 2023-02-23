@@ -2,18 +2,78 @@
   "standingList": [
     {
       "id": 0,
+      "name": "부대냥",
+      "image": "Images/StandingImage/budea_nyan",
+      "locationX": -244
+    },
+    {
+      "id": 1,
+      "name": "캔따개",
+      "image": "Images/StandingImage/npc_1",
+      "locationX": 244
+    },
+    {
+      "id": 2,
+      "name": "학생회장",
+      "image": "Images/StandingImage/npc_2",
+      "locationX": -244
+    },
+    {
+      "id": 3,
       "name": "교수님",
       "image": "Images/StandingImage/npc_3",
       "locationX": -244
     },
     {
-      "id": 1,
-      "name": "깜냥이",
-      "image": "Images/StandingImage/npc_nya",
-      "locationX": 244
+      "id": 4,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
     },
     {
-      "id": 2,
+      "id": 5,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 6,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 7,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 8,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 9,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 10,
+      "name": "",
+      "image": "Images/StandingImage/npc_3",
+      "locationX": -244
+    },
+    {
+      "id": 11,
+      "name": "캔따개",
+      "image": "Images/StandingImage/npc_11",
+      "locationX": -244
+    },
+    {
+      "id": 12,
       "name": "나레이션",
       "image": "Images/StandingImage/narration",
       "locationX": 244

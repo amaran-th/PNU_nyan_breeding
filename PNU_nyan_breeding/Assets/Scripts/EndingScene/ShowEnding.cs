@@ -18,31 +18,46 @@ public class ShowEnding : MonoBehaviour
     public Dictionary<int,EndingDialogue> ending =  new Dictionary<int,EndingDialogue>();
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public Dictionary<string, int> staindingId = new Dictionary<string, int>()
-    {
-      {"교수님", 0 },
-      {"깜냥이", 1 },
-      {"나레이션", 2}
+    {      
+      {"부대냥", 0 },
+      {"캔따개", 1 },
+      {"학생회장", 2},
+      {"교수님", 3 },
+      {"캔따개2", 11 },
+      {"나레이션", 12},
+      {"일러스트", 13}
     };
 
-    public Image tempImg;
+    public Image standingImg;
+    public Image endingIllust;
+    public Image backgroundImg;
+    
+    private bool preventClick = false;
+
+    
+    public static List<Dictionary<int, EndingDialogue>> normalEnding; // 테스트용 임시
 
     // Start is called before the first frame update
     void Awake() {
         DialogueBox.SetActive(true);
         ReturnButton.SetActive(false);
+        endingIllust.color = new Color(1,1,1,0);
         standingList = Managers.Data.standingList;
+        normalEnding = Managers.Data.normalEnding; // 테스트용 임시
         
     }
     void Start()
     {
         Debug.Log("showEnding");
-        ending = GameObject.Find("Canvas").GetComponent<CalculateEnding>().resEnding;
+        //ending = GameObject.Find("Canvas").GetComponent<CalculateEnding>().resEnding;
+        ending = normalEnding[0]; // 테스트용 임시
+        Debug.Log(ending[index].background);
+        backgroundImg.sprite = Resources.Load<Sprite>(ending[index].background);
         textComponent.text = string.Empty;
         textComponent2.text = string.Empty;
         
         Debug.Log(standingList[index]);
         Debug.Log(ending[index]);
-        Debug.Log(ending[index].script);
         
         Debug.Log("ending count: "+ending.Count+" index: "+index);
         NextLine();
@@ -51,7 +66,7 @@ public class ShowEnding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !preventClick)
         {
             Debug.Log(textComponent.text);
             Debug.Log(ending[index].script);
@@ -66,7 +81,6 @@ public class ShowEnding : MonoBehaviour
             {
                 StopAllCoroutines();
                 textComponent.text = ending[index].script;
-
             }
         }
     }
@@ -92,6 +106,7 @@ public class ShowEnding : MonoBehaviour
         else
         {
             DialogueBox.SetActive(false);
+            preventClick = true;
             ReturnButton.SetActive(true);
         }  
     }
@@ -99,8 +114,17 @@ public class ShowEnding : MonoBehaviour
     void UpdateBeforeDialogue(int index) {
         var spriteId = staindingId[ending[index].name];
 
+        if (spriteId == 13) {
+            DialogueBox.SetActive(false);    
+            textComponent.text = string.Empty;
+            preventClick = true;
+            endingIllust.sprite = Resources.Load<Sprite>(ending[index].background);
+            StartCoroutine(IllustAppears());
+            return;
+        }
+
         textComponent.text = string.Empty;
-        if (standingList[spriteId].id == 2)
+        if (standingList[spriteId].id == 12)
         {
          textComponent2.text = string.Empty;
          NameSlot.SetActive(false);
@@ -111,11 +135,27 @@ public class ShowEnding : MonoBehaviour
             }
 
         Debug.Log(standingList[spriteId].image);
-        tempImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
-        tempImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,tempImg.transform.localPosition.y,tempImg.transform.localPosition.z);
+        standingImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
+        standingImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,standingImg.transform.localPosition.y,standingImg.transform.localPosition.z);
+        backgroundImg.sprite = Resources.Load<Sprite>(ending[index].background);
+        
     }
 
     public void ReturnToMain() {
         SceneManager.LoadScene("TitleScene");
+    }
+
+    IEnumerator IllustAppears() {
+        Debug.Log("appears");
+        float fadeCount = 0;
+        while (fadeCount < 1.0f) {
+            fadeCount += 0.01f;
+            Debug.Log(fadeCount);
+            yield return new WaitForSeconds(0.01f);
+            endingIllust.color = new Color(1,1,1,fadeCount);
+        }
+        yield return new WaitForSeconds(1.0f);
+        DialogueBox.SetActive(true);
+        preventClick = false;
     }
 }
