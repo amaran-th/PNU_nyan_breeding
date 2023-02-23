@@ -73,7 +73,7 @@ public class NpcEvent : MonoBehaviour
                     break;
         }
         //resEvent = npcEvent[Managers.Player.playerInfoData.npc_story_count[0]];
-        Debug.Log("스토리:"+Managers.Player.playerInfoData.npc_story_count[resNpcId]);
+        Debug.Log("스토리:"+(Managers.Player.playerInfoData.npc_story_count[resNpcId]+1));
         DeclareIllust();
     }
 
