@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingCollectionButtons : MonoBehaviour
 {
@@ -10,9 +11,23 @@ public class EndingCollectionButtons : MonoBehaviour
         
     }
 
+    public void GoTitleButtonOnClick() 
+    {
+        SceneManager.LoadScene("TitleScene");
+    }
+
+    public void FlipPageLeft()
+    {
+
+    }
+
+    public void FlipPageRight()
+    {
+        
+    }
+
     public void ShowData()
     {
-        Debug.Log(EndingCollectionManager.endingData);
-        //Debug.Log("ddd");
+        // Debug.Log(EndingCollectionManager.endingData);
     }
 }
