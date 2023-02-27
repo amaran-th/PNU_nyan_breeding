@@ -218,25 +218,52 @@ public class RandomNameData : ILoader<int, RandomName>
 }
 #endregion
 
-
- #region Diagloue
-
+#region Ending
 [System.Serializable]
 public class EndingDialogue : RawData
 {
     public string name;
     public string script;
+	public string background;
 }
 
 [System.Serializable]   
-public class DialogueData : ILoader<int, EndingDialogue>
+public class NormalEndingData : ILoader<int, EndingDialogue>
 {
-	public EndingDialogue[] dialogueList;  // json 파일에서 여기로 담김
+	public EndingDialogue[] normalEnding ;   
 
 	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
 	{
 		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
-		foreach (EndingDialogue dialogue in dialogueList) // 리스트에서 Dictionary로 옮기는 작업
+		foreach (EndingDialogue dialogue in normalEnding) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+[System.Serializable]   
+public class BadEndingData : ILoader<int, EndingDialogue>
+{
+	public EndingDialogue[] badEnding ;   
+
+	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
+		foreach (EndingDialogue dialogue in badEnding) // 리스트에서 Dictionary로 옮기는 작업
+			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
+		return dataDict;
+	}
+}
+
+[System.Serializable]   
+public class HiddenndingData : ILoader<int, EndingDialogue>
+{
+	public EndingDialogue[] hiddenEnding ;   
+
+	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
+		foreach (EndingDialogue dialogue in hiddenEnding) // 리스트에서 Dictionary로 옮기는 작업
 			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
 		return dataDict;
 	}
@@ -244,61 +271,10 @@ public class DialogueData : ILoader<int, EndingDialogue>
 
 #endregion
 
-#region EmploymentEnding
-
-[System.Serializable]   
-public class EmploymentEndData : ILoader<int, EndingDialogue>
-{
-	public EndingDialogue[] employmentEnd;   
-
-	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
-	{
-		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
-		foreach (EndingDialogue dialogue in employmentEnd) // 리스트에서 Dictionary로 옮기는 작업
-			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
-		return dataDict;
-	}
-
-}
-
-#endregion
-
-#region JoblessEnding
-
-[System.Serializable]   
-public class JoblessEndData    : ILoader<int, EndingDialogue>
-{
-	public EndingDialogue[] joblessEnd;   
-
-	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
-	{
-		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
-		foreach (EndingDialogue dialogue in joblessEnd) // 리스트에서 Dictionary로 옮기는 작업
-			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
-		return dataDict;
-	}
-}
-
-#endregion
-
-#region GraduateSchoolEnding
 
 
-[System.Serializable]   
-public class GraduateSchoolEndData : ILoader<int, EndingDialogue>
-{
-	public EndingDialogue[] graduateSchoolEnd;   
 
-	public Dictionary<int, EndingDialogue> MakeDict() // 오버라이딩
-	{
-		Dictionary<int, EndingDialogue> dataDict = new Dictionary<int, EndingDialogue>();
-		foreach (EndingDialogue dialogue in graduateSchoolEnd) // 리스트에서 Dictionary로 옮기는 작업
-			dataDict.Add(dialogue.id, dialogue); // level을 ID(Key)로 
-		return dataDict;
-	}
-}
 
-#endregion
 
 #region professorEvent
 [System.Serializable]

@@ -16,15 +16,20 @@ public class DataManager: MonoBehaviour
     public Dictionary<int, NPC> npcData=new Dictionary<int, NPC>();
     public Dictionary<int, CatSpecies> catSpeciesDataList =new Dictionary<int, CatSpecies>();
     public Dictionary<int, RandomName> randomNameDataList =new Dictionary<int, RandomName>();
-
-    public Dictionary<int, EndingDialogue> dialogueList =new Dictionary<int, EndingDialogue>(); 
-    public Dictionary<int, EndingDialogue> employmentEnd =new Dictionary<int, EndingDialogue>(); 
-    public Dictionary<int, EndingDialogue> joblessEnd =new Dictionary<int, EndingDialogue>(); 
-    public Dictionary<int, EndingDialogue> graduateSchoolEnd =new Dictionary<int, EndingDialogue>(); 
+    //Illust
     public Dictionary<int, Standing> standingList =new Dictionary<int, Standing>(); 
     public Dictionary<int, EndingIllust> illustList =new Dictionary<int, EndingIllust>(); 
     public Dictionary<int, Background> backgroundList =new Dictionary<int, Background>(); 
 
+    //Ending
+    public List<Dictionary<int, EndingDialogue>> normalEnding=new List<Dictionary<int, EndingDialogue>>();
+    private string[] NormalEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+    public List<Dictionary<int, EndingDialogue>> badEnding=new List<Dictionary<int, EndingDialogue>>();
+    private string[] BadEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+    public List<Dictionary<int, EndingDialogue>> hiddenEnding=new List<Dictionary<int, EndingDialogue>>();
+    private string[] HiddenEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+ 
+    //NPCEvent
     public List<Dictionary<int, ProfessorEvent>> professorEvent=new List<Dictionary<int, ProfessorEvent>>();
     private string[] professorEventPath={"Json/NpcEventProfessor/professorEvent0", "Json/NpcEventProfessor/professorEvent1","Json/NpcEventProfessor/professorEvent3","Json/NpcEventProfessor/professorEvent4","Json/NpcEventProfessor/professorEvent5","Json/NpcEventProfessor/professorEvent6","Json/NpcEventProfessor/professorEvent7","Json/NpcEventProfessor/professorEvent8","Json/NpcEventProfessor/professorEvent9"};
     public List<Dictionary<int, ProfessorEvent>> blackCatEvent=new List<Dictionary<int, ProfessorEvent>>();
@@ -42,14 +47,18 @@ public class DataManager: MonoBehaviour
         npcData=LoadJson<NPCData, int, NPC>("Json/npc").MakeDict();
         catSpeciesDataList = (LoadJson<CatSpeciesData, int, CatSpecies>("Json/cat_species").MakeDict());
         randomNameDataList = (LoadJson<RandomNameData, int, RandomName>("Json/random_name").MakeDict());
-        dialogueList = (LoadJson<DialogueData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
-        employmentEnd = (LoadJson<EmploymentEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
-        joblessEnd = (LoadJson<JoblessEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
-        graduateSchoolEnd = (LoadJson<GraduateSchoolEndData, int, EndingDialogue>("Json/endingDialogue").MakeDict());
+
+        //Ending
+       for(int i=0;i<NormalEndingPath.Length;i++){
+            normalEnding.Add(LoadJson<NormalEndingData, int, EndingDialogue>(NormalEndingPath[i]).MakeDict());
+        }
+
+        //Illust
         standingList = (LoadJson<StandingData, int, Standing>("Json/standing").MakeDict());
         illustList = (LoadJson<EndingIllustData, int, EndingIllust>("Json/endingIllust").MakeDict());
         backgroundList = (LoadJson<BackgroundData, int, Background>("Json/background").MakeDict());
     
+        //NPCEvent
         for(int i=0;i<professorEventPath.Length;i++){
             professorEvent.Add(LoadJson<ProfessorEventData, int, ProfessorEvent>(professorEventPath[i]).MakeDict());
         }

@@ -95,12 +95,12 @@ public class ActivityController : MonoBehaviour
     }
     void ViewSecondActivity(){
         activities[1].gameObject.SetActive(true);
-        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2);
+        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",3);
         Invoke("ViewThirdActivity",2f);
     }
     void ViewThirdActivity(){
         activities[2].gameObject.SetActive(true);
-        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",3);
+        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",4);
         Invoke("ActiveNextButton",2f);
     }
     void ActiveNextButton(){

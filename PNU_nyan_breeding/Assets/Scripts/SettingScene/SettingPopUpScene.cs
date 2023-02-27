@@ -11,11 +11,13 @@ public class SettingPopUpScene : MonoBehaviour
     public GameObject SoundBtn;
     public GameObject InfoBtn;
     public GameObject TitleBtn;
+    public GameObject EndgameBtn;
 
     public GameObject SettingPopUp;
     public GameObject SoundPopUp;
     public GameObject InfoPopUp;
     public GameObject TitlePopUp;
+    public GameObject EndPopUp;
     
     public AudioMixer BGMSource;
     public Slider BGMSourceSlider;
@@ -38,6 +40,16 @@ public class SettingPopUpScene : MonoBehaviour
         TitlePopUp.SetActive(false);
         SettingPopUp.SetActive(false);
 
+        
+    }
+
+    public void EndgameYesClicked()
+    {
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; //에디터 종료
+    #else
+        Application.Quit(); // 어플리케이션 종료
+    #endif
         
     }
 

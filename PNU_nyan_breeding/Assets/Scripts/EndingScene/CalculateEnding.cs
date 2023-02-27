@@ -16,14 +16,12 @@ public class CalculateEnding : MonoBehaviour
     
     public Image endingIllust;
 
-    public static Dictionary<int,EndingDialogue> dialogueList = new Dictionary<int,EndingDialogue>();
-    public static Dictionary<int,EndingDialogue> employmentEnd = new Dictionary<int,EndingDialogue>();
-    public static Dictionary<int,EndingDialogue> joblessEnd = new Dictionary<int,EndingDialogue>();
-    public static Dictionary<int,EndingDialogue> graduateSchoolEnd = new Dictionary<int,EndingDialogue>();
+    public static List<Dictionary<int, EndingDialogue>> normalEnding;
+    public static List<Dictionary<int, EndingDialogue>> badEnding; 
+    public static List<Dictionary<int, EndingDialogue>> hiddenEnding;
     public Dictionary<int,EndingDialogue>[] endingName = new Dictionary<int,EndingDialogue>[3];
     public Dictionary<int,EndingDialogue> resEnding = new Dictionary<int,EndingDialogue>();
-    public Dictionary<int, EndingIllust> illustList =new Dictionary<int, EndingIllust>(); 
-
+    
     void Awake() {
         Debug.Log("CalculateEnding");
         Calculate();
@@ -40,31 +38,20 @@ public class CalculateEnding : MonoBehaviour
         
         if(CodingStat>80 || KnowStat>80 || SecurityStat>80) EndingIndex=0;
         else if(CodingStat>65 || KnowStat>65 || SecurityStat>65) EndingIndex=1;
-        else EndingIndex=2;
+        else EndingIndex=0;
 
         Debug.Log(EndingIndex);
         
         DeclareEnding();
-        DeclareIllust();
     }
 
     void DeclareEnding(){
-        employmentEnd = Managers.Data.employmentEnd;
-        joblessEnd = Managers.Data.joblessEnd;
-        graduateSchoolEnd = Managers.Data.graduateSchoolEnd;
-        illustList = Managers.Data.illustList;
+        normalEnding = Managers.Data.normalEnding;
+        badEnding = Managers.Data.badEnding;
+        hiddenEnding = Managers.Data.hiddenEnding;
 
-        endingName[0]=employmentEnd;
-        endingName[1]=joblessEnd;
-        endingName[2]=graduateSchoolEnd;
-
-        resEnding = endingName[EndingIndex];
+        resEnding = normalEnding[EndingIndex];
         Debug.Log(resEnding[0]);
     }
 
-    // Update is called once per frame
-    void DeclareIllust() {
-        Debug.Log(illustList[EndingIndex].img_path);
-        endingIllust.sprite = Resources.Load<Sprite>(illustList[EndingIndex].img_path);
-    }
 }
