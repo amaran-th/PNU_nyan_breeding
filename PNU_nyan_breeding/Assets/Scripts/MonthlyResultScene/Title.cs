@@ -8,6 +8,6 @@ public class Title : MonoBehaviour
     public TMP_Text text;
     void Awake()
     {
-        text.text=MonthlyResultManager.playerInfoData.grade+"학년"+MonthlyResultManager.playerInfoData.month+"월 월말정산";
+        text.text=MonthlyResultManager.playerInfoData.grade+"학년 "+MonthlyResultManager.playerInfoData.month+"월 한달결과표";
     }
 }
