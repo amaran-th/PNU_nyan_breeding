@@ -14,9 +14,9 @@ public class ShowStat : MonoBehaviour
             
             var statItem=Instantiate(stat,transform); //자식 객체 생성
             statItem.name = "statObj";//자식객체 이름 설정
-            statItem.transform.localScale = new Vector3(1.20f, 1.20f, 0f);
+            statItem.transform.localScale = new Vector3(1.29f, 1.29f, 0f);
          
-            statItem.transform.localPosition=new Vector3(0f,288+ -i*90f, 0f); 
+            statItem.transform.localPosition=new Vector3(0f, 1f -i*90f , 0f); 
 
         
             if(MonthlyResultManager.Diff[i]>0){
