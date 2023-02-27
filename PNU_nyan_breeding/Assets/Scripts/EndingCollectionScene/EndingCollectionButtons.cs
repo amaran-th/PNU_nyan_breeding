@@ -18,7 +18,7 @@ public class EndingCollectionButtons : MonoBehaviour
 
     public void FlipPageLeft()
     {
-
+        Debug.Log(EndingCollectionManager.endingCollectionData.endingName);
     }
 
     public void FlipPageRight()
