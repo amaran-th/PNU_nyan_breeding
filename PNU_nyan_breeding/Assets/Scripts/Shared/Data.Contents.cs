@@ -82,6 +82,8 @@ public class Player{
     public PlayerInfo playerInfo;
     //스탯
     public PlayerStat playerStat;
+	//엔딩 정보
+	public EndingCollection endingCollection;
 
 }
 [System.Serializable]
@@ -129,7 +131,45 @@ public class PlayerStat{
         
 	}
 }
+[System.Serializable]
+public class EndingCollection{
+	public string endingName;
+	public int done;
+	// public string completeDate;
+}
 
+/* [System.Serializable]
+public class Ending{
+	public string endingName;
+	public int done;
+	// public string completeDate;
+}
+
+public class EndingCollection{
+    //public Ending ending1;
+	//public Ending ending2;
+	//public Ending ending3;
+	//public Ending ending4;
+	/* public List<Ending> GetEndingList(){
+		return new List<Ending>(){ending1, ending2, ending3, ending4};
+	}
+	public void UpdateEnding(List<string> diff){
+		ending1.endingName += diff[0];
+        ending2.endingName += diff[1];
+		ending3.endingName += diff[2];
+        ending4.endingName += diff[3];
+	}*/
+
+	/*public Ending[] EndingCollectionList;   
+
+	public Dictionary<int, Ending> MakeDict() // 오버라이딩
+	{
+		Dictionary<int, Ending> endingCollectionDict = new Dictionary<int, Ending>();
+		foreach (Ending ending in EndingCollectionList) // 리스트에서 Dictionary로 옮기는 작업
+			endingCollectionDict.Add(ending.id, ending); // level을 ID(Key)로 
+		return endingCollectionDict;
+	}
+}*/
 #endregion
 
 

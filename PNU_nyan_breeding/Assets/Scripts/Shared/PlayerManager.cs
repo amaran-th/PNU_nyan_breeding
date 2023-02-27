@@ -12,6 +12,7 @@ public class PlayerManager: MonoBehaviour
     public Player playerData = new Player(); // 부모? 클래스  Player 저장
     public PlayerInfo playerInfoData = new PlayerInfo(); // 부모? 클래스  Player 저장
     public PlayerStat playerStatData = new PlayerStat(); //이중 클래스 PlayerStat 저장
+    public EndingCollection endingCollectionData = new EndingCollection();
 
  
     public void Init() 
