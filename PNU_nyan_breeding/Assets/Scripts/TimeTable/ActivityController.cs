@@ -29,12 +29,58 @@ public class ActivityController : MonoBehaviour
     void Awake(){
         trigger=false;
     }
+
     void Update(){
         if(trigger){
             trigger=false;
             LoadIllust();
             Invoke("ViewFirstActivity",1f);
         }
+
+        FadeinActivity();
+        
+    }
+
+    void LoadIllust(){
+        for(int i=0;i<3;i++){
+            //TODO Activity에 gif_path, info 추가 
+            activities[i].transform.Find("Illust").GetComponent<Image>().sprite=Resources.Load<Sprite>(CalenderController.scheduleList[i].img_path) as Sprite;
+            //activities[i].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2);
+            activities[i].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=CalenderController.scheduleList[i].name+"을 했다!";
+            
+        }
+    }
+
+    public void ViewActivity(){
+        Invoke("ViewFirstActivity",1f);
+    }
+    void ViewFirstActivity(){
+        trigger=false;
+        activities[0].SetActive(true);
+        activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",0); //임시로 activity_type을 2로 넣음
+        Invoke("RemoveFirstPage",2f);
+    }
+    void RemoveFirstPage(){
+        plan.gameObject.SetActive(false);
+        activities[0].gameObject.SetActive(false);
+        Invoke("ViewSecondActivity",1f);
+    }
+    void ViewSecondActivity(){
+        activities[1].gameObject.SetActive(true);
+        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",3);
+        Invoke("ViewThirdActivity",2f);
+    }
+    void ViewThirdActivity(){
+        activities[2].gameObject.SetActive(true);
+        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",4);
+        Invoke("ActiveNextButton",2f);
+    }
+    void ActiveNextButton(){
+        nextButton.SetActive(true);
+    }
+
+    //Activity image fadein funtion
+    public void FadeinActivity() {
 
         if (activities[0].activeSelf && fadeins[0]) {
             colors[0].a=1;
@@ -68,43 +114,6 @@ public class ActivityController : MonoBehaviour
             }
             time+=Time.deltaTime;
         }
-    }
-    void LoadIllust(){
-        for(int i=0;i<3;i++){
-            //TODO Activity에 gif_path, info 추가 
-            activities[i].transform.Find("Illust").GetComponent<Image>().sprite=Resources.Load<Sprite>(CalenderController.scheduleList[i].img_path) as Sprite;
-            //activities[i].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2);
-            activities[i].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=CalenderController.scheduleList[i].name+"을 했다!";
-            
-        }
-    }
-
-    public void ViewActivity(){
-        Invoke("ViewFirstActivity",1f);
-    }
-    void ViewFirstActivity(){
-        trigger=false;
-        activities[0].SetActive(true);
-        activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2); //임시로 activity_type을 2로 넣음
-        Invoke("RemoveFirstPage",2f);
-    }
-    void RemoveFirstPage(){
-        plan.gameObject.SetActive(false);
-        activities[0].gameObject.SetActive(false);
-        Invoke("ViewSecondActivity",1f);
-    }
-    void ViewSecondActivity(){
-        activities[1].gameObject.SetActive(true);
-        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",3);
-        Invoke("ViewThirdActivity",2f);
-    }
-    void ViewThirdActivity(){
-        activities[2].gameObject.SetActive(true);
-        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",4);
-        Invoke("ActiveNextButton",2f);
-    }
-    void ActiveNextButton(){
-        nextButton.SetActive(true);
     }
     
     
