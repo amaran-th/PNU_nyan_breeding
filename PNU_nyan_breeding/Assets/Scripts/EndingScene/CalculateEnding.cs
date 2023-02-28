@@ -17,9 +17,8 @@ public class CalculateEnding : MonoBehaviour
     public Image endingIllust;
 
     public static List<Dictionary<int, EndingDialogue>> normalEnding;
-    public static List<Dictionary<int, EndingDialogue>> badEnding; 
-    public static List<Dictionary<int, EndingDialogue>> hiddenEnding;
-    public Dictionary<int,EndingDialogue>[] endingName = new Dictionary<int,EndingDialogue>[3];
+    public static List<Dictionary<int, EndingDialogue>> badEnding;
+    public static List<Dictionary<int, EndingDialogue>> hiddenEnding; //temp
     public Dictionary<int,EndingDialogue> resEnding = new Dictionary<int,EndingDialogue>();
     
     void Awake() {
@@ -48,9 +47,9 @@ public class CalculateEnding : MonoBehaviour
     void DeclareEnding(){
         normalEnding = Managers.Data.normalEnding;
         badEnding = Managers.Data.badEnding;
-        hiddenEnding = Managers.Data.hiddenEnding;
+        hiddenEnding = Managers.Data.hiddenEnding; //temp
 
-        resEnding = normalEnding[EndingIndex];
+        resEnding = hiddenEnding[EndingIndex];  
         Debug.Log(resEnding[0]);
     }
 

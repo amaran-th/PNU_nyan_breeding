@@ -256,7 +256,7 @@ public class BadEndingData : ILoader<int, EndingDialogue>
 }
 
 [System.Serializable]   
-public class HiddenndingData : ILoader<int, EndingDialogue>
+public class HiddenEndingData : ILoader<int, EndingDialogue>
 {
 	public EndingDialogue[] hiddenEnding ;   
 
