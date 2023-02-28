@@ -8079,7 +8079,7 @@ MonoBehaviour:
   - {fileID: 34904182}
   - {fileID: 318830194}
   - {fileID: 45776182}
-  nextSceneName: HomeScene
+  nextSceneName: TutorialMonthlyResultScene
 --- !u!4 &2105344358
 Transform:
   m_ObjectHideFlags: 0
