@@ -30,14 +30,14 @@ public class ShowEnding : MonoBehaviour
     public Image endingIllust;
     public Image backgroundImg;
     //string playerName = EndingManager.playerInfoData.name;
-    string playerName = "임시이름"; //temp
+    string playerName = "임시이름"; //temp 
     
     
     private bool preventClick = false;
 
     
-    // public static List<Dictionary<int, EndingDialogue>> normalEnding; // 테스트용 임시
-    // public static List<Dictionary<int, EndingDialogue>> hiddenEnding; // 테스트용 임시
+    public static List<Dictionary<int, EndingDialogue>> normalEnding; // 테스트용 임시
+    public static List<Dictionary<int, EndingDialogue>> hiddenEnding; // 테스트용 임시
 
     // Start is called before the first frame update
     void Awake() {
@@ -45,13 +45,8 @@ public class ShowEnding : MonoBehaviour
         ReturnButton.SetActive(false);
         endingIllust.color = new Color(1,1,1,0);
         standingList = Managers.Data.standingList;
-        // normalEnding = Managers.Data.normalEnding; // 테스트용 임시
-        // hiddenEnding = Managers.Data.hiddenEnding; // 테스트용 임시
-        
-        normalEnding = EndingManager.normalEnding;
-        badEnding = EndingManager.badEnding;
-        hiddenEnding = EndingManager.hiddenEnding;
-
+        normalEnding = Managers.Data.normalEnding; // 테스트용 임시
+        hiddenEnding = Managers.Data.hiddenEnding; // 테스트용 임시
         
     }
     void Start()
