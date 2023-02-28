@@ -2,104 +2,104 @@
   "normalEnding": [
     {
       "id": 0,
-      "name": "나레이션",
-      "script": "[부대냥]은 대학에 다니면서 미래에 대한 고민이 생겼다.",
+      "name": "12",
+      "script": "[0]은 대학에 다니면서 미래에 대한 고민이 생겼다.",
       "background": "Images/background/dark"
     },
     {
       "id": 1,
-      "name": "나레이션",
-      "script": "[부대냥]은 이론, 코딩, 보안 그 어떤 것도 포기할 수 없었던 것이다.",
+      "name": "12",
+      "script": "[0]은 이론, 코딩, 보안 그 어떤 것도 포기할 수 없었던 것이다.",
       "background": "Images/background/dark"
     },
     {
       "id": 2,
-      "name": "나레이션",
-      "script": "다만 직접 무언가를 개발해내기에 [부대냥]은 세상을 바꿀만한 아이디어를 생각해내는 상상력이 부족했다.",
+      "name": "12",
+      "script": "다만 직접 무언가를 개발해내기에 [0]은 세상을 바꿀만한 아이디어를 생각해내는 상상력이 부족했다.",
       "background": "Images/background/dark"
     },
 
     {
       "id": 3,
-      "name": "일러스트",
+      "name": "13",
       "script": "",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 4,
-      "name": "나레이션",
+      "name": "12",
       "script": "'네카라쿠배냥' 대한민국 6대 IT 계열 대기업의 반열에 당당히 오르게 된 냥냥테크.",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 5,
-      "name": "나레이션",
-      "script": "[부대냥]은 지금까지 쌓아올린 전공 지식과 경험을 바탕으로 냥냥테크에 이력서를 내보기로 결정했다.",
+      "name": "12",
+      "script": "[0]은 지금까지 쌓아올린 전공 지식과 경험을 바탕으로 냥냥테크에 이력서를 내보기로 결정했다.",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 6,
-      "name": "부대냥",
+      "name": "0",
       "script": "고양이라고 떨어지는 거 아닐까냥..",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 7,
-      "name": "나레이션",
+      "name": "12",
       "script": "하지만....",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 8,
-      "name": "나레이션",
+      "name": "12",
       "script": "<무궁한 발전을 위해 고양이 손이라도 빌린다!>",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 9,
-      "name": "나레이션",
-      "script": "순탄하게 코딩 테스트와 면접을 통과한 [부대냥]. ",
+      "name": "12",
+      "script": "순탄하게 코딩 테스트와 면접을 통과한 [0]. ",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 10,
-      "name": "나레이션",
-      "script": "냥냥테크 직원들은 고양이가 귀여워서 합격한 게 아니냐, 채용 비리가 아니냐며 반발했지만, 군더더기 없는 실력을 보여주며 [부대냥]은 실력을 입증해냈다.",
+      "name": "12",
+      "script": "냥냥테크 직원들은 고양이가 귀여워서 합격한 게 아니냐, 채용 비리가 아니냐며 반발했지만, 군더더기 없는 실력을 보여주며 [0]은 실력을 입증해냈다.",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 11,
-      "name": "부대냥",
+      "name": "0",
       "script": "코드에 버그 있다고 합니다. 해당 부분 수정 및 개선하면 될까요?",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 12,
-      "name": "부대냥",
+      "name": "0",
       "script": "디자인 팀 의견 반영했습니다! 수고하셨습니다!",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 13,
-      "name": "부대냥",
+      "name": "0",
       "script": "제발 왜...? 왜 안 돌아가는 거야...",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 14,
-      "name": "나레이션",
-      "script": "[부산]대, 아니 이제는 냥냥테크의 귀염둥이 마스코트 [부대냥]은 모두가 부러워할 커리어캣이 되었다. ",
+      "name": "12",
+      "script": "[부산]대, 아니 이제는 냥냥테크의 귀염둥이 마스코트 [0]은 모두가 부러워할 커리어캣이 되었다. ",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 15,
-      "name": "나레이션",
-      "script": "코딩이 성공하기를 기도하며 성실히 살아가는 [부대냥]. 오늘도 열심히 개발개발, 냥발냥발 중이다!",
+      "name": "12",
+      "script": "코딩이 성공하기를 기도하며 성실히 살아가는 [0]. 오늘도 열심히 개발개발, 냥발냥발 중이다!",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 16,
-      "name": "나레이션",
+      "name": "12",
       "script": "~Normal Ending 00. 커리어캣이 될 거야!~",
       "background": "Images/EndingIllust/employment"
     }
