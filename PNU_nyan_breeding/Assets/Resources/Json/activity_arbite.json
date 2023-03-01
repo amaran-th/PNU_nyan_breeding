@@ -1,6 +1,7 @@
 {
   "activities": [
     {
+      "activity_type": 4,
       "id": 0,
       "name": "코딩 학원",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -16,6 +17,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 1,
       "name": "과외",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -31,6 +33,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 2,
       "name": "과사 근로",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -46,6 +49,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 3,
       "name": "치킨집 알바",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -61,6 +65,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 4,
       "name": "코딩 외주 알바",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -76,6 +81,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 5,
       "name": "빵집 알바",
       "img_path": "Images/Practice/Calender/todo_yellow",
@@ -91,6 +97,7 @@
       "grade": 0
     },
     {
+      "activity_type": 4,
       "id": 6,
       "name": "물류센터 알바",
       "img_path": "Images/Practice/Calender/todo_yellow",
