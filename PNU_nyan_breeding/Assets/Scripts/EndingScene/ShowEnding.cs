@@ -45,8 +45,8 @@ public class ShowEnding : MonoBehaviour
         ReturnButton.SetActive(false);
         endingIllust.color = new Color(1,1,1,0);
         standingList = Managers.Data.standingList;
-        normalEnding = Managers.Data.normalEnding; // 테스트용 임시
-        hiddenEnding = Managers.Data.hiddenEnding; // 테스트용 임시
+        normalEnding = EndingManager.normalEnding; // 테스트용 임시
+        hiddenEnding = EndingManager.hiddenEnding; // 테스트용 임시
         
     }
     void Start()
@@ -149,8 +149,6 @@ public class ShowEnding : MonoBehaviour
         //Debug.Log(standingList[spriteId].image);
         backgroundImg.sprite = Resources.Load<Sprite>(ending[index].background);
 
-        
-        
     }
 
     public void ReturnToMain() {
