@@ -145,6 +145,7 @@ public class Ending{
 	// public string completeDate;
 }
 
+[System.Serializable]
 public class EndingCollection{
     public Ending ending1;
 	public Ending ending2;

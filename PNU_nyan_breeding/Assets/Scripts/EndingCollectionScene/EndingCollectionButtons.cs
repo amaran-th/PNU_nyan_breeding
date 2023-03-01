@@ -8,7 +8,7 @@ public class EndingCollectionButtons : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log(JsonUtility.ToJson(EndingCollectionManager.endingCollectionData)); //json파일 잘 받아오는지 검사
     }
 
     public void GoTitleButtonOnClick() 
