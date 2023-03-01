@@ -45,9 +45,9 @@ public class CalculateEnding : MonoBehaviour
     }
 
     void DeclareEnding(){
-        normalEnding = Managers.Data.normalEnding;
-        badEnding = Managers.Data.badEnding;
-        hiddenEnding = Managers.Data.hiddenEnding; //temp
+        normalEnding = EndingManager.normalEnding;
+        badEnding = EndingManager.badEnding;
+        hiddenEnding = EndingManager.hiddenEnding; //temp
 
         resEnding = hiddenEnding[EndingIndex];  
         Debug.Log(resEnding[0]);
