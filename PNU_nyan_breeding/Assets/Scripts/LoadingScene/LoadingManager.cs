@@ -11,6 +11,7 @@ public class LoadingManager : MonoBehaviour
 
     private string nextscene;
     private float time;
+    private float end_time;
     private int newGame;
     private int continueGame;
 
@@ -18,10 +19,10 @@ public class LoadingManager : MonoBehaviour
         newGame = PlayerPrefs.GetInt("new");
         continueGame = PlayerPrefs.GetInt("continue");
         StartCoroutine(LoadAsynSceneCoroutine());
+        slider.value=0;
     }
 
     IEnumerator LoadAsynSceneCoroutine() {
-
         if (newGame == 1) {
             nextscene = "SelectScene";
         } else {
@@ -32,11 +33,11 @@ public class LoadingManager : MonoBehaviour
         operation.allowSceneActivation = false;
 
         while (!operation.isDone) {
-            time += Time.time;
+            time += 4f;
 
             slider.value = time/1000f;
 
-            if (time>2000) {
+            if (time>1800) {
                 operation.allowSceneActivation=true;
             }
             yield return null;
