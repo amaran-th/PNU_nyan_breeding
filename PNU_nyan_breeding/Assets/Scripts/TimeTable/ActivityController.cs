@@ -57,7 +57,8 @@ public class ActivityController : MonoBehaviour
     void ViewFirstActivity(){
         trigger=false;
         activities[0].SetActive(true);
-        activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",0); //임시로 activity_type을 2로 넣음
+        activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[0].activity_type);
+        activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[0].id); 
         Invoke("RemoveFirstPage",2f);
     }
     void RemoveFirstPage(){
@@ -67,12 +68,14 @@ public class ActivityController : MonoBehaviour
     }
     void ViewSecondActivity(){
         activities[1].gameObject.SetActive(true);
-        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",3);
+        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[1].activity_type);
+        activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[1].id); 
         Invoke("ViewThirdActivity",2f);
     }
     void ViewThirdActivity(){
         activities[2].gameObject.SetActive(true);
-        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",4);
+        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[2].activity_type);
+        activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[2].id); 
         Invoke("ActiveNextButton",2f);
     }
     void ActiveNextButton(){
