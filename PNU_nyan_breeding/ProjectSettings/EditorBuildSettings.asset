@@ -68,6 +68,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/EndingCollectionScene.unity
+    guid: dff2179becc64624aa750c08ed59aa36
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
