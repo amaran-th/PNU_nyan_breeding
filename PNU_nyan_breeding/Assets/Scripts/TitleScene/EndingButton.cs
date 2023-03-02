@@ -5,7 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class EndingButton : MonoBehaviour
 {
-    public void OnClickEnddingButton(){
+    private EndingCollection endingCollectionData = new EndingCollection();
+
+    public void OnClickEndingButton(){
         SceneManager.LoadScene("EndingScene");
     }  
+
+    public void OnClickEndingCollectionButton(){
+        endingCollectionData = Managers.Player.LoadJson<EndingCollection>(Application.persistentDataPath + $"/ending");
+        Managers.Player.endingCollectionData = endingCollectionData;
+        SceneManager.LoadScene("EndingCollectionScene");
+    } 
 }

@@ -64,11 +64,11 @@ public class ShowLoadList : MonoBehaviour
 
     public void LoadGameFromSave(int index)
     {
-        playerData = Managers.Player.LoadJson<Player>(Application.persistentDataPath + $"/save{index}");
+        playerData = Managers.Player.LoadJson<Player>(path + $"{index}");
         Managers.Player.playerInfoData = playerData.playerInfo;
         PlayerPrefs.SetInt("continue", 1);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("LoadingScene");
+        SceneManager.LoadScene("HomeScene");
     }
 
     private void Awake()

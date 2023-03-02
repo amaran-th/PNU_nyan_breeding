@@ -6,6 +6,7 @@ public class TitleManager : MonoBehaviour
 {
     public static PlayerInfo playerInfoData;
     public static PlayerStat playerStatData;
+    public static EndingCollection endingCollectionData;
 
     public static List<int> playerStat = new List<int>();
     public static Dictionary<int, NPC> npcData;
