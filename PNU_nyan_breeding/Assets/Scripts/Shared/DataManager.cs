@@ -25,9 +25,9 @@ public class DataManager: MonoBehaviour
     public List<Dictionary<int, EndingDialogue>> normalEnding=new List<Dictionary<int, EndingDialogue>>();
     private string[] NormalEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
     public List<Dictionary<int, EndingDialogue>> badEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] BadEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+    private string[] BadEndingPath={};
     public List<Dictionary<int, EndingDialogue>> hiddenEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] HiddenEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+    private string[] HiddenEndingPath={"Json/HiddenEnding/overworkEnd"};
  
     //NPCEvent
     public List<Dictionary<int, ProfessorEvent>> professorEvent=new List<Dictionary<int, ProfessorEvent>>();
@@ -51,6 +51,12 @@ public class DataManager: MonoBehaviour
         //Ending
        for(int i=0;i<NormalEndingPath.Length;i++){
             normalEnding.Add(LoadJson<NormalEndingData, int, EndingDialogue>(NormalEndingPath[i]).MakeDict());
+        }
+        for(int i=0;i<HiddenEndingPath.Length;i++){
+            hiddenEnding.Add(LoadJson<HiddenEndingData, int, EndingDialogue>(HiddenEndingPath[i]).MakeDict());
+        }
+        for(int i=0;i<BadEndingPath.Length;i++){
+            badEnding.Add(LoadJson<BadEndingData, int, EndingDialogue>(BadEndingPath[i]).MakeDict());
         }
 
         //Illust

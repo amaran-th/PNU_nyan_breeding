@@ -10,6 +10,8 @@ public class Activity : RawData
 {
     public string name;
     public string img_path;
+	public int activity_type;
+	public int activity_id;
     public int coding_stat;
     public int know_stat;
     public int security_stat;
@@ -247,7 +249,7 @@ public class BadEndingData : ILoader<int, EndingDialogue>
 }
 
 [System.Serializable]   
-public class HiddenndingData : ILoader<int, EndingDialogue>
+public class HiddenEndingData : ILoader<int, EndingDialogue>
 {
 	public EndingDialogue[] hiddenEnding ;   
 

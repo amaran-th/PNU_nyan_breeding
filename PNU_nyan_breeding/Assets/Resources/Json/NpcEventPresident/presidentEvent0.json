@@ -2,25 +2,25 @@
   "presidentEvent": [
     {
       "id": 0,
-      "name": "교수님",
+      "name": "2",
       "script": "presidentEvent0 000000000000000",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 1,
-      "name": "깜냥이",
+      "name": "부대냥",
       "script": "script  script script  script ",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 2,
-      "name": "교수님",
+      "name": "2",
       "script": "script script ",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 3,
-      "name": "교수님",
+      "name": "2",
       "script": "script script script script ",
       "background": "Images/EndingIllust/employment"
     },
@@ -32,13 +32,13 @@
     },
     {
       "id": 5,
-      "name": "교수님",
+      "name": "2",
       "script": "선택지1 1",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 6,
-      "name": "깜냥이",
+      "name": "부대냥",
       "script": "선택지1 2",
       "background": "Images/EndingIllust/employment"
     },
@@ -56,13 +56,13 @@
     },
     {
       "id": 9,
-      "name": "교수님",
+      "name": "2",
       "script": "선택지2 1",
       "background": "Images/EndingIllust/employment"
     },
     {
       "id": 10,
-      "name": "깜냥이",
+      "name": "부대냥",
       "script": "선택지2 2 next is end",
       "background": "Images/EndingIllust/employment"
     },

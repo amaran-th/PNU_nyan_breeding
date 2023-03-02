@@ -23,15 +23,13 @@ public class NpcEvent : MonoBehaviour
     private int index2=0;
     private bool preventClick = false;
 
-    public Dictionary<string, int> staindingId = new Dictionary<string, int>()
+    public Dictionary<string, string> staindingId = new Dictionary<string, string>()
     {      
-      {"부대냥", 0 },
-      {"캔따개", 1 },
-      {"학생회장", 2},
-      {"교수님", 3 },
-      {"캔따개", 11 },
-      {"나레이션", 12},
-      {"일러스트", 13}
+      {"0",   "부대냥" },
+      {"1",   "캔따개" },
+      {"2",   "학생회장"},
+      {"3",   "교수님"},
+      {"11",  "캔따개"},
     };
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public static List<Dictionary<int, ProfessorEvent>> professorEventList;
@@ -163,23 +161,33 @@ public class NpcEvent : MonoBehaviour
         }  
     }
 
-    void UpdateBeforeDialogue(int index) {
-        var spriteId = staindingId[resEvent[index].name];
 
+void UpdateBeforeDialogue(int index) {
+        var spriteId = 0;
         textComponent.text = string.Empty;
-        if (spriteId == 12)
-        {
-         textComponent2.text = string.Empty;
-         NameSlot.SetActive(false);
-         }
-        else {
-            textComponent2.text = resEvent[index].name;
+        //스탠딩이 존재하는지 확인
+        if (staindingId.ContainsKey(resEvent[index].name)) {
             NameSlot.SetActive(true);
-            }
+            spriteId = int.Parse(resEvent[index].name);
+            textComponent2.text =  staindingId[resEvent[index].name];
+            standingImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
+            standingImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,standingImg.transform.localPosition.y,standingImg.transform.localPosition.z);
+        
+        }
+        else if (resEvent[index].name == "나레이션") {
+            textComponent2.text = string.Empty;
+            NameSlot.SetActive(false);
+            standingImg.sprite = Resources.Load<Sprite>(standingList[12].image);
+        }
+        else {
+            NameSlot.SetActive(true);
+            textComponent2.text = resEvent[index].name;
+            standingImg.sprite = Resources.Load<Sprite>(standingList[12].image);
+        }
 
-        Debug.Log(standingList[spriteId].image);
-        standingImg.sprite = Resources.Load<Sprite>(standingList[spriteId].image);
-        standingImg.transform.localPosition = new Vector3(standingList[spriteId].locationX,standingImg.transform.localPosition.y,standingImg.transform.localPosition.z);
+        //Debug.Log(standingList[spriteId].image);
+        backgroundImg.sprite = Resources.Load<Sprite>(resEvent[index].background);
+        
     }
 
     void activeSelect() {
