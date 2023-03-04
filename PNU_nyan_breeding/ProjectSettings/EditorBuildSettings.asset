@@ -62,6 +62,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TutorialMonthlyResultScene.unity
     guid: 102155c8379018344a87c4f104159a11
+  - enabled: 1
+    path: Assets/Scenes/TutorialMapScene.unity
+    guid: 2aa3e6fcc9e85834fa3d42e276f884f1
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
