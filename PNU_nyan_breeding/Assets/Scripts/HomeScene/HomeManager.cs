@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class HomeManager : MonoBehaviour
 {
+    public static Player playerData;
     public static PlayerInfo playerInfoData;
     public static PlayerStat playerStatData;
 
@@ -15,6 +16,7 @@ public class HomeManager : MonoBehaviour
 
     void Awake()
     {
+        playerData = Managers.Player.playerData;
         playerInfoData = Managers.Player.playerInfoData;  
         playerStatData = Managers.Player.playerStatData;  
         playerStat = playerStatData.GetStatList();
@@ -24,7 +26,7 @@ public class HomeManager : MonoBehaviour
 
     void Start()
     {
-       // ModalManager.instance.OpenModal("1번째 튜토리얼입니다~",  YesOrNoButton );  
+       // ModalManager.instance.OpenModal("1번째 튜토리얼입니다~",  YesOrNoButton );
         if (playerInfoData.month == 3 && playerInfoData.grade == 1 && flag == 0){
             ModalManager.instance.YesOrNoOpenModal("튜토리얼 볼것인가 말것인가!",YesButton,NoButton);
             flag = 1;  
@@ -39,7 +41,7 @@ public class HomeManager : MonoBehaviour
 
     public void NoButton()
     {
-        Debug.Log("아니오"); 
+        Debug.Log("아니오");
         
     }
 
