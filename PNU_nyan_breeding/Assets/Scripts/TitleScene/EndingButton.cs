@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndingButton : MonoBehaviour
 {
     public static List<Dictionary<int, EndingDialogue>> normalEnding;
+    private EndingCollection endingCollectionData = new EndingCollection();
     
     void Awake() {
         ShareData.whichEnding[0] = true;
@@ -13,7 +14,6 @@ public class EndingButton : MonoBehaviour
     }
     
     public void OnClickEndingButton(){
-        private EndingCollection endingCollectionData = new EndingCollection();
         SceneManager.LoadScene("EndingScene");
     }  
 
