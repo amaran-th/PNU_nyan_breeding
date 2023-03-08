@@ -35,33 +35,20 @@ public class ShowEnding : MonoBehaviour
     
     private bool preventClick = false;
 
-    // public static List<Dictionary<int, EndingDialogue>> normalEnding;
-    // public static List<Dictionary<int, EndingDialogue>> badEnding;
-    // public static List<Dictionary<int, EndingDialogue>> hiddenEnding;
-
     void Awake() {
-        // normalEnding = EndingManager.normalEnding;
-        // badEnding = EndingManager.badEnding;
-        // hiddenEnding = EndingManager.hiddenEnding;
-
         DialogueBox.SetActive(true);
         ReturnButton.SetActive(false);
         endingIllust.color = new Color(1,1,1,0);
         standingList = Managers.Data.standingList;
-
-        ending = ShareData.resEnding;  
     }
     void Start()
     {
+        ending = ShareData.resEnding;  
         Debug.Log("showEnding");
-        //ending = hiddenEnding[0]; // 테스트용 임시
-        Debug.Log(ending[index].background);
+        //Debug.Log(ending[index].background);
         backgroundImg.sprite = Resources.Load<Sprite>(ending[index].background);
         textComponent.text = string.Empty;
         textComponent2.text = string.Empty;
-        
-        //Debug.Log(standingList[index]);
-        //Debug.Log(ending[index]);
         
         Debug.Log("ending count: "+ending.Count+" index: "+index);
         NextLine();

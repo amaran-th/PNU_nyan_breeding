@@ -25,7 +25,7 @@ public class DataManager: MonoBehaviour
     public List<Dictionary<int, EndingDialogue>> normalEnding=new List<Dictionary<int, EndingDialogue>>();
     private string[] NormalEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
     public List<Dictionary<int, EndingDialogue>> badEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] BadEndingPath={};
+    private string[] BadEndingPath={"Json/BadEnding/noJobEnd"};
     public List<Dictionary<int, EndingDialogue>> hiddenEnding=new List<Dictionary<int, EndingDialogue>>();
     private string[] HiddenEndingPath={"Json/HiddenEnding/overworkEnd"};
  

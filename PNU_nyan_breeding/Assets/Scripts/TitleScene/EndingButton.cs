@@ -8,15 +8,10 @@ public class EndingButton : MonoBehaviour
     public static List<Dictionary<int, EndingDialogue>> normalEnding;
     
     void Awake() {
-        normalEnding = EndingManager.normalEnding;
-        ShareData.EndingIndex = 0;  
-        Temp();
+        ShareData.whichEnding[0] = true;
+        ShareData.endingIndex = 0;  
     }
 
-    void Temp() {
-        ShareData.resEnding = normalEnding[0];
-    }
-    
     public void OnClickEnddingButton(){
         SceneManager.LoadScene("EndingScene");
     }  
