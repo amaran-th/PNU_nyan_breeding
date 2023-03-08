@@ -9,6 +9,7 @@ public class EndingCollectionManager : MonoBehaviour
     public static PlayerInfo playerInfoData;
     public static PlayerStat playerStatData;
     public static EndingCollection endingCollectionData;
+    //public static Page pageData;
 
     public static List<int> playerStat = new List<int>();
 
@@ -18,7 +19,7 @@ public class EndingCollectionManager : MonoBehaviour
         playerInfoData = Managers.Player.playerInfoData;  
         playerStatData = Managers.Player.playerStatData;  
         playerStat = playerStatData.GetStatList();
-        endingCollectionData = Managers.Player.endingCollectionData;     
+        endingCollectionData = Managers.Player.endingCollectionData;   
     }
 
     
