@@ -1,6 +1,7 @@
 {
   "activities": [
     {
+      "activity_type": 5,
       "id": 0,
       "name": "CTF",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -16,6 +17,7 @@
       "grade": -2
     },
     {
+      "activity_type": 5,
       "id": 1,
       "name": "해커톤",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -31,6 +33,7 @@
       "grade": -4
     },
     {
+      "activity_type": 5,
       "id": 2,
       "name": "알고리즘 대회",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -46,6 +49,7 @@
       "grade": -6
     },
     {
+      "activity_type": 5,
       "id": 3,
       "name": "요리대회",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -61,6 +65,7 @@
       "grade": -8
     },
     {
+      "activity_type": 5,
       "id": 4,
       "name": "벚꽃놀이",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -76,6 +81,7 @@
       "grade": -4
     },
     {
+      "activity_type": 5,
       "id": 5,
       "name": "할로윈 축제",
       "img_path": "Images/Practice/Calender/todo_purple",
@@ -91,6 +97,7 @@
       "grade": -10
     },
     {
+      "activity_type": 5,
       "id": 6,
       "name": "연말파티",
       "img_path": "Images/Practice/Calender/todo_purple",

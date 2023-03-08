@@ -23,9 +23,15 @@ public class SettingPopUpScene : MonoBehaviour
     public Slider BGMSourceSlider;
     public Slider EffectSlider;
 
+    static public SettingPopUpScene instance;
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
     
     public void BGMSourceControl()

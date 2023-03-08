@@ -11,8 +11,15 @@ public class EndingButton : MonoBehaviour
         ShareData.whichEnding[0] = true;
         ShareData.endingIndex = 0;  
     }
-
-    public void OnClickEnddingButton(){
+    
+    public void OnClickEndingButton(){
+        private EndingCollection endingCollectionData = new EndingCollection();
         SceneManager.LoadScene("EndingScene");
     }  
+
+    public void OnClickEndingCollectionButton(){
+        endingCollectionData = Managers.Player.LoadJson<EndingCollection>(Application.persistentDataPath + $"/ending");
+        Managers.Player.endingCollectionData = endingCollectionData;
+        SceneManager.LoadScene("EndingCollectionScene");
+    } 
 }

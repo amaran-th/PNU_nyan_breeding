@@ -19,7 +19,7 @@ public class CheckSave : MonoBehaviour
     private void Awake()
     {
         saveFilePath = Application.persistentDataPath + "/" + "save";
-        playerInfoPath = Application.dataPath + "/Resources/Json/player_info.json";
+        //playerInfoPath = Application.dataPath + "/Resources/Json/player_info.json";
     }
 
     public void SaveYesBtnClicked() 
@@ -36,15 +36,16 @@ public class CheckSave : MonoBehaviour
 
     public void MakeSaveFile()
     {
-        System.IO.File.Copy(playerInfoPath, saveFilePath + slotNumber.ToString(), true);
-        // vstring data = JsonUtility.ToJson(nowPlayer);
-        // File.WriteAllText(path + slotNumber.ToString(), data);
+        //Managers.SaveData(saveFilePath + slotNumber.ToString(), HomeManager.PlayerData);
+        HomeManager.playerData.playerInfo = HomeManager.playerInfoData;
+        HomeManager.playerData.playerStat = HomeManager.playerStatData;
+        string data = JsonUtility.ToJson(HomeManager.playerData);
+        File.WriteAllText(saveFilePath + slotNumber.ToString(), data);
     }
 
     void Update()
     {
         slotNumber = ShowSaveList.slotNumber;
     }
-
     
 }

@@ -29,6 +29,7 @@ public class MonthlyResultManager : MonoBehaviour
         Diff = new List<int>(){0,0,0,0,0,0,0};
         MoneyMinusDiff=-1000;    //고정지출
         playerStat = playerStatData.GetStatList();
+        Debug.Log(playerStat);
 
         for(int i=0;i<3;i++){
             temp=fixedScheduleList[i].GetStatList();

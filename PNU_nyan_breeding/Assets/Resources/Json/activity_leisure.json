@@ -1,6 +1,7 @@
 {
   "activities": [
     {
+      "activity_type": 3,
       "id": 0,
       "name": "전시 구경",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -16,6 +17,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 1,
       "name": "집에서 휴식",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -31,6 +33,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 2,
       "name": "회식",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -46,6 +49,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 3,
       "name": "쇼핑",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -61,6 +65,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 4,
       "name": "바캉스",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -76,6 +81,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 5,
       "name": "독서&영화관람",
       "img_path": "Images/Practice/Calender/todo_cyan",
@@ -91,6 +97,7 @@
       "grade": 0
     },
     {
+      "activity_type": 3,
       "id": 6,
       "name": "친목 모임",
       "img_path": "Images/Practice/Calender/todo_cyan",
