@@ -1,0 +1,83 @@
+{
+  "badEnding": [
+    {
+      "id": 0,
+      "name": "나레이션",
+      "script": "[부대냥]은 대학에 다니면서 졸업은 좋지만 조금 쉬고 싶다는 생각을 자주 했다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 1,
+      "name": "나레이션",
+      "script": "대학 생활도 좋지만 어쩐지 공부도 잘되지 않고, 사람들과 어울리는 게 피곤했다. 새로운 것을 생각해내는 것도 귀찮았다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 2,
+      "name": "부대냥",
+      "script": "학교 안다니고 졸업장 받고싶다냥...",
+      "background": "Images/background/dark"
+    },
+
+    {
+      "id": 3,
+      "name": "나레이션",
+      "script": "[부대냥]은 바로 취업하기엔 지쳤다는 것을 깨달았다. 그렇다고 대학원에 가서 공부를 더 하고 싶지도 않고, 생산적인 일을 잠시 쉬고 싶었다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 4,
+      "name": "일러스트",
+      "script": "...",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 5,
+      "name": "부대냥",
+      "script": "조금만.. 누워 있자... 오늘만, 오늘만.",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 6,
+      "name": "부대냥",
+      "script": "이번 달까지만 쉬고 다음 달부터는 일하는 거다 냥...",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 7,
+      "name": "부대냥",
+      "script": "아니냥!! 딱 30분만 더 쉬고 이력서 적을거다냥...",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 8,
+      "name": "부대냥",
+      "script": "아ㅋㅋ 아는 게 있어야 취직을 하지~",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 9,
+      "name": "나레이션",
+      "script": "[부대냥]은 백수가 되었다!",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 10,
+      "name": "나레이션",
+      "script": "하루하루를 허망하게 보내던 [부대냥]. 집안일을 포함해 미루고 미룬 일들은 이미 산이 되어 건드릴 엄두가 나지 않는다.",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 11,
+      "name": "나레이션",
+      "script": "오늘도 미룬 일을 내일 할 턱이 없었다! [부대냥]은 어제도, 오늘도 아무 계획 없이 TV만 보며 잠이 들었다.",
+      "background": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 12,
+      "name": "나레이션",
+      "script": "~Bad Ending 00. 노는 게 제일 좋아!~",
+      "background": "Images/EndingIllust/jobless"
+    }
+  ]
+}
