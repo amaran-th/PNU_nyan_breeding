@@ -29,7 +29,7 @@ public class SoundManager : MonoBehaviour
     public Sound[] effectSounds;
     public Sound[] bgmSounds;
 
-    public AudioSource audioSourceBFM;
+    public AudioSource[] audioSourceBFM;
     public AudioSource[] audioSourceEffects;
 
     public string[] playSoundName;
