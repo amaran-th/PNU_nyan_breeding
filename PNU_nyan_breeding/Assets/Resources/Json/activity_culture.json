@@ -1,6 +1,7 @@
 {
   "activities": [
     {
+      "activity_type": 1,
       "id": 0,
       "name": "대중매체와 장신구",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -16,6 +17,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 1,
       "name": "우리 삶의 심리학",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -31,6 +33,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 2,
       "name": "즐거운 경영",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -46,6 +49,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 3,
       "name": "고전읽기와 토론",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -61,6 +65,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 4,
       "name": "데카르트의 윤리",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -76,6 +81,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 5,
       "name": "성과 사랑",
       "img_path": "Images/Practice/Calender/todo_green",
@@ -91,6 +97,7 @@
       "grade": 0
     },
     {
+      "activity_type": 1,
       "id": 6,
       "name": "영어회화 기초",
       "img_path": "Images/Practice/Calender/todo_green",

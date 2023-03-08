@@ -1,6 +1,7 @@
 {
   "activities": [
     {
+      "activity_type": 2,
       "id": 0,
       "name": "보안 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
@@ -16,6 +17,7 @@
       "grade": 0
     },
     {
+      "activity_type": 2,
       "id": 1,
       "name": "개발 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
@@ -31,6 +33,7 @@
       "grade": 0
     },
     {
+      "activity_type": 2,
       "id": 2,
       "name": "코딩 교육봉사 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
@@ -46,6 +49,7 @@
       "grade": 0
     },
     {
+      "activity_type": 2,
       "id": 3,
       "name": "운동 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
@@ -61,6 +65,7 @@
       "grade": 0
     },
     {
+      "activity_type": 2,
       "id": 4,
       "name": "예술 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
@@ -76,6 +81,7 @@
       "grade": 0
     },
     {
+      "activity_type": 2,
       "id": 5,
       "name": "창업 동아리",
       "img_path": "Images/Practice/Calender/todo_orange",
