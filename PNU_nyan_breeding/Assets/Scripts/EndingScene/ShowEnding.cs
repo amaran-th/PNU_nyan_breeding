@@ -15,7 +15,7 @@ public class ShowEnding : MonoBehaviour
     public GameObject NameSlot;
     public float textSpeed;
     private int index = 0;
-    public Dictionary<int,EndingDialogue> ending =  new Dictionary<int,EndingDialogue>();
+    public Dictionary<int,EndingDialogue> ending;
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public Dictionary<string, string> staindingId = new Dictionary<string, string>()
     {      
@@ -35,25 +35,26 @@ public class ShowEnding : MonoBehaviour
     
     private bool preventClick = false;
 
-    
-    public static List<Dictionary<int, EndingDialogue>> normalEnding; // 테스트용 임시
-    public static List<Dictionary<int, EndingDialogue>> hiddenEnding; // 테스트용 임시
+    // public static List<Dictionary<int, EndingDialogue>> normalEnding;
+    // public static List<Dictionary<int, EndingDialogue>> badEnding;
+    // public static List<Dictionary<int, EndingDialogue>> hiddenEnding;
 
-    // Start is called before the first frame update
     void Awake() {
+        // normalEnding = EndingManager.normalEnding;
+        // badEnding = EndingManager.badEnding;
+        // hiddenEnding = EndingManager.hiddenEnding;
+
         DialogueBox.SetActive(true);
         ReturnButton.SetActive(false);
         endingIllust.color = new Color(1,1,1,0);
         standingList = Managers.Data.standingList;
-        normalEnding = EndingManager.normalEnding; // 테스트용 임시
-        hiddenEnding = EndingManager.hiddenEnding; // 테스트용 임시
-        
+
+        ending = ShareData.resEnding;  
     }
     void Start()
     {
         Debug.Log("showEnding");
-        //ending = GameObject.Find("Canvas").GetComponent<CalculateEnding>().resEnding;
-        ending = hiddenEnding[0]; // 테스트용 임시
+        //ending = hiddenEnding[0]; // 테스트용 임시
         Debug.Log(ending[index].background);
         backgroundImg.sprite = Resources.Load<Sprite>(ending[index].background);
         textComponent.text = string.Empty;

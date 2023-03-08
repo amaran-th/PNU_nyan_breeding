@@ -20,6 +20,12 @@ public class ShareData : MonoBehaviour
     bool[] _npcMail={false,false,false};
     public static bool[] npcMail {get{return Instance._npcMail;} set{Instance._npcMail=value;}}
 
+    int _endIndex=0;
+    public static int EndingIndex  {get{return Instance._endIndex;} set{Instance._endIndex=value;}}
+    
+    Dictionary<int,EndingDialogue> _ending = new Dictionary<int,EndingDialogue>();
+    public static Dictionary<int,EndingDialogue> resEnding {get{return Instance._ending;} set{Instance._ending=value;}}
+
     void Start()
     {
         Init();

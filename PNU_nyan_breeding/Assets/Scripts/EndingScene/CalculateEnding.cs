@@ -12,17 +12,14 @@ public class CalculateEnding : MonoBehaviour
     int SocialityStat;
     int InterestStat;
     int StressStat;
-    public int EndingIndex;
+    public int NormalEndingIndex;
     
     public Image endingIllust;
-
     public static List<Dictionary<int, EndingDialogue>> normalEnding;
-    public static List<Dictionary<int, EndingDialogue>> badEnding;
-    public static List<Dictionary<int, EndingDialogue>> hiddenEnding; //temp
-    public Dictionary<int,EndingDialogue> resEnding = new Dictionary<int,EndingDialogue>();
     
     void Awake() {
         Debug.Log("CalculateEnding");
+        normalEnding = EndingManager.normalEnding;
         Calculate();
     }
 
@@ -35,22 +32,12 @@ public class CalculateEnding : MonoBehaviour
         InterestStat = EndingManager.playerStatData.interest_stat;
         StressStat = EndingManager.playerStatData.stress_stat;
         
-        if(CodingStat>80 || KnowStat>80 || SecurityStat>80) EndingIndex=0;
-        else if(CodingStat>65 || KnowStat>65 || SecurityStat>65) EndingIndex=1;
-        else EndingIndex=0;
+        if(CodingStat>80 || KnowStat>80 || SecurityStat>80) NormalEndingIndex=0;
+        else if(CodingStat>65 || KnowStat>65 || SecurityStat>65) NormalEndingIndex=1;
+        else NormalEndingIndex=0;
 
-        Debug.Log(EndingIndex);
-        
-        DeclareEnding();
+        Debug.Log(NormalEndingIndex);
+        ShareData.EndingIndex = NormalEndingIndex;
+        ShareData.resEnding = normalEnding[ShareData.EndingIndex];
     }
-
-    void DeclareEnding(){
-        normalEnding = EndingManager.normalEnding;
-        badEnding = EndingManager.badEnding;
-        hiddenEnding = EndingManager.hiddenEnding; //temp
-
-        resEnding = hiddenEnding[EndingIndex];  
-        Debug.Log(resEnding[0]);
-    }
-
 }
