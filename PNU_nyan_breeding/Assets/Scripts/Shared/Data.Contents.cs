@@ -133,61 +133,34 @@ public class PlayerStat{
         
 	}
 }
-
-/*[System.Serializable]
-public class Ending{
-	public string endingName;
-	public int done;
-	// public string completeDate;
-}
-
-[System.Serializable]
-public class EndingCollection{
-    public Ending ending1;
-	public Ending ending2;
-	public Ending ending3;
-	public Ending ending4;
-	public List<Ending> GetEndingList() {
-		return new List<Ending>(){ending1, ending2, ending3, ending4};
-	}
-	public void UpdateEnding(List<string> diff){
-		ending1.endingName += diff[0];
-        ending2.endingName += diff[1];
-		ending3.endingName += diff[2];
-        ending4.endingName += diff[3];
-	}
-}*/
 #endregion
 
-#region EndingCollect
-
-/*[System.Serializable]
-public class EndingCollect{
-	//엔딩 정보
-	public EndingCollection endingCollection;
-}*/
+#region EndingCollection
 
 [System.Serializable]
 public class Ending{
+	public bool done;
 	public string endingName;
-	public int done;
-	// public string completeDate;
+	public string completeDate;
+}
+[System.Serializable]
+public class Page{
+    public Ending[] ending;
 }
 
 [System.Serializable]
 public class EndingCollection{
-    public Ending ending1;
-	public Ending ending2;
-	public Ending ending3;
-	public Ending ending4;
-	public List<Ending> GetEndingList() {
-		return new List<Ending>(){ending1, ending2, ending3, ending4};
-	}
-	public void UpdateEnding(List<string> diff){
-		ending1.endingName += diff[0];
-        ending2.endingName += diff[1];
-		ending3.endingName += diff[2];
-        ending4.endingName += diff[3];
+	public Page[] book;
+
+	public Dictionary<int, Page> MakeDict() // 오버라이딩
+	{
+		int index=0;
+		Dictionary<int, Page> endingDict = new Dictionary<int, Page>();
+		foreach (Page page in book) {// 리스트에서 Dictionary로 옮기는 작업
+			endingDict.Add(index, page); // level을 ID(Key)로 
+			index++;
+		}
+		return endingDict;
 	}
 }
 

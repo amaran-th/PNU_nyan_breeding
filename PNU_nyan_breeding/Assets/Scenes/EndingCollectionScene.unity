@@ -2222,6 +2222,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5b2676e587dc440848f4c91550e126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndingImage:
+  - {fileID: 1988174229}
+  - {fileID: 1515151206}
+  - {fileID: 780427564}
+  - {fileID: 1327005820}
+  EndingName:
+  - {fileID: 659661626}
+  - {fileID: 1703154066}
+  - {fileID: 113718884}
+  - {fileID: 1578028222}
+  EndingDate:
+  - {fileID: 798130312}
+  - {fileID: 630472658}
+  - {fileID: 1694804634}
+  - {fileID: 1546117356}
+  LeftBtn: {fileID: 1108431611}
+  RightBtn: {fileID: 1351349343}
 --- !u!1 &1985673435
 GameObject:
   m_ObjectHideFlags: 0
