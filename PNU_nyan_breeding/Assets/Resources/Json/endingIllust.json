@@ -14,6 +14,36 @@
       "id": 2,
       "name": "graduateSchoolEnd",
       "img_path": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 3,
+      "name": "employmentEnd",
+      "img_path": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 4,
+      "name": "joblessEnd",
+      "img_path": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 5,
+      "name": "graduateSchoolEnd",
+      "img_path": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 6,
+      "name": "employmentEnd",
+      "img_path": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 7,
+      "name": "joblessEnd",
+      "img_path": "Images/EndingIllust/jobless"
+    },
+    {
+      "id": 8,
+      "name": "graduateSchoolEnd",
+      "img_path": "Images/EndingIllust/graduateSchool"
     }
   ]
 }

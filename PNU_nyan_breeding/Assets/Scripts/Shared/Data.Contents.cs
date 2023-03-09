@@ -139,16 +139,13 @@ public class PlayerStat{
 
 [System.Serializable]
 public class Ending{
+	public bool done;
 	public string endingName;
-	public int done;
-	//public string completeDate;
+	public string completeDate;
 }
 [System.Serializable]
 public class Page{
     public Ending[] ending;
-	/*public Ending ending2;
-	public Ending ending3;
-	public Ending ending4;*/
 }
 
 [System.Serializable]
@@ -165,15 +162,6 @@ public class EndingCollection{
 		}
 		return endingDict;
 	}
-	/*public List<Ending> GetEndingList() {
-		return new List<Ending>(){ending1, ending2, ending3, ending4};
-	}
-	public void UpdateEnding(List<string> diff){
-		ending1.endingName += diff[0];
-        ending2.endingName += diff[1];
-		ending3.endingName += diff[2];
-        ending4.endingName += diff[3];
-	}*/
 }
 
 #endregion

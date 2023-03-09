@@ -14,18 +14,26 @@ public class EndingCollectionButtons : MonoBehaviour
     public Button RightBtn;
     private int page=0;
     Dictionary<int, Page> endingDict;
+    Dictionary<int, EndingIllust> illustList;
+
 
     void Start()
     {
         LeftBtn.interactable=false;
         RightBtn.interactable=true;
-        Debug.Log(JsonUtility.ToJson(EndingCollectionManager.endingCollectionData));
+        //Debug.Log(JsonUtility.ToJson(EndingCollectionManager.endingCollectionData));
         endingDict = EndingCollectionManager.endingCollectionData.MakeDict();
+        illustList = EndingCollectionManager.illustList;
 
-        for(int i=0; i<4; i++) {
+        for(int i=0; i<4; i++) 
+        {
             // done에 따라 이미지, 글자 활성화
-            EndingName[i].text = endingDict[0].ending[i].endingName;
-            EndingDate[i].text = endingDict[0].ending[i].done.ToString();
+            if(endingDict[0].ending[i].done) 
+            {
+                EndingImage[i].sprite = Resources.Load<Sprite>(illustList[page*4+i].img_path) as Sprite;
+                EndingName[i].text = endingDict[0].ending[i].endingName;
+                EndingDate[i].text = endingDict[0].ending[i].completeDate;
+            }
         }
     }
 
@@ -47,9 +55,14 @@ public class EndingCollectionButtons : MonoBehaviour
         }
         //Debug.Log(JsonUtility.ToJson(endingDict[1]));
 
-        for(int i=0; i<4; i++) {
-            EndingName[i].text = endingDict[page].ending[i].endingName;
-            EndingDate[i].text = endingDict[page].ending[i].done.ToString();
+        for(int i=0; i<4; i++) 
+        {
+            if(endingDict[0].ending[i].done) 
+            {
+                EndingImage[i].sprite = Resources.Load<Sprite>(illustList[page*4+i].img_path) as Sprite;
+                EndingName[i].text = endingDict[0].ending[i].endingName;
+                EndingDate[i].text = endingDict[0].ending[i].completeDate;
+            }
         }
     }
 
@@ -65,9 +78,14 @@ public class EndingCollectionButtons : MonoBehaviour
             LeftBtn.interactable=true;
         }
 
-        for(int i=0; i<4; i++) {
-            EndingName[i].text = endingDict[page].ending[i].endingName;
-            EndingDate[i].text = endingDict[page].ending[i].done.ToString();
+        for(int i=0; i<4; i++) 
+        {
+            if(endingDict[0].ending[i].done) 
+            {
+                EndingImage[i].sprite = Resources.Load<Sprite>(illustList[page*4+i].img_path) as Sprite;
+                EndingName[i].text = endingDict[0].ending[i].endingName;
+                EndingDate[i].text = endingDict[0].ending[i].completeDate;
+            }
         }
     }
 
