@@ -20,6 +20,7 @@ public class SettingPopUpScene : MonoBehaviour
     public GameObject EndPopUp;
     
     public AudioMixer BGMSource;
+    public AudioMixer EffectSource;
     public Slider BGMSourceSlider;
     public Slider EffectSlider;
 
@@ -39,6 +40,14 @@ public class SettingPopUpScene : MonoBehaviour
         float BGMVal = BGMSourceSlider.value;
         BGMSource.SetFloat("BGMSourceParam", Mathf.Log10(BGMVal)*20);
     }
+
+    public void EffectSourceControl()
+    {
+        float EffectVal = EffectSlider.value;
+        EffectSource.SetFloat("EffectSourceParam", Mathf.Log10(EffectVal)*20);
+    }
+
+
 
     public void TitleYesClicked()
     {
