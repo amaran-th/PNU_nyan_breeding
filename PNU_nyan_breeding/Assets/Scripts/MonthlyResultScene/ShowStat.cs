@@ -8,7 +8,7 @@ public class ShowStat : MonoBehaviour
 {
     public GameObject stat; // stat prefabs
     public TextMeshProUGUI statChange; //
-     public TextMeshProUGUI statOrigin; 
+    public TextMeshProUGUI statOrigin; 
     
     void Start()
     {
@@ -29,8 +29,8 @@ public class ShowStat : MonoBehaviour
                 statItem.transform.Find("Change").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i] + MonthlyResultManager.Diff[i];
                 statItem.transform.Find("Change").Find("Fill Area").Find("Fill").GetComponent<Image>().color  = new Color32(36,125,255,255); //파란색
 
-                statChange.text +=  "+" + MonthlyResultManager.Diff[i] + "\n" ;
-                statChange.color =  new Color32(36,125,255,255); 
+                statChange.text +=  "<color=#247DFF>+" + MonthlyResultManager.Diff[i] + "</color>\n" ;
+
                 
             }
             else if (MonthlyResultManager.Diff[i]<0){
@@ -39,8 +39,8 @@ public class ShowStat : MonoBehaviour
 
                 //statItem.transform.Find("Change").Find("Fill Area").Find("Fill").GetComponent<Image>().color  = new Color(0,0,255); //파란색
                 
-                statChange.text += MonthlyResultManager.Diff[i] + "\n" ;
-                statChange.color =  new Color32(255,80,51,255);
+                statChange.text += "<color=#FF5033>"+ MonthlyResultManager.Diff[i] +  "</color>\n" ;
+
             }
             else{ 
                 statItem.transform.Find("Origin").GetComponent<Slider>().value = MonthlyResultManager.playerStat[i];
