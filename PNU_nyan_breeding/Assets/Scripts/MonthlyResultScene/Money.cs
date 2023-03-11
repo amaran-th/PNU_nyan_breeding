@@ -14,8 +14,10 @@ public class Money : MonoBehaviour
     void Start()
     {
         origin.text = MonthlyResultManager.playerInfoData.money_stat+"냥";
-        plusDiff.text="<color=blue>+"+MonthlyResultManager.MoneyPlusDiff+"</color>";
-        minusDiff.text="<color=red>"+MonthlyResultManager.MoneyMinusDiff+"</color>";
+        plusDiff.text="+"+MonthlyResultManager.MoneyPlusDiff;
+        minusDiff.text = "" + MonthlyResultManager.MoneyMinusDiff;
+        plusDiff.color =  new Color32(36,125,255,255); 
+        minusDiff.color =  new Color32(255,80,51,255);
 
         if (MonthlyResultManager.MoneyTotalDiff>0) {
             totalDiff.text="+"+MonthlyResultManager.MoneyTotalDiff+"냥";

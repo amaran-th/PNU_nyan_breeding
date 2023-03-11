@@ -25,7 +25,7 @@ public class TutorialMonthlyShowStat : MonoBehaviour
             }
             else if (i==1){
                 statItem.transform.Find("Change").GetComponent<Slider>().value = 10;
-                statItem.transform.Find("Change").Find("Fill Area").Find("Fill").GetComponent<Image>().color  = new Color(0,0,255);
+                statItem.transform.Find("Change").Find("Fill Area").Find("Fill").GetComponent<Image>().color  = new Color(36,125,255);
             }
         
             // if(MonthlyResultManager.Diff[i]>0){
