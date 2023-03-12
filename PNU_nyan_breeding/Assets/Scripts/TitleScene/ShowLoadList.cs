@@ -16,7 +16,7 @@ public class ShowLoadList : MonoBehaviour
     private string path;
     public static int slotNumber;
 
-    // bool[] isSaveFileExists = new bool[3];
+    public Button[] isLoadButtonEnable;
     public Image[] catImage;
     public TMP_Text[] FileNames;
     public TMP_Text[] UnivAndNames;
@@ -41,13 +41,14 @@ public class ShowLoadList : MonoBehaviour
         {
             if(File.Exists(path + $"{i}"))
             {
-                // isSaveFileExists[i] = true;
+                isLoadButtonEnable[i].interactable=true;
                 playerData = Managers.Player.LoadJson<Player>(path + $"{i}");
                 slotNumber = i;
                 // 파일 이름
                 FileNames[i].text = $"파일{i+1}";
                 // 고양이 이미지
                 var catData = Managers.Data.catSpeciesDataList[playerData.playerInfo.species];
+                catImage[i].color = new Color(1f, 1f, 1f, 1f);
                 catImage[i].sprite = Resources.Load<Sprite>(catData.img_path) as Sprite;
                 // 대학, 이름
                 UnivAndNames[i].text = $"{playerData.playerInfo.university}대학교 {playerData.playerInfo.name}";
@@ -56,7 +57,12 @@ public class ShowLoadList : MonoBehaviour
             }
             else
             {
-                FileNames[i].text = "Empty";
+                isLoadButtonEnable[i].interactable=false;
+                FileNames[i].text = $"파일{i+1}";
+                catImage[i].color = new Color(1f, 1f, 1f, 0f);
+                UnivAndNames[i].text = "비어 있음";
+                YearAndMonth[i].text = "";
+
             }
         }
         //DataManage.instance.DataClear();
