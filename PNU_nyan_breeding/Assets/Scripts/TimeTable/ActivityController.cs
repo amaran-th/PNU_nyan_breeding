@@ -46,8 +46,7 @@ public class ActivityController : MonoBehaviour
             //TODO Activity에 gif_path, info 추가 
             activities[i].transform.Find("Illust").GetComponent<Image>().sprite=Resources.Load<Sprite>(CalenderController.scheduleList[i].img_path) as Sprite;
             //activities[i].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type",2);
-            activities[i].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=CalenderController.scheduleList[i].name+"을 했다!";
-            
+            //activities[i].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=CalenderController.scheduleList[i].name+"을 했다";
         }
     }
 
@@ -59,6 +58,7 @@ public class ActivityController : MonoBehaviour
         activities[0].SetActive(true);
         activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[0].activity_type);
         activities[0].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[0].id); 
+        StartCoroutine(Typing(0, CalenderController.scheduleList[0].name+"을 했다")); 
         Invoke("RemoveFirstPage",2f);
     }
     void RemoveFirstPage(){
@@ -70,12 +70,14 @@ public class ActivityController : MonoBehaviour
         activities[1].gameObject.SetActive(true);
         activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[1].activity_type);
         activities[1].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[1].id); 
+        StartCoroutine(Typing(1, CalenderController.scheduleList[1].name+"을 했다")); 
         Invoke("ViewThirdActivity",2f);
     }
     void ViewThirdActivity(){
         activities[2].gameObject.SetActive(true);
         activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_type", CalenderController.scheduleList[2].activity_type);
         activities[2].transform.Find("Illust").GetComponent<Animator>().SetInteger("activity_id", CalenderController.scheduleList[2].id); 
+        StartCoroutine(Typing(2, CalenderController.scheduleList[2].name+"을 했다")); 
         Invoke("ActiveNextButton",2f);
     }
     void ActiveNextButton(){
@@ -117,6 +119,18 @@ public class ActivityController : MonoBehaviour
             }
             time+=Time.deltaTime;
         }
+    }
+
+    //타이핑 효과를 위한 함수
+    IEnumerator Typing(int idx, string message) 
+    { 
+        activities[idx].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text=null;
+
+        for (int i = 0; i < message.Length; i++) 
+        { 
+            activities[idx].transform.Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text += message[i];
+            yield return new WaitForSeconds(0.1f); 
+        } 
     }
     
     
