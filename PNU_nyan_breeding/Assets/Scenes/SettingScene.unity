@@ -875,7 +875,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectSounds: []
   bgmSounds: []
-  audioSourceBFM: {fileID: 299966056}
+  audioSourceBFM:
+  - {fileID: 0}
   audioSourceEffects: []
   playSoundName: []
 --- !u!82 &299966056
@@ -1881,10 +1882,10 @@ RectTransform:
   m_Father: {fileID: 2037351911}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1922, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787577376
 MonoBehaviour:
@@ -3540,11 +3541,14 @@ MonoBehaviour:
   SoundBtn: {fileID: 893127619}
   InfoBtn: {fileID: 523751901}
   TitleBtn: {fileID: 1909028958}
+  EndgameBtn: {fileID: 0}
   SettingPopUp: {fileID: 911332265}
   SoundPopUp: {fileID: 274356225}
   InfoPopUp: {fileID: 453658107}
   TitlePopUp: {fileID: 0}
+  EndPopUp: {fileID: 0}
   BGMSource: {fileID: 24100000, guid: 44637e1c680af174db87e74aff05f932, type: 2}
+  EffectSource: {fileID: 0}
   BGMSourceSlider: {fileID: 1974980647}
   EffectSlider: {fileID: 109393579}
 --- !u!114 &1457608774
@@ -3837,7 +3841,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4766,7 +4770,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

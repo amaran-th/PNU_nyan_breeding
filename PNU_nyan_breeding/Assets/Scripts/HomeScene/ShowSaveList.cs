@@ -47,6 +47,7 @@ public class ShowSaveList : MonoBehaviour
                 FileNames[i].text = $"파일{i+1}";
                 // 고양이 이미지
                 var catData = Managers.Data.catSpeciesDataList[playerData.playerInfo.species];
+                catImage[i].color = new Color(1f, 1f, 1f, 1f);
                 catImage[i].sprite = Resources.Load<Sprite>(catData.img_path) as Sprite;
                 // 대학, 이름
                 UnivAndNames[i].text = $"{playerData.playerInfo.university}대학교 {playerData.playerInfo.name}";
@@ -55,7 +56,11 @@ public class ShowSaveList : MonoBehaviour
             }
             else
             {
-                FileNames[i].text = "Empty";
+                FileNames[i].text = $"파일{i+1}";
+                catImage[i].color = new Color(1f, 1f, 1f, 0f);
+                UnivAndNames[i].text = "비어 있음";
+                YearAndMonth[i].text = "";
+
             }
         }
         //DataManage.instance.DataClear();
