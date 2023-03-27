@@ -3515,7 +3515,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 704620011}
         m_TargetAssemblyTypeName: EndingButton, Assembly-CSharp
-        m_MethodName: OnClickEnddingButton
+        m_MethodName: OnClickEndingButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
