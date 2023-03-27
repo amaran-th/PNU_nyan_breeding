@@ -23,11 +23,11 @@ public class DataManager: MonoBehaviour
 
     //Ending
     public List<Dictionary<int, EndingDialogue>> normalEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] NormalEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd"};
+    private string[] NormalEndingPath={"Json/NormalEnding/developerEnd","Json/NormalEnding/graduateSchoolEnd","Json/NormalEnding/professorEnd","Json/NormalEnding/educatorEnd","Json/NormalEnding/starInstructorEnd","Json/NormalEnding/whiteHackerEnd","Json/NormalEnding/whiteHackerEnd","Json/NormalEnding/NISEnd","Json/NormalEnding/freelancerEnd","Json/NormalEnding/startupEnd","Json/NormalEnding/stockListEnd","Json/NormalEnding/publicOfficialEnd"};
     public List<Dictionary<int, EndingDialogue>> badEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] BadEndingPath={"Json/BadEnding/noJobEnd"};
+    private string[] BadEndingPath={"Json/BadEnding/noJobEnd","Json/BadEnding/artistEnd"};
     public List<Dictionary<int, EndingDialogue>> hiddenEnding=new List<Dictionary<int, EndingDialogue>>();
-    private string[] HiddenEndingPath={"Json/HiddenEnding/overworkEnd"};
+    private string[] HiddenEndingPath={"Json/HiddenEnding/overworkEnd","Json/HiddenEnding/richEnd","Json/HiddenEnding/streetCatEnd","Json/HiddenEnding/chickenEnd","Json/HiddenEnding/bullyCatEnd","Json/HiddenEnding/probationEnd","Json/HiddenEnding/PreviousConvictionEnd"};
  
     //NPCEvent
     public List<Dictionary<int, ProfessorEvent>> professorEvent=new List<Dictionary<int, ProfessorEvent>>();

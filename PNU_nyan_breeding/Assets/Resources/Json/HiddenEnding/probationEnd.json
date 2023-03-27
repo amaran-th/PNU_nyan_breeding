@@ -1,0 +1,149 @@
+{
+  "hiddenEnding": [
+    {
+      "id": 0,
+      "name": "일러스트",
+      "script": "학사경고엔딩.....",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 1,
+      "name": "부대냥",
+      "script": "좋아. 이걸로 과제 하나 끝났고, 이제 다음 과제를..",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 2,
+      "name": "부대냥",
+      "script": "(으으... 요즘 잠을 너무 못잤어...)",
+      "background": "Images/EndingIllust/employment"
+    },
+
+    {
+      "id": 3,
+      "name": "부대냥",
+      "script": "(하지만... 어쩔 수 없어! 나한테는 건강보다 더 중요한게 있는 걸!)",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 4,
+      "name": "부대냥",
+      "script": "...",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 5,
+      "name": "부대냥",
+      "script": "어라? 눈앞이 흐릿하네... 귀도 이상하게 먹먹하고...",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 6,
+      "name": "부대냥",
+      "script": "어어....",
+      "background": "Images/EndingIllust/employment"
+    },
+    {
+      "id": 7,
+      "name": "일러스트",
+      "script": "",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 8,
+      "name": "???",
+      "script": "환자 분 정신이 드십니까?",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 9,
+      "name": "부대냥",
+      "script": "으...으어? 어? 여기 어디에요? 머리가 지끈지끈해...",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 10,
+      "name": "수의사",
+      "script": "여기는 냥냥 동물 병원입니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 11,
+      "name": "수의사",
+      "script": "도서관에 쓰러져 계시던 걸 지나가던 학생이 발견하고 데리고 와주셨습니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 12,
+      "name": "수의사",
+      "script": "쓰러지신지 벌써 사흘이 지났어요.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 13,
+      "name": "나레이션",
+      "script": "끝없는 과제와 멈출 줄 모르는 시험으로 인해 스트레스가 심하게 쌓인 [부대냥].",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 14,
+      "name": "나레이션",
+      "script": "결국 과로로 동물 병원 응급실에 실려 가고 말았던 것이다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 15,
+      "name": "수의사 ",
+      "script": "최근에 무리를 많이 하신 것 같더군요. 과로에요. 고양이의 몸은 약해서, 큰 문제가 생길 수 있습니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 16,
+      "name": "수의사",
+      "script": "또한 쓰러지면서 허리를 의자에 부딪혀 척추에 금이 갔습니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 17,
+      "name": "수의사",
+      "script": "당분간 침상 안정하시고, 추후에도 오래 앉아있거나 허리를 과도하게 사용하는 일은 피하셔야 합니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 18,
+      "name": "부대냥",
+      "script": "아니, 이게 무슨 소리에요! 부딪혔다고 그렇게 된다고?",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 19,
+      "name": "수의사",
+      "script": "입원 기간도 길고... 안타깝게도 동물은 보험 적용이 안되어서요. 총 300만 원입니다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 20,
+      "name": "부대냥",
+      "script": "??!?! 저 저한테는 그만한 돈이 없어요!",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 21,
+      "name": "나레이션",
+      "script": "스트레스 관리에 소홀했던 [부대냥]. 허리도 다치고 어마어마한 액수의 병원비를 내야 하는 문제가 생겼다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 22,
+      "name": "나레이션",
+      "script": "[부대냥]은 어쩔 수 없이 돈을 벌기 위해 학업을 중단하게 되었다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 23,
+      "name": "나레이션",
+      "script": "~Hidden Ending 00. 건강한 신체, 건강한 코드~",
+      "background": "Images/background/dark"
+    }
+  ]
+}

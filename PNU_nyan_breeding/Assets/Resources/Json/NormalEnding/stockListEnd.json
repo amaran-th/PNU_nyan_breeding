@@ -1,0 +1,95 @@
+{
+  "normalEnding": [
+    {
+      "id": 0,
+      "name": "나레이션",
+      "script": "주식상장 에닝 [부대냥]은 4학년이 되며 미래에 대해 진지하게 고민하게 되었다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 1,
+      "name": "나레이션",
+      "script": "[부대냥]은 지금까지 지루한 수업, 지옥 같은 조별 과제도 전공에 대한 흥미와 재미로 버텨낼 수 있었다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 2,
+      "name": "나레이션",
+      "script": " 더 배우고 싶은 마음과 취업이 닥친 현실 가운데교수님의 제안은 [부대냥]의 마음을 빼앗아 갔다.",
+      "background": "Images/background/dark"
+    },
+
+    {
+      "id": 3,
+      "name": "부대냥",
+      "script": "공부를 더 깊게 하겠다냥!",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 4,
+      "name": "나레이션",
+      "script": "그렇게 [부대냥]이 [부산] 대학원에 오기로 결정을 내린 지 1년이 흘렀다.",
+      "background": "Images/background/dark"
+    },
+    {
+      "id": 5,
+      "name": "일러스트",
+      "script": "...",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 6,
+      "name": "부대냥",
+      "script": "교수님 말씀하신 논문 리뷰 완료했습니다...",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 7,
+      "name": "3",
+      "script": "다 되었으면 프로그래밍 입문 수업 채점도 부탁하네. 다 되면 메일로 보내주게.",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 8,
+      "name": "3",
+      "script": "아, 그리고 자네 논문은 잘 읽었다네. 교열하여 저쪽 바구니에 넣어두었으니 확인하고 다시 써오게나.",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 9,
+      "name": "3",
+      "script": "다음 주 목요일 세미나 있는 것 잊지 말고. 내일 아침에 새 학부 연구생이 오기로 했으니 좀 널널해 질 걸세.",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 10,
+      "name": "3",
+      "script": "안내 나 대신 잘 부탁하네. 그리고... 커피가 먹고 싶은데 흠흠.",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 11,
+      "name": "부대냥",
+      "script": "(벌써 새벽 2시다. 오늘도 집에 들어가긴 글렀구나...)",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 12,
+      "name": "나레이션",
+      "script": "대학원생의 길로 들어선 [부대냥]. 어째서인지 일을 해도 해도 끝이 나지 않는다!",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 13,
+      "name": "나레이션",
+      "script": "교수님의 충직한 노예- 아닌 학부생으로서 오늘도 논문과 과제를 하며 바쁜 생활을 이어가고 있다.",
+      "background": "Images/EndingIllust/graduateSchool"
+    },
+    {
+      "id": 14,
+      "name": "나레이션",
+      "script": "~Normal ending. 01. 대학원생 살려!~",
+      "background": "Images/EndingIllust/graduateSchool"
+    }
+  ]
+}
