@@ -15,6 +15,7 @@ public class ShowEnding : MonoBehaviour
     public GameObject NameSlot;
     public float textSpeed;
     private int index = 0;
+    public string script = "";
     public Dictionary<int,EndingDialogue> ending;
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public Dictionary<string, string> staindingId = new Dictionary<string, string>()
@@ -25,12 +26,14 @@ public class ShowEnding : MonoBehaviour
       {"3",   "교수님"},
       {"11",  "캔따개"},
     };
-
+    
     public Image standingImg;
     public Image endingIllust;
     public Image backgroundImg;
     //string playerName = EndingManager.playerInfoData.name;
+    //string universityName = EndingManager.playerInfoData.university;
     string playerName = "임시이름"; //temp 
+    string universityName = "임시학교";
     
     
     private bool preventClick = false;
@@ -51,6 +54,7 @@ public class ShowEnding : MonoBehaviour
         textComponent2.text = string.Empty;
         
         Debug.Log("ending count: "+ending.Count+" index: "+index);
+        //script = script.Replace("[부대냥]", playerName).Replace("[부산]", universityName);
         NextLine();
     }
 
@@ -60,25 +64,23 @@ public class ShowEnding : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && !preventClick)
         {
             Debug.Log(textComponent.text);
-            Debug.Log(ending[index].script.Replace("[부대냥]", playerName));
             Debug.Log("ending count: "+ending.Count+" index: "+index);
-            if (textComponent.text == ending[index].script.Replace("[부대냥]", playerName))
+            if (textComponent.text == script)
             {
-                
                 index++;
                 NextLine();
             }
             else
             {
                 StopAllCoroutines();
-                textComponent.text = ending[index].script.Replace("[부대냥]", playerName);
+                textComponent.text = script;
             }
         }
     }
 
     IEnumerator TypeLine()
     {
-        foreach (char c in ending[index].script.Replace("[부대냥]", playerName).ToCharArray())
+        foreach (char c in script.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -91,6 +93,8 @@ public class ShowEnding : MonoBehaviour
         Debug.Log("ending count: "+ending.Count+" index: "+index+"index < ending.Count-1 ?: "+(index < ending.Count));
         if(index < ending.Count  )
         {
+            script = ending[index].script.Replace("[부대냥]", playerName).Replace("[부산]", universityName);
+            Debug.Log(script);
             UpdateBeforeDialogue(index);
             StartCoroutine(TypeLine());
         }    
@@ -130,7 +134,8 @@ public class ShowEnding : MonoBehaviour
         }
         else {
             NameSlot.SetActive(true);
-            textComponent2.text = ending[index].name;
+            if(ending[index].name == "부대냥") textComponent2.text = playerName;
+            else textComponent2.text = ending[index].name;
             standingImg.sprite = Resources.Load<Sprite>(standingList[12].image);
         }
 

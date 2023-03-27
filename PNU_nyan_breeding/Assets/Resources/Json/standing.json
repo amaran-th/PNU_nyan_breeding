@@ -71,6 +71,12 @@
       "name": "캔따개",
       "image": "Images/StandingImage/npc_11",
       "locationX": 244
+    },
+    {
+      "id": 12,
+      "name": "나레이션",
+      "image": "Images/StandingImage/narration",
+      "locationX": 244
     }
   ]
 }

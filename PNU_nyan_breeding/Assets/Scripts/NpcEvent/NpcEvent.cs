@@ -18,6 +18,7 @@ public class NpcEvent : MonoBehaviour
     public float textSpeed;
     public Image standingImg;
     public Image backgroundImg;
+    public string script = "";
 
     private int index = 0;
     private int index2=0;
@@ -31,6 +32,10 @@ public class NpcEvent : MonoBehaviour
       {"3",   "교수님"},
       {"11",  "캔따개"},
     };
+
+    string playerName = Managers.Player.playerInfoData.name;
+    string universityName = Managers.Player.playerInfoData.university;
+
     public static Dictionary<int, Standing> standingList = new Dictionary<int, Standing>();
     public static List<Dictionary<int, ProfessorEvent>> professorEventList;
     public static List<Dictionary<int, ProfessorEvent>> blackCatEventList; 
@@ -102,9 +107,9 @@ public class NpcEvent : MonoBehaviour
     {
         if(Input.GetMouseButtonUp(0) && !preventClick)
         {
-            Debug.Log(resEvent[index].script);
+            Debug.Log(script);
             Debug.Log("event count: "+resEvent.Count+" index: "+index);
-            if (textComponent.text == resEvent[index].script)
+            if (textComponent.text == script)
             {
                 
                 index++;
@@ -113,7 +118,7 @@ public class NpcEvent : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                textComponent.text = resEvent[index].script;
+                textComponent.text = script;
 
             }
         }
@@ -121,7 +126,7 @@ public class NpcEvent : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach (char c in resEvent[index].script.ToCharArray())
+        foreach (char c in script.ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -134,6 +139,7 @@ public class NpcEvent : MonoBehaviour
         if(index <= resEvent.Count && resEvent[index].name != "end")
         {
             DeclareIllust();
+            script = resEvent[index].script.Replace("[부대냥]", playerName).Replace("[부산]", universityName);
             if(resEvent[index].name == "선택지1") activeSelect();
             else {
             UpdateBeforeDialogue(index);
@@ -181,7 +187,8 @@ void UpdateBeforeDialogue(int index) {
         }
         else {
             NameSlot.SetActive(true);
-            textComponent2.text = resEvent[index].name;
+            if(resEvent[index].name == "부대냥") textComponent2.text = playerName;
+            else textComponent2.text = resEvent[index].name;
             standingImg.sprite = Resources.Load<Sprite>(standingList[12].image);
         }
 
