@@ -56,7 +56,7 @@ public class NpcEvent : MonoBehaviour
     }
 
     void DeclareEvent() {
-        Debug.Log("DeclareEvent");
+        //Debug.Log("DeclareEvent");
 
         professorEventList = Managers.Data.professorEvent;
         blackCatEventList = Managers.Data.blackCatEvent;
@@ -80,7 +80,6 @@ public class NpcEvent : MonoBehaviour
                     break;
         }
         //resEvent = npcEvent[Managers.Player.playerInfoData.npc_story_count[0]];
-        Debug.Log("스토리:"+(Managers.Player.playerInfoData.npc_story_count[resNpcId]+1));
         DeclareIllust();
     }
 
@@ -107,7 +106,7 @@ public class NpcEvent : MonoBehaviour
     {
         if(Input.GetMouseButtonUp(0) && !preventClick)
         {
-            Debug.Log(script);
+            //Debug.Log(script);
             Debug.Log("event count: "+resEvent.Count+" index: "+index);
             if (textComponent.text == script)
             {
@@ -146,27 +145,32 @@ public class NpcEvent : MonoBehaviour
             StartCoroutine(TypeLine());
             }
         }    
-        else
-        {
-            if(resEvent[index].name == "end") {
-                switch (resEvent[index].script) {
-                    case "up": 
-                        if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
-                        Debug.Log(Managers.Player.playerInfoData.npc_bond[resNpcId]);
-                        break;
-                    case "down":
-                        if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;
-                        break;
-                    default: return;
-                }
-            }
-            DialogueBox.SetActive(false);
-            StaindingImg.SetActive(false);
-            playerInfoData.UpdateStoryCount(resNpcId);
-            SceneManager.LoadScene("MonthlyResultScene");
-        }  
+        else finishDialogue();
     }
 
+void finishDialogue() {
+    if(resEvent[index].name == "end") {
+        switch (resEvent[index].script) {
+            case "up": 
+                if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
+                Debug.Log(Managers.Player.playerInfoData.npc_bond[resNpcId]);
+                break;
+            case "down":
+                if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;
+                break;
+            default: return;
+        }
+    }
+    DialogueBox.SetActive(false);
+    StaindingImg.SetActive(false);
+    playerInfoData.UpdateStoryCount(resNpcId);
+    Debug.Log("스토리:"+ Managers.Player.playerInfoData.npc_story_count[resNpcId] +", 호감도:"+ Managers.Player.playerInfoData.npc_bond[resNpcId]);
+    if(Managers.Player.playerInfoData.npc_story_count[resNpcId]==9 && Managers.Player.playerInfoData.npc_bond[resNpcId] == 5 && resNpcId!=3) {
+        Debug.Log("메일 활성화");
+        ShareData.npcMail[resNpcId] = true;
+    }
+    SceneManager.LoadScene("MonthlyResultScene");    
+}
 
 void UpdateBeforeDialogue(int index) {
         var spriteId = 0;
@@ -221,13 +225,11 @@ void UpdateBeforeDialogue(int index) {
 
     public void bondUpSkip() {
         if (Managers.Player.playerInfoData.npc_bond[resNpcId]<5) Managers.Player.playerInfoData.npc_bond[resNpcId]+=1;
-        playerInfoData.UpdateStoryCount(resNpcId);
-        SceneManager.LoadScene("MonthlyResultScene");
+        finishDialogue();
     }
     public void bondDownSkip() {
         if(Managers.Player.playerInfoData.npc_bond[resNpcId]>0) Managers.Player.playerInfoData.npc_bond[resNpcId]-=1;              
-        playerInfoData.UpdateStoryCount(resNpcId);
-        SceneManager.LoadScene("MonthlyResultScene");
+        finishDialogue();
     }
 
 }

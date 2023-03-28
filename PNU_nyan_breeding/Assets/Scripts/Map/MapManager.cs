@@ -31,6 +31,7 @@ public class MapManager : MonoBehaviour
         npcData = Managers.Data.npcData;  
         playerInfoData= Managers.Player.playerInfoData;
         currentNpc=-1;  
+        ResetMail();
         CreateNPCIcons();
     }
 
@@ -38,6 +39,12 @@ public class MapManager : MonoBehaviour
     {
         detectNpc=currentNpc;
     }
+
+    public void ResetMail() {
+        for (int i=0; i<3; i++)
+            ShareData.npcMail[i] = false;
+    }
+
     public void CreateNPCIcons(){   //NPC 아이콘 생성
         for(int i=0;i<npcData.Count;i++){
             if (Managers.Player.playerInfoData.npc_story_count[i] == 9 && Managers.Player.playerInfoData.npc_bond[i] < 5 || Managers.Player.playerInfoData.npc_story_count[i] > 9 ) continue;
